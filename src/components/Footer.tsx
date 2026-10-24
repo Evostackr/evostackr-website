@@ -96,6 +96,20 @@ export function Footer({ onNavigate }: FooterProps) {
                 <li><a href="#faq" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#faq'); } }} className="footer__nav-link link-underline">FAQ</a></li>
                 <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
                 <li><a href="/rss.xml" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>
+                <li>
+                  <a
+                    href="/admin/seo"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/admin/seo');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    SEO &amp; AI Intelligence
+                  </a>
+                </li>
                 <li><a href="#contact" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#contact'); } }} className="footer__nav-link link-underline">Contact</a></li>
               </ul>
             </div>

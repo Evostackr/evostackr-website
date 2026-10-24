@@ -10,6 +10,7 @@ import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
+import { OptimizationSuite } from './pages/OptimizationSuite';
 
 function getInitialPath(): string {
   if (typeof window === 'undefined') return '/';
@@ -43,6 +44,11 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  const isSeoSuite =
+    currentPath === '/admin/seo' ||
+    currentPath === '/system/seo' ||
+    currentPath === '/optimization';
+
   useEffect(() => {
     if (currentPath === '/services/google-play-closed-testing') {
       document.title = 'Google Play Closed Testing Services | Evostackr';
@@ -56,6 +62,19 @@ function App() {
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
         canonical.setAttribute('href', 'https://evostackr.in/services/google-play-closed-testing');
+      }
+    } else if (isSeoSuite) {
+      document.title = 'Optimization Suite & Search Intelligence | Evostackr';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Evostackr Unified Optimization Suite: Complete Technical SEO, AEO, GEO, SXO, and AI Search Intelligence Architecture.'
+        );
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://evostackr.in/admin/seo');
       }
     } else {
       document.title = 'Evostackr — Independent Software Products & Custom Engineering';
@@ -71,7 +90,7 @@ function App() {
         canonical.setAttribute('href', 'https://evostackr.in/');
       }
     }
-  }, [currentPath]);
+  }, [currentPath, isSeoSuite]);
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
 
@@ -84,6 +103,8 @@ function App() {
       <main id="main-content">
         {isClosedTestingPage ? (
           <GooglePlayClosedTesting onNavigateHome={() => navigate('/')} />
+        ) : isSeoSuite ? (
+          <OptimizationSuite onNavigateHome={() => navigate('/')} />
         ) : (
           <>
             <Hero />

@@ -1,0 +1,115 @@
+import type { ConversionFunnel, BacklinkObservation } from './types';
+
+export const conversionFunnels: ConversionFunnel[] = [
+  {
+    id: 'funnel-closed-testing',
+    name: 'Google Play Closed Testing Service Conversion Funnel',
+    goalType: 'Primary',
+    description: 'Tracks progression from initial closed testing service discovery to email consultation / order confirmation.',
+    steps: [
+      {
+        stepIndex: 1,
+        name: 'Landing on /services/google-play-closed-testing',
+        targetElement: '.gp-hero',
+        actionType: 'view',
+        frictionPoints: ['Page load latency', 'Initial mobile layout shift'],
+        optimizationHypothesis: 'Keep critical hero LCP under 1.2s to retain high-intent inbound search traffic.',
+      },
+      {
+        stepIndex: 2,
+        name: 'Inspecting Currency-Converted Pricing (₹1,245 INR / USD)',
+        targetElement: '.gp-price-card',
+        actionType: 'interaction',
+        frictionPoints: ['Currency conversion delay or failure', 'Uncertainty over what is included in ₹1,245'],
+        optimizationHypothesis: 'Display clear starting scope (20 testers for 14 continuous days, real Android device matrix) right next to animated price.',
+      },
+      {
+        stepIndex: 3,
+        name: 'Reviewing 11 Verified Portfolio Apps & Google Play Links',
+        targetElement: '.gp-portfolio',
+        actionType: 'interaction',
+        frictionPoints: ['Doubt whether apps actually passed Google Play review'],
+        optimizationHypothesis: 'Direct clickable Google Play store links with verified package IDs build immediate trust and reduce skepticism.',
+      },
+      {
+        stepIndex: 4,
+        name: 'Triggering Primary CTA ("Start Closed Testing" / "support@evostackr.in")',
+        targetElement: '.gp-cta-block .btn--primary',
+        actionType: 'click',
+        frictionPoints: ['Mailto client not configured on desktop', 'Subject line ambiguity'],
+        optimizationHypothesis: 'Pre-fill mailto subject line with app details to minimize user typing friction.',
+      },
+    ],
+  },
+  {
+    id: 'funnel-custom-services',
+    name: 'Custom Software Engineering Inquiry Funnel',
+    goalType: 'Primary',
+    description: 'Tracks visitors evaluating custom web, SaaS, and automation development capabilities.',
+    steps: [
+      {
+        stepIndex: 1,
+        name: 'Discovery of Services Section on Homepage',
+        targetElement: '#services',
+        actionType: 'view',
+        frictionPoints: ['Generic marketing copy confusion'],
+        optimizationHypothesis: 'Clear engineering-focused service cards (Websites, Web Apps, SaaS, Automation, APIs) demonstrate technical competence.',
+      },
+      {
+        stepIndex: 2,
+        name: 'Reviewing Technical Case Studies',
+        targetElement: '#work',
+        actionType: 'interaction',
+        frictionPoints: ['Lack of concrete technical stack disclosure'],
+        optimizationHypothesis: 'Display real technologies used (Kotlin, Room SQLite, Jetpack Compose, React 19, WebSockets) to validate architectural credibility.',
+      },
+      {
+        stepIndex: 3,
+        name: 'Contact Form / Support Dispatch',
+        targetElement: '#contact',
+        actionType: 'submission',
+        frictionPoints: ['Excessive required form fields', 'Delayed response expectations'],
+        optimizationHypothesis: 'Direct email contact channel to support@evostackr.in with clear response SLA.',
+      },
+    ],
+  },
+];
+
+export const backlinkObservations: BacklinkObservation[] = [
+  {
+    id: 'bl-1',
+    referringDomain: 'github.com/Evostackr',
+    targetPage: 'https://evostackr.in/',
+    anchorText: 'Evostackr Official Website',
+    type: 'editorial',
+    status: 'active',
+    provenance: 'Official organization profile verified link',
+  },
+  {
+    id: 'bl-2',
+    referringDomain: 'dir.evostackr.in',
+    targetPage: 'https://evostackr.in/',
+    anchorText: 'Evostackr Studio',
+    type: 'directory',
+    status: 'active',
+    provenance: 'Internal sub-domain authority cross-link',
+  },
+  {
+    id: 'bl-3',
+    referringDomain: 'play.google.com',
+    targetPage: 'https://evostackr.in/services/google-play-closed-testing',
+    anchorText: 'Developer Testing Services Referral',
+    type: 'editorial',
+    status: 'active',
+    provenance: 'Observed referral traffic from Google Play Console developer forum threads',
+  },
+  {
+    id: 'bl-4',
+    referringDomain: 'producthunt.com',
+    targetPage: 'https://evostackr.in/',
+    anchorText: 'Evostackr Products',
+    type: 'unlinked_mention',
+    status: 'prospective',
+    provenance: 'Planned product launches for SMS Campaign Manager and 24IDChat',
+  },
+];
