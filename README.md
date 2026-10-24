@@ -1,32 +1,46 @@
-# React + TypeScript + Vite
+# Evostackr — Official Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Official website for **Evostackr**, an independent software company developing proprietary software products and delivering high-assurance custom software engineering services.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Framework**: React 19 + TypeScript
+- **Bundler & Tooling**: Vite 8
+- **Styling**: Vanilla CSS (modular design tokens & responsive architecture)
+- **Deployment**: Cloudflare Pages
 
-## React Compiler
+---
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Local Development
 
-## Expanding the Oxlint configuration
+```bash
+# Install dependencies
+npm install
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+# Start development server
+npm run dev
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# Build for production
+npm run build
+
+# Preview production build locally
+npm run preview
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+---
+
+## Cloudflare Pages Deployment Configuration
+
+When connecting this repository to **Cloudflare Pages**:
+
+| Setting | Value |
+| :--- | :--- |
+| **Framework preset** | `Vite` |
+| **Build command** | `npm run build` |
+| **Build output directory** | `dist` |
+| **Root directory** | `/` (leave empty or default) |
+| **Node.js Version** | `20` (automatically picked up from `.nvmrc` / `.node-version`) |
+
+### Included Cloudflare Pages Configurations
+- **`public/_redirects`**: Automatically handles Single Page Application (SPA) routing fallback (`/* /index.html 200`).
+- **`public/_headers`**: Enforces security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) and long-term immutable caching for static assets in `/assets/*`.
