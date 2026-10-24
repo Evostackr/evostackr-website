@@ -50,6 +50,7 @@
 - **SaaS Platform Development**: Multi-tenant software platforms featuring subscription billing, secure user provisioning, RBAC, and scalable cloud infrastructure.
 - **Business Software & Automation**: Operational workflow tools, automated data pipelines, and internal business engines that eliminate manual repetitive tasks.
 - **API Integrations & Custom Engineering**: Third-party integrations, custom REST/GraphQL APIs, webhooks, and secure system synchronization.
+- **Google Play Closed Testing Support**: Specialized technical guidance and tester participation support for the Google Play closed testing track to prepare Android applications for store publishing. Starting price: ₹1,245 INR (with indicative live foreign exchange USD equivalent). Dedicated URL: https://evostackr.in/services/google-play-closed-testing.
 
 ## Engineering Philosophy
 - **Product-Oriented**: We think like product builders and owners, not commodity contractors.

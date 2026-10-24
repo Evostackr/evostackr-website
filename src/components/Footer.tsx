@@ -3,14 +3,33 @@ import { products } from '../data';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
-export function Footer() {
+interface FooterProps {
+  onNavigate?: (path: string, hash?: string) => void;
+}
+
+export function Footer({ onNavigate }: FooterProps) {
+  const handleNav = (path: string, hash?: string) => {
+    if (onNavigate) {
+      onNavigate(path, hash);
+    }
+  };
 
   return (
     <footer className="footer" role="contentinfo">
       <div className="container">
         <div className="footer__main">
           <div className="footer__brand">
-            <a href="#" className="footer__wordmark" aria-label="Evostackr Home">
+            <a
+              href="/"
+              onClick={(e) => {
+                if (onNavigate) {
+                  e.preventDefault();
+                  handleNav('/');
+                }
+              }}
+              className="footer__wordmark"
+              aria-label="Evostackr Home"
+            >
               <img
                 src="/evostackr-logo.png"
                 alt="Evostackr logo"
@@ -47,23 +66,37 @@ export function Footer() {
             <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Services</h3>
               <ul className="footer__nav-list">
-                <li><a href="#services" className="footer__nav-link link-underline">Web Development</a></li>
-                <li><a href="#services" className="footer__nav-link link-underline">Web Applications</a></li>
-                <li><a href="#services" className="footer__nav-link link-underline">SaaS Platforms</a></li>
-                <li><a href="#services" className="footer__nav-link link-underline">Business Software</a></li>
-                <li><a href="#services" className="footer__nav-link link-underline">API & Integrations</a></li>
+                <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">Web Development</a></li>
+                <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">Web Applications</a></li>
+                <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">SaaS Platforms</a></li>
+                <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">Business Software</a></li>
+                <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">API &amp; Integrations</a></li>
+                <li>
+                  <a
+                    href="/services/google-play-closed-testing"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/services/google-play-closed-testing');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Google Play Closed Testing
+                  </a>
+                </li>
               </ul>
             </div>
 
             <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Company</h3>
               <ul className="footer__nav-list">
-                <li><a href="#about" className="footer__nav-link link-underline">About</a></li>
-                <li><a href="#work" className="footer__nav-link link-underline">Work</a></li>
-                <li><a href="#faq" className="footer__nav-link link-underline">FAQ</a></li>
+                <li><a href="#about" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#about'); } }} className="footer__nav-link link-underline">About</a></li>
+                <li><a href="#work" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#work'); } }} className="footer__nav-link link-underline">Work</a></li>
+                <li><a href="#faq" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#faq'); } }} className="footer__nav-link link-underline">FAQ</a></li>
                 <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
                 <li><a href="/rss.xml" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>
-                <li><a href="#contact" className="footer__nav-link link-underline">Contact</a></li>
+                <li><a href="#contact" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#contact'); } }} className="footer__nav-link link-underline">Contact</a></li>
               </ul>
             </div>
           </nav>
@@ -74,7 +107,7 @@ export function Footer() {
             © {CURRENT_YEAR} Evostackr. All rights reserved.
           </p>
           <div className="footer__legal">
-            <a href="#contact" className="footer__legal-link link-underline">Privacy &amp; Terms</a>
+            <a href="#contact" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#contact'); } }} className="footer__legal-link link-underline">Privacy &amp; Terms</a>
           </div>
         </div>
       </div>

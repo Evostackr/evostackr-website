@@ -51,8 +51,13 @@
   transition: color var(--transition-fast);
 }
 
-.nav__link:hover {
+.nav__link:hover,
+.nav__link--active {
   color: var(--color-text);
+}
+
+.nav__link--active {
+  font-weight: var(--fw-semibold);
 }
 
 .nav__link:focus-visible {

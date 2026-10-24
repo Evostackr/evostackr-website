@@ -74,6 +74,7 @@ Unlike traditional web agencies that assemble boilerplate themes or outsourced c
 3. **SaaS Platform Development**: Multi-tenant architectures, subscription billing integrations (Stripe, Lemon Squeezy), role-based access control (RBAC), and scalable containerized deployments.
 4. **Business Software & Automation**: Custom internal tools, operational dashboards, automated data pipelines, and workflow systems that remove repetitive manual human labor.
 5. **API Integrations & Custom Engineering**: Robust REST and GraphQL APIs, webhook engines, third-party ecosystem bridges, and cross-platform synchronization.
+6. **Google Play Closed Testing Support**: Comprehensive closed testing track coordination and genuine tester participation support for Android developers preparing their apps for production release. Starting price: ₹1,245 INR (calculated in USD via live exchange rates). URL: https://evostackr.in/services/google-play-closed-testing. Note: Evostackr adheres strictly to Google Play Developer policies and does not promise guaranteed approval or policy circumvention.
 
 ---
 

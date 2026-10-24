@@ -78,6 +78,32 @@
   max-width: 480px;
 }
 
+.service-item__badge {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  background-color: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 2px;
+  font-size: 0.75rem;
+  color: var(--color-dark-text);
+  margin-bottom: var(--space-xs);
+}
+
+.service-item__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-xs);
+  color: var(--color-dark-text);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  margin-top: var(--space-sm);
+  transition: color var(--transition-fast);
+}
+
+.service-item__link:hover {
+  color: #FFFFFF;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .services__layout {

@@ -1,7 +1,11 @@
 import './Services.css';
 import { services } from '../data';
 
-export function Services() {
+interface ServicesProps {
+  onNavigate?: (path: string) => void;
+}
+
+export function Services({ onNavigate }: ServicesProps) {
   return (
     <section id="services" className="services section" aria-labelledby="services-heading">
       <div className="container">
@@ -35,6 +39,30 @@ export function Services() {
                 </div>
               </article>
             ))}
+
+            {/* Specialized Google Play Closed Testing Service Item */}
+            <article className="service-item" key="google-play-closed-testing">
+              <div className="service-item__number text-meta">06</div>
+              <div className="service-item__content">
+                <span className="service-item__badge text-meta">Starting from ₹1,245 INR</span>
+                <h3 className="service-item__title">Google Play Closed Testing</h3>
+                <p className="service-item__description">
+                  Structured support for the Google Play closed testing track, tester engagement coordination, and release workflow readiness.
+                </p>
+                <a
+                  href="/services/google-play-closed-testing"
+                  onClick={(e) => {
+                    if (onNavigate) {
+                      e.preventDefault();
+                      onNavigate('/services/google-play-closed-testing');
+                    }
+                  }}
+                  className="service-item__link link-underline"
+                >
+                  View service details &amp; pricing <span className="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
+            </article>
           </div>
         </div>
       </div>
