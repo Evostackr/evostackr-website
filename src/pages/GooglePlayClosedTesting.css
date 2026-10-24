@@ -513,6 +513,200 @@
   font-size: 0.8125rem;
 }
 
+/* ─── Closed Testing Portfolio Section ─── */
+.service-portfolio {
+  background-color: var(--color-bg);
+  border-top: 1px solid var(--color-border);
+}
+
+.service-portfolio__header {
+  max-width: 760px;
+  margin-bottom: var(--space-3xl);
+}
+
+.service-portfolio__title {
+  font-size: clamp(2rem, 3.5vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--color-text);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-sm);
+  line-height: 1.15;
+}
+
+.service-portfolio__subtitle {
+  color: var(--color-text-secondary);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  margin-bottom: var(--space-md);
+}
+
+.service-portfolio__notice {
+  display: inline-block;
+  color: var(--color-text-secondary);
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  padding: var(--space-xs) var(--space-sm);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 2px);
+}
+
+.service-portfolio__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-xl);
+}
+
+/* Portfolio Card */
+.portfolio-card {
+  background-color: #FFFFFF;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm, 2px);
+  padding: var(--space-xl);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: border-color var(--transition-fast);
+}
+
+.portfolio-card:hover {
+  border-color: var(--color-text);
+}
+
+.portfolio-card--featured {
+  grid-column: 1 / -1;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.portfolio-card__top {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+
+.portfolio-card__icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  object-fit: cover;
+  flex-shrink: 0;
+  background-color: var(--color-surface);
+}
+
+.portfolio-card__icon-fallback {
+  width: 56px;
+  height: 56px;
+  border-radius: 12px;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.portfolio-card__meta-col {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2xs);
+}
+
+.portfolio-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--space-xs);
+}
+
+.portfolio-card__category {
+  font-size: 0.75rem;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+.portfolio-card__track-badge {
+  font-size: 0.6875rem;
+  color: var(--color-text-secondary);
+  background-color: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--color-border);
+  padding: 1px 6px;
+  border-radius: 2px;
+}
+
+.portfolio-card__name {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.portfolio-card__body {
+  margin-bottom: var(--space-lg);
+  flex-grow: 1;
+}
+
+.portfolio-card__desc {
+  font-size: 0.9375rem;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin-bottom: var(--space-sm);
+}
+
+.portfolio-card__package {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+  font-size: 0.8125rem;
+}
+
+.portfolio-card__pkg-label {
+  color: var(--color-text-secondary);
+  font-size: 0.75rem;
+}
+
+.portfolio-card__pkg-code {
+  font-family: monospace;
+  font-size: 0.75rem;
+  color: var(--color-text);
+  background-color: var(--color-surface-alt, #DDE1DF);
+  padding: 2px 6px;
+  border-radius: 2px;
+  word-break: break-all;
+}
+
+.portfolio-card__actions {
+  padding-top: var(--space-sm);
+  border-top: 1px solid var(--color-border);
+}
+
+.portfolio-card__link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-2xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: color var(--transition-fast);
+}
+
+.portfolio-card__link:hover {
+  color: #000000;
+}
+
 /* Responsive Breakpoints */
 @media (max-width: 960px) {
   .service-hero__layout {
@@ -527,6 +721,10 @@
   .pricing-info__layout {
     grid-template-columns: 1fr;
     gap: var(--space-xl);
+  }
+
+  .service-portfolio__grid {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -549,6 +747,10 @@
   }
 
   .price-card {
+    padding: var(--space-lg);
+  }
+
+  .portfolio-card {
     padding: var(--space-lg);
   }
 }

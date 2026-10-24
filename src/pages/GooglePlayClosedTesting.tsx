@@ -9,9 +9,73 @@ import {
   type CurrencyConversionState,
 } from '../utils/currency';
 import { useAnimatedPrice } from '../hooks/useAnimatedPrice';
+import { closedTestingApps, type ClosedTestingApp } from '../data';
 
 interface GooglePlayClosedTestingProps {
   onNavigateHome: () => void;
+}
+
+function AppIcon({ iconPath, name }: { iconPath: string; name: string }) {
+  const [hasError, setHasError] = useState(false);
+
+  if (hasError) {
+    return (
+      <div className="portfolio-card__icon-fallback" aria-hidden="true">
+        <span>{name.charAt(0)}</span>
+      </div>
+    );
+  }
+
+  return (
+    <img
+      src={iconPath}
+      alt={`${name} app icon`}
+      className="portfolio-card__icon"
+      width="56"
+      height="56"
+      loading="lazy"
+      onError={() => setHasError(true)}
+    />
+  );
+}
+
+function PortfolioCard({ app }: { app: ClosedTestingApp }) {
+  return (
+    <article className={`portfolio-card ${app.featured ? 'portfolio-card--featured' : ''}`}>
+      <div className="portfolio-card__top">
+        <AppIcon iconPath={app.iconPath} name={app.name} />
+        <div className="portfolio-card__meta-col">
+          <div className="portfolio-card__tags">
+            <span className="portfolio-card__category text-meta">{app.category}</span>
+            <span className="portfolio-card__track-badge text-meta">Closed Testing Track</span>
+          </div>
+          <h3 className="portfolio-card__name">{app.name}</h3>
+        </div>
+      </div>
+
+      <div className="portfolio-card__body">
+        {app.description && (
+          <p className="portfolio-card__desc">{app.description}</p>
+        )}
+        <div className="portfolio-card__package">
+          <span className="portfolio-card__pkg-label text-meta">Package ID:</span>
+          <code className="portfolio-card__pkg-code">{app.packageId}</code>
+        </div>
+      </div>
+
+      <div className="portfolio-card__actions">
+        <a
+          href={app.playUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="portfolio-card__link link-underline"
+          aria-label={`View ${app.name} on Google Play Store`}
+        >
+          View on Google Play <span className="arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </article>
+  );
 }
 
 export function GooglePlayClosedTesting({ onNavigateHome }: GooglePlayClosedTestingProps) {
@@ -364,6 +428,33 @@ export function GooglePlayClosedTesting({ onNavigateHome }: GooglePlayClosedTest
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Closed Testing Portfolio Section */}
+      <section id="portfolio" className="service-portfolio section" aria-labelledby="portfolio-heading">
+        <div className="container">
+          <div className="service-portfolio__header">
+            <div className="section-label">
+              <span className="section-label__line" />
+              <span className="section-label__text">CLOSED TESTING PORTFOLIO</span>
+            </div>
+            <h2 id="portfolio-heading" className="service-portfolio__title">
+              Apps we've supported through <span className="text-editorial">closed testing.</span>
+            </h2>
+            <p className="service-portfolio__subtitle">
+              We have supported closed testing for Android applications across multiple categories. Explore the applications listed below on Google Play.
+            </p>
+            <p className="service-portfolio__notice text-meta">
+              Notice: The applications below are independent client and community projects supported through Evostackr's closed testing services, not products owned or developed by Evostackr.
+            </p>
+          </div>
+
+          <div className="service-portfolio__grid">
+            {closedTestingApps.map((app) => (
+              <PortfolioCard app={app} key={app.id} />
+            ))}
           </div>
         </div>
       </section>

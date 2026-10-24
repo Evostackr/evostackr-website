@@ -125,3 +125,117 @@ export const caseStudies: CaseStudy[] = [
     url: 'https://dir.evostackr.in/#/project/tempemailfree',
   },
 ];
+
+export interface ClosedTestingApp {
+  id: string;
+  name: string;
+  packageId: string;
+  playUrl: string;
+  category: string;
+  iconPath: string;
+  description?: string;
+  featured?: boolean;
+}
+
+export const closedTestingApps: ClosedTestingApp[] = [
+  {
+    id: 'jalwa-live',
+    name: 'Jalwa Live',
+    packageId: 'com.jalwalive.app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.jalwalive.app',
+    category: 'Entertainment',
+    iconPath: '/portfolio-icons/com_jalwalive_app.webp',
+    description: 'Live interactive broadcasting and social entertainment streaming platform on Android.',
+    featured: true,
+  },
+  {
+    id: 'quezzy',
+    name: 'Quezzy',
+    packageId: 'com.quezzy.quiz_app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.quezzy.quiz_app',
+    category: 'Quiz & Education',
+    iconPath: '/portfolio-icons/com_quezzy_quiz_app.webp',
+    description: 'Multi-category trivia challenge and interactive knowledge assessment application.',
+  },
+  {
+    id: 'notely',
+    name: 'Notely',
+    packageId: 'com.notely.notes_app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.notely.notes_app',
+    category: 'Productivity',
+    iconPath: '/portfolio-icons/com_notely_notes_app.webp',
+    description: 'Minimalist note-taking, checklists, and daily personal organizer utility.',
+  },
+  {
+    id: 'online-ludo',
+    name: 'Online Ludo',
+    packageId: 'com.online.ludo_game',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.online.ludo_game',
+    category: 'Games',
+    iconPath: '/portfolio-icons/com_online_ludo_game.webp',
+    description: 'Real-time multiplayer digital board game with room lobbies and live dice matches.',
+  },
+  {
+    id: 'sarkari-result',
+    name: 'Sarkari Result',
+    packageId: 'com.sarkariresult.sarkariresult_app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.sarkariresult.sarkariresult_app',
+    category: 'Information',
+    iconPath: '/portfolio-icons/com_sarkariresult_sarkariresult_app.webp',
+    description: 'Public job notifications, examination results, and government recruitment updates.',
+  },
+  {
+    id: 'cricmatch',
+    name: 'CricMatch',
+    packageId: 'com.cricmatch.app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.cricmatch.app',
+    category: 'Sports',
+    iconPath: '/portfolio-icons/com_cricmatch_app.webp',
+    description: 'Real-time cricket score updates, match schedules, and ball-by-ball commentary.',
+  },
+  {
+    id: 'tutorconnect',
+    name: 'TutorConnect',
+    packageId: 'com.TutorConnect',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.TutorConnect',
+    category: 'Education',
+    iconPath: '/portfolio-icons/com_TutorConnect.webp',
+    description: 'Tutor-student discovery platform connecting learners with specialized subject mentors.',
+  },
+  {
+    id: 'pdf-me',
+    name: 'PDF Me',
+    packageId: 'com.pdfme.pdfeditor',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.pdfme.pdfeditor',
+    category: 'Productivity',
+    iconPath: '/portfolio-icons/com_pdfme_pdfeditor.webp',
+    description: 'Mobile document scanner, PDF editor, conversion, and digital signature tool.',
+  },
+  {
+    id: 'online-dating',
+    name: 'Online Dating',
+    packageId: 'com.online.datingapp',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.online.datingapp',
+    category: 'Dating',
+    iconPath: '/portfolio-icons/com_online_datingapp.webp',
+    description: 'Location-based social discovery, verified profiles, and private messaging.',
+  },
+  {
+    id: 'myastro-ai',
+    name: 'MyAstro AI',
+    packageId: 'com.myastro.ai',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.myastro.ai',
+    category: 'Astrology',
+    iconPath: '/portfolio-icons/com_myastro_ai.webp',
+    description: 'AI-assisted astrological readings, birth chart calculations, and daily horoscopes.',
+  },
+  {
+    id: 'home-workout',
+    name: 'Home Workout',
+    packageId: 'com.homeworkout.fitness_app',
+    playUrl: 'https://play.google.com/store/apps/details?id=com.homeworkout.fitness_app',
+    category: 'Fitness',
+    iconPath: '/portfolio-icons/com_homeworkout_fitness_app.webp',
+    description: 'Daily exercise routines, no-equipment fitness challenges, and calorie trackers.',
+  },
+];
