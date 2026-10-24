@@ -179,7 +179,13 @@ export function Products() {
                 <p className="product-card__description">{featured.description}</p>
                 <div className="product-card__actions">
                   {featured.url ? (
-                    <a href={featured.url} className="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+                    <a
+                      href={featured.url}
+                      className="btn btn--secondary"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label={`Visit ${featured.name} project specifications`}
+                    >
                       Visit product <span className="arrow" aria-hidden="true">→</span>
                     </a>
                   ) : (
@@ -208,7 +214,13 @@ export function Products() {
                   <p className="product-card__description">{product.description}</p>
                   <div className="product-card__actions">
                     {product.url ? (
-                      <a href={product.url} className="btn btn--secondary" target="_blank" rel="noopener noreferrer">
+                      <a
+                        href={product.url}
+                        className="btn btn--secondary"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label={`Visit ${product.name} project specifications`}
+                      >
                         Visit product <span className="arrow" aria-hidden="true">→</span>
                       </a>
                     ) : (

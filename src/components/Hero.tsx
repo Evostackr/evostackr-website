@@ -21,7 +21,7 @@ export function Hero() {
           </p>
 
           <p className="hero__description">
-            We build digital products and custom software for real-world problems.
+            Evostackr builds independent digital products and custom software for real-world problems.
           </p>
 
           <div className="hero__actions">

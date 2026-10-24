@@ -85,7 +85,13 @@ export function Work() {
                 </div>
 
                 {study.url && (
-                  <a href={study.url} className="btn btn--secondary case-study__link" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href={study.url}
+                    className="btn btn--secondary case-study__link"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={`View ${study.name} engineering case study`}
+                  >
                     View project <span className="arrow" aria-hidden="true">→</span>
                   </a>
                 )}

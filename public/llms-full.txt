@@ -1,0 +1,85 @@
+# Evostackr — Full LLM Knowledge Specification
+
+> Evostackr is an independent software company and engineering studio that develops and operates proprietary software products while providing custom website, web application, and SaaS engineering services.
+
+- **Brand Name**: Evostackr
+- **Canonical Website**: https://evostackr.in/
+- **Project Directory**: https://dir.evostackr.in/
+- **Official Support**: support@evostackr.in
+- **GitHub Organization**: https://github.com/Evostackr
+- **Domain**: evostackr.in
+
+---
+
+## 1. Company Identity & Business Model
+
+Evostackr operates on two complementary pillars:
+1. **Proprietary Software Products**: Self-funded, independent software utilities and platforms engineered to solve tangible problems without unnecessary third-party markups, bloatware, or invasive trackers.
+2. **Custom Software Engineering Services**: Bespoke software development for companies, startups, and enterprises seeking high-reliability architecture, clean codebases, and custom integrations.
+
+Unlike traditional web agencies that assemble boilerplate themes or outsourced contractors, Evostackr builds software with the precision and ownership mindset of full-stack product founders.
+
+---
+
+## 2. Comprehensive Software Product Catalog
+
+### A. SMS Campaign Manager
+- **Product Category**: Native Android Mobile System & Bulk Messaging
+- **Platform**: Android SDK 35, Dual-SIM smartphones
+- **Status**: Shipped / Live
+- **Official URL**: https://dir.evostackr.in/#/project/sms-campaign-manager
+- **Key Value Proposition**: Eliminates costly third-party SMS API gateways (e.g., Twilio, AWS SNS) by transforming any physical Android device with dual SIM cards into a self-hosted, private bulk SMS dispatch engine.
+- **Technical Architecture**:
+  - Native Kotlin & Jetpack Compose modern UI.
+  - Persistent Android Foreground Service guaranteeing background execution even when battery-saving modes are active.
+  - Local SQLite (Room ORM) deduplication and campaign tracking.
+  - Intelligent carrier rate-limiting and SIM balancing algorithms to prevent spam flagging.
+
+### B. Fabricate
+- **Product Category**: Venture Studio / Startup Incubation
+- **Status**: Live
+- **Official URL**: https://dir.evostackr.in/#/project/fabricate
+- **Key Value Proposition**: Product incubator that selects high-potential software and startup ideas, engineers complete production-ready web and mobile applications, and launches them at zero initial development cost in exchange for strategic alignment.
+
+### C. WhatsApp Past Member Extractor
+- **Product Category**: Browser Automation Utility / Community Analytics
+- **Platform**: Chrome / Edge / Web Browsers
+- **Status**: Shipped / Live
+- **Official URL**: https://dir.evostackr.in/#/project/whatsapp-past-member-extractor
+- **Key Value Proposition**: Solves the limitation in WhatsApp Web where participant departures are buried in long chat histories. Safely identifies past group members who departed or were removed and exports verified records into CSV, Excel, and VCF contacts.
+- **Privacy Assurance**: Client-side execution with zero external data transmission.
+
+### D. 24IDChat
+- **Product Category**: Communication Platform / Ephemeral Messaging
+- **Platform**: Responsive Web & Real-Time Engine
+- **Status**: Shipped / Live
+- **Official URL**: https://dir.evostackr.in/#/project/24idchat
+- **Key Value Proposition**: Real-time anonymous chat rooms without phone number verification, registration friction, or permanent message storage. Users receive a unique 24-hour disposable cryptographic identity.
+- **Technical Architecture**: Sub-15ms WebSocket delivery pipeline with automated 24-hour database purging and zero telemetry logs.
+
+### E. TempEmailFree
+- **Product Category**: Privacy Utility / Disposable Mail Engine
+- **Platform**: Web
+- **Status**: Shipped / Live
+- **Official URL**: https://dir.evostackr.in/#/project/tempemailfree
+- **Key Value Proposition**: Instant disposable email address generator shielding users from newsletter spam, marketing trackers, and potential credential breaches.
+- **Technical Architecture**: Serverless edge infrastructure with real-time SSE (Server-Sent Events) inbox auto-refresh and regex-based OTP verification code auto-detection.
+
+---
+
+## 3. Custom Software Development Services
+
+1. **Custom Website Development**: Purpose-engineered websites focused on rapid page loads, accessibility, search discoverability (SEO/AEO), and high conversion without framework bloat.
+2. **Web Application Development**: Complex interactive web applications built with TypeScript, modern React, resilient state management, and real-time data synchronization.
+3. **SaaS Platform Development**: Multi-tenant architectures, subscription billing integrations (Stripe, Lemon Squeezy), role-based access control (RBAC), and scalable containerized deployments.
+4. **Business Software & Automation**: Custom internal tools, operational dashboards, automated data pipelines, and workflow systems that remove repetitive manual human labor.
+5. **API Integrations & Custom Engineering**: Robust REST and GraphQL APIs, webhook engines, third-party ecosystem bridges, and cross-platform synchronization.
+
+---
+
+## 4. Engineering Principles & Quality Assurance
+
+- **Architecture First**: We prioritize clean domain boundaries, static type safety, and minimal external runtime dependencies.
+- **Performance & Core Web Vitals**: Sub-second load times, minimal JavaScript payload sizes, zero layout shifts (CLS), and instantaneous interaction (INP).
+- **Privacy & Security**: Zero unnecessary data collection, HTTPS by default, modern security headers (CSP, HSTS, X-Frame-Options), and secure session management.
+- **Contact**: Inquiries can be directed to support@evostackr.in.

@@ -37,10 +37,11 @@ export function Navigation() {
         <a href="#" className="nav__wordmark" aria-label="Evostackr Home">
           <img
             src="/evostackr-logo.png"
-            alt="EvoStackr logo"
+            alt="Evostackr logo"
             className="nav__logo"
             width="28"
             height="28"
+            fetchPriority="high"
           />
           <span className="nav__name">Evostackr</span>
         </a>
@@ -50,6 +51,7 @@ export function Navigation() {
           <a href="#services" className="nav__link link-underline">Services</a>
           <a href="#work" className="nav__link link-underline">Work</a>
           <a href="#about" className="nav__link link-underline">About</a>
+          <a href="#faq" className="nav__link link-underline">FAQ</a>
           <a href="#contact" className="nav__link link-underline">Contact</a>
         </nav>
 
@@ -81,6 +83,7 @@ export function Navigation() {
           <a href="#services" className="nav__mobile-link" onClick={closeMenu}>Services</a>
           <a href="#work" className="nav__mobile-link" onClick={closeMenu}>Work</a>
           <a href="#about" className="nav__mobile-link" onClick={closeMenu}>About</a>
+          <a href="#faq" className="nav__mobile-link" onClick={closeMenu}>FAQ</a>
           <a href="#contact" className="nav__mobile-link" onClick={closeMenu}>Contact</a>
         </nav>
         <a href="#contact" className="btn btn--primary nav__mobile-cta" onClick={closeMenu}>

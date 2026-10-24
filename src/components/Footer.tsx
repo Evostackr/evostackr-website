@@ -1,8 +1,9 @@
 import './Footer.css';
 import { products } from '../data';
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function Footer() {
-  const currentYear = new Date().getFullYear();
 
   return (
     <footer className="footer" role="contentinfo">
@@ -12,10 +13,11 @@ export function Footer() {
             <a href="#" className="footer__wordmark" aria-label="Evostackr Home">
               <img
                 src="/evostackr-logo.png"
-                alt="EvoStackr logo"
+                alt="Evostackr logo"
                 className="footer__logo"
                 width="28"
                 height="28"
+                loading="lazy"
               />
               <span className="footer__name">Evostackr</span>
             </a>
@@ -58,6 +60,8 @@ export function Footer() {
               <ul className="footer__nav-list">
                 <li><a href="#about" className="footer__nav-link link-underline">About</a></li>
                 <li><a href="#work" className="footer__nav-link link-underline">Work</a></li>
+                <li><a href="#faq" className="footer__nav-link link-underline">FAQ</a></li>
+                <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
                 <li><a href="#contact" className="footer__nav-link link-underline">Contact</a></li>
               </ul>
             </div>
@@ -66,11 +70,10 @@ export function Footer() {
 
         <div className="footer__bottom">
           <p className="footer__copyright">
-            © {currentYear} Evostackr. All rights reserved.
+            © {CURRENT_YEAR} Evostackr. All rights reserved.
           </p>
           <div className="footer__legal">
-            <a href="#" className="footer__legal-link link-underline">Privacy Policy</a>
-            <a href="#" className="footer__legal-link link-underline">Terms of Service</a>
+            <a href="#contact" className="footer__legal-link link-underline">Privacy &amp; Terms</a>
           </div>
         </div>
       </div>

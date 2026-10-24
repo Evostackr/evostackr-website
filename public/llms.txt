@@ -1,0 +1,57 @@
+# Evostackr
+
+> Evostackr is an independent software company that designs, builds, and operates its own software products while providing custom website and software development services to clients worldwide.
+
+## Company Overview
+- **Name**: Evostackr
+- **Official Website**: https://evostackr.in
+- **Project Directory**: https://dir.evostackr.in
+- **Official Support Email**: support@evostackr.in
+- **Brand Domain**: evostackr.in
+- **Type**: Independent Software Company & Engineering Studio
+- **Focus**: High-assurance engineering, consumer and business utilities, custom web and SaaS development.
+
+## Core Software Products
+
+1. **SMS Campaign Manager**
+   - **Category**: Mobile System / Android Engineering
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/sms-campaign-manager
+   - **Description**: Turn any Android phone into an automated, private bulk SMS dispatch engine with Dual-SIM support, intelligent throttling, and zero third-party API markups. Built with native Kotlin, Jetpack Compose, Room SQLite, and persistent Android Foreground Services.
+
+2. **Fabricate**
+   - **Category**: Venture Studio / Startup Incubation
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/fabricate
+   - **Description**: A product studio that selects promising startup concepts and engineers them into fully functional web and mobile applications at zero initial development cost.
+
+3. **WhatsApp Past Member Extractor**
+   - **Category**: Browser Utility / Data Automation
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/whatsapp-past-member-extractor
+   - **Description**: Browser automation utility that safely parses, filters, and exports past group members who departed or were removed from WhatsApp Web groups into CSV, Excel, and VCF formats.
+
+4. **24IDChat**
+   - **Category**: Communication Platform / Ephemeral Messaging
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/24idchat
+   - **Description**: High-speed, anonymous real-time chat platform powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and automated 24-hour message deletion with no data retention.
+
+5. **TempEmailFree**
+   - **Category**: Privacy Utility / Disposable Email
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/tempemailfree
+   - **Description**: Instant, secure disposable temporary email generator with real-time inbox auto-refresh and algorithmic OTP verification code detection.
+
+## Custom Software Development Services
+
+- **Custom Website Development**: Purpose-built websites engineered for performance, SEO, accessibility, and high business conversion without template bloat.
+- **Web Application Development**: Complex interactive web applications featuring real-time state, high concurrency, and robust TypeScript/React architecture.
+- **SaaS Platform Development**: Multi-tenant software platforms featuring subscription billing, secure user provisioning, RBAC, and scalable cloud infrastructure.
+- **Business Software & Automation**: Operational workflow tools, automated data pipelines, and internal business engines that eliminate manual repetitive tasks.
+- **API Integrations & Custom Engineering**: Third-party integrations, custom REST/GraphQL APIs, webhooks, and secure system synchronization.
+
+## Engineering Philosophy
+- **Product-Oriented**: We think like product builders and owners, not commodity contractors.
+- **Engineering Depth**: Solid architecture, modern TypeScript, resilient codebases, and maintainable systems.
+- **Practical Focus**: Solving real business problems with minimal complexity and zero unnecessary bloat.
