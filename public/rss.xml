@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Evostackr — Products &amp; Software Engineering</title>
+    <link>https://evostackr.in/</link>
+    <description>Official product releases, engineering updates, and software developments from Evostackr.</description>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <atom:link href="https://evostackr.in/rss.xml" rel="self" type="application/rss+xml" />
+    <managingEditor>support@evostackr.in (Evostackr)</managingEditor>
+    <webMaster>support@evostackr.in (Evostackr)</webMaster>
+    <docs>https://www.rssboard.org/rss-specification</docs>
+
+    <item>
+      <title>SMS Campaign Manager — Dual-SIM Bulk SMS Dispatch Engine for Android</title>
+      <link>https://dir.evostackr.in/#/project/sms-campaign-manager</link>
+      <guid isPermaLink="true">https://dir.evostackr.in/#/project/sms-campaign-manager</guid>
+      <pubDate>Sat, 24 Oct 2026 09:00:00 GMT</pubDate>
+      <description><![CDATA[Turn any Android phone into an automated, private bulk SMS dispatch engine with Dual-SIM support, intelligent rate-limiting, and zero third-party gateway markups. Built using native Kotlin, Jetpack Compose, and persistent Foreground Services.]]></description>
+      <category>Mobile System</category>
+    </item>
+
+    <item>
+      <title>Fabricate — Product Incubation Studio for Startups</title>
+      <link>https://dir.evostackr.in/#/project/fabricate</link>
+      <guid isPermaLink="true">https://dir.evostackr.in/#/project/fabricate</guid>
+      <pubDate>Sat, 24 Oct 2026 08:30:00 GMT</pubDate>
+      <description><![CDATA[A venture studio that selects promising startup ideas and engineers them into functional web and mobile applications at zero initial development cost.]]></description>
+      <category>Venture Studio</category>
+    </item>
+
+    <item>
+      <title>WhatsApp Past Member Extractor — Browser Group Analytics &amp; Export Tool</title>
+      <link>https://dir.evostackr.in/#/project/whatsapp-past-member-extractor</link>
+      <guid isPermaLink="true">https://dir.evostackr.in/#/project/whatsapp-past-member-extractor</guid>
+      <pubDate>Sat, 24 Oct 2026 08:00:00 GMT</pubDate>
+      <description><![CDATA[Client-side browser utility that safely extracts and exports past participants who left or were removed from WhatsApp Web groups into CSV, Excel, and VCF formats.]]></description>
+      <category>Browser Utility</category>
+    </item>
+
+    <item>
+      <title>24IDChat — Ephemeral Anonymous Messaging Platform</title>
+      <link>https://dir.evostackr.in/#/project/24idchat</link>
+      <guid isPermaLink="true">https://dir.evostackr.in/#/project/24idchat</guid>
+      <pubDate>Sat, 24 Oct 2026 07:30:00 GMT</pubDate>
+      <description><![CDATA[High-speed real-time anonymous chat rooms powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and self-purging message streams with zero data logging.]]></description>
+      <category>Communication Platform</category>
+    </item>
+
+    <item>
+      <title>TempEmailFree — Instant Disposable Email Generator with OTP Detection</title>
+      <link>https://dir.evostackr.in/#/project/tempemailfree</link>
+      <guid isPermaLink="true">https://dir.evostackr.in/#/project/tempemailfree</guid>
+      <pubDate>Sat, 24 Oct 2026 07:00:00 GMT</pubDate>
+      <description><![CDATA[Instant, secure, and disposable temporary email service featuring real-time inbox auto-refresh and algorithmic OTP verification code detection.]]></description>
+      <category>Privacy Utility</category>
+    </item>
+
+    <item>
+      <title>Custom Software Engineering &amp; SaaS Platform Architecture</title>
+      <link>https://evostackr.in/#services</link>
+      <guid isPermaLink="true">https://evostackr.in/#services</guid>
+      <pubDate>Sat, 24 Oct 2026 06:00:00 GMT</pubDate>
+      <description><![CDATA[Evostackr provides custom website engineering, complex web application development, multi-tenant SaaS platforms, business workflow automation, and custom API integrations for clients worldwide.]]></description>
+      <category>Engineering Services</category>
+    </item>
+  </channel>
+</rss>

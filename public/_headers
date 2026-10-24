@@ -26,3 +26,7 @@
 
 /llms-full.txt
   Cache-Control: public, max-age=86400
+
+/rss.xml
+  Cache-Control: public, max-age=86400
+  Content-Type: application/rss+xml; charset=UTF-8

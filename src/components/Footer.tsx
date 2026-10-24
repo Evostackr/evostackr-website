@@ -62,6 +62,7 @@ export function Footer() {
                 <li><a href="#work" className="footer__nav-link link-underline">Work</a></li>
                 <li><a href="#faq" className="footer__nav-link link-underline">FAQ</a></li>
                 <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
+                <li><a href="/rss.xml" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>
                 <li><a href="#contact" className="footer__nav-link link-underline">Contact</a></li>
               </ul>
             </div>
