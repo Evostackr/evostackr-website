@@ -1,0 +1,88 @@
+.contact {
+  background-color: var(--color-dark);
+  color: var(--color-dark-text);
+}
+
+.contact__layout {
+  display: grid;
+  grid-template-columns: 7fr 5fr;
+  gap: var(--space-4xl);
+  align-items: center;
+}
+
+.contact__title {
+  font-size: var(--fs-h1);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  margin-bottom: var(--space-lg);
+  color: var(--color-dark-text);
+}
+
+.contact__description {
+  font-size: var(--fs-body);
+  color: var(--color-dark-text-secondary);
+  line-height: var(--lh-relaxed);
+  max-width: 480px;
+  margin-bottom: var(--space-2xl);
+}
+
+.contact__channels {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--space-xl);
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact__channel-label {
+  color: var(--color-dark-text-secondary);
+  display: block;
+  margin-bottom: var(--space-sm);
+}
+
+.contact__channel-text {
+  font-size: var(--fs-small);
+  color: var(--color-dark-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.contact__actions {
+  margin-bottom: var(--space-lg);
+}
+
+.contact__note {
+  color: var(--color-dark-text-secondary);
+  opacity: 0.6;
+  font-style: italic;
+}
+
+.contact__visual {
+  display: flex;
+  justify-content: center;
+}
+
+.contact__graphic {
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 1024px) {
+  .contact__layout {
+    grid-template-columns: 1fr;
+    gap: var(--space-3xl);
+  }
+
+  .contact__visual {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__channels {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+}

@@ -1,0 +1,84 @@
+/* ─── Hero Software Illustration Styles ─── */
+
+.hero-illustration {
+  width: 100%;
+  max-width: 510px;
+  height: auto;
+  display: block;
+  overflow: visible;
+  user-select: none;
+}
+
+/* ─── Subtle Keyframe Animations (Strictly 2-3 selective elements) ─── */
+
+/* 1. Floating Secondary Interface Panel */
+.hero-illustration__floating-panel {
+  animation: heroFloatPanel 6.5s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes heroFloatPanel {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+/* 2. Micro Connection Nodes Breathing Pulse */
+.hero-illustration__pulse-node {
+  animation: heroNodePulse 3.6s ease-in-out infinite;
+  transform-box: fill-box;
+  transform-origin: center;
+}
+
+.hero-illustration__pulse-node--delay {
+  animation-delay: 1.8s;
+}
+
+@keyframes heroNodePulse {
+  0%, 100% {
+    opacity: 0.4;
+    transform: scale(0.9);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.18);
+  }
+}
+
+/* 3. Settings Gear Very Slow Rotation */
+.hero-illustration__gear {
+  animation: heroGearRotate 40s linear infinite;
+  transform-origin: 90px 205px;
+  will-change: transform;
+}
+
+@keyframes heroGearRotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* ─── Interactive Details & Surface Restraint ─── */
+.hero-illustration__surface {
+  transition: opacity var(--transition-base);
+}
+
+.hero-illustration:hover .hero-illustration__surface {
+  opacity: 0.98;
+}
+
+/* ─── Accessibility: Prefers Reduced Motion ─── */
+@media (prefers-reduced-motion: reduce) {
+  .hero-illustration__floating-panel,
+  .hero-illustration__pulse-node,
+  .hero-illustration__pulse-node--delay,
+  .hero-illustration__gear {
+    animation: none !important;
+  }
+}
