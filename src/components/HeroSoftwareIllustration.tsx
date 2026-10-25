@@ -24,13 +24,13 @@ function SettingsGear() {
         <path
           d={gearPath}
           fill="#DDE1DF"
-          stroke="#25282A"
+          stroke="#111827"
           strokeWidth="1.25"
           strokeLinejoin="round"
         />
         {/* Gear center hub cutout */}
-        <ellipse cx="90" cy="205" rx="11" ry="9.5" fill="#F5F6F5" stroke="#25282A" strokeWidth="1.25" />
-        <ellipse cx="90" cy="205" rx="4" ry="3.5" fill="#25282A" />
+        <ellipse cx="90" cy="205" rx="11" ry="9.5" fill="#F5F6F5" stroke="#111827" strokeWidth="1.25" />
+        <ellipse cx="90" cy="205" rx="4" ry="3.5" fill="#111827" />
       </g>
     </g>
   );
@@ -46,14 +46,14 @@ function DashboardPanel() {
       {/* ─── Monitor Stand & Ground Base ─── */}
       <g className="hero-illustration__stand">
         {/* Isometric base on floor */}
-        <polygon points="210,395 280,380 320,395 250,410" fill="#25282A" />
-        <polygon points="210,395 250,410 250,415 210,400" fill="#1C1E20" />
-        <polygon points="250,410 320,395 320,400 250,415" fill="#3A3E40" />
+        <polygon points="210,395 280,380 320,395 250,410" fill="#111827" />
+        <polygon points="210,395 250,410 250,415 210,400" fill="#0f172a" />
+        <polygon points="250,410 320,395 320,400 250,415" fill="#1E3A5F" />
 
         {/* Curved metal neck supporting monitor */}
         <path
           d="M 265,395 C 265,360 290,340 310,315"
-          stroke="#25282A"
+          stroke="#111827"
           strokeWidth="12"
           strokeLinecap="round"
           fill="none"
@@ -72,21 +72,21 @@ function DashboardPanel() {
       <polygon
         points="180,50 192,45 462,150 450,155"
         fill="#DDE1DF"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1"
       />
       {/* Right 3D extrusion */}
       <polygon
         points="450,155 462,150 462,345 450,350"
-        fill="#25282A"
-        stroke="#25282A"
+        fill="#111827"
+        stroke="#111827"
         strokeWidth="1"
       />
       {/* Front bezel face */}
       <polygon
         points="180,50 450,155 450,350 180,245"
-        fill="#25282A"
-        stroke="#25282A"
+        fill="#111827"
+        stroke="#111827"
         strokeWidth="1.5"
       />
 
@@ -103,7 +103,7 @@ function DashboardPanel() {
       <line x1="188" y1="87" x2="442" y2="186" stroke="#D9DCDA" strokeWidth="1" />
 
       {/* Window traffic controls */}
-      <circle cx="204" cy="74" r="3" fill="#25282A" />
+      <circle cx="204" cy="74" r="3" fill="#111827" />
       <circle cx="214" cy="78" r="3" fill="#6F7475" />
       <circle cx="224" cy="82" r="3" fill="#D9DCDA" />
 
@@ -111,7 +111,7 @@ function DashboardPanel() {
       <polygon points="245,86 350,127 350,135 245,94" fill="#E8EBE9" />
 
       {/* Right-side user profile badge icon */}
-      <circle cx="425" cy="168" r="4" fill="#DDE1DF" stroke="#25282A" strokeWidth="0.75" />
+      <circle cx="425" cy="168" r="4" fill="#DDE1DF" stroke="#111827" strokeWidth="0.75" />
 
       {/* ─── Pane 1: Upper Left — Code Editor / System Architecture ─── */}
       <polygon
@@ -125,12 +125,12 @@ function DashboardPanel() {
       <line x1="207" y1="109" x2="225" y2="116" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
 
       {/* Indented syntax code lines */}
-      <line x1="212" y1="120" x2="265" y2="141" stroke="#25282A" strokeWidth="3" strokeLinecap="round" />
+      <line x1="212" y1="120" x2="265" y2="141" stroke="#111827" strokeWidth="3" strokeLinecap="round" />
       <line x1="222" y1="130" x2="285" y2="155" stroke="#6F7475" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="222" y1="140" x2="255" y2="153" stroke="#DDE1DF" strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="222" y1="150" x2="305" y2="182" stroke="#25282A" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="222" y1="150" x2="305" y2="182" stroke="#111827" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="232" y1="160" x2="275" y2="177" stroke="#6F7475" strokeWidth="2.5" strokeLinecap="round" />
-      <line x1="212" y1="170" x2="245" y2="183" stroke="#25282A" strokeWidth="3" strokeLinecap="round" />
+      <line x1="212" y1="170" x2="245" y2="183" stroke="#111827" strokeWidth="3" strokeLinecap="round" />
 
       {/* ─── Pane 2: Lower Left — Triple Metric Bar Charts ─── */}
       <polygon
@@ -145,17 +145,17 @@ function DashboardPanel() {
       <line x1="208" y1="190" x2="312" y2="231" stroke="#E8EBE9" strokeWidth="0.75" strokeDasharray="2 2" />
 
       {/* Group A bars */}
-      <polygon points="220,210 226,212 226,236 220,234" fill="#25282A" />
+      <polygon points="220,210 226,212 226,236 220,234" fill="#111827" />
       <polygon points="229,202 235,204 235,240 229,238" fill="#6F7475" />
       <polygon points="238,223 244,225 244,243 238,241" fill="#DDE1DF" />
 
       {/* Group B bars */}
-      <polygon points="258,219 264,221 264,251 258,249" fill="#25282A" />
+      <polygon points="258,219 264,221 264,251 258,249" fill="#111827" />
       <polygon points="267,211 273,213 273,255 267,253" fill="#6F7475" />
       <polygon points="276,234 282,236 282,258 276,256" fill="#DDE1DF" />
 
       {/* Group C bars */}
-      <polygon points="294,225 300,227 300,265 294,263" fill="#25282A" />
+      <polygon points="294,225 300,227 300,265 294,263" fill="#111827" />
       <polygon points="303,241 309,243 309,269 303,267" fill="#6F7475" />
 
       {/* ─── Pane 3: Upper Right — Polar / Radar Architecture Widget ─── */}
@@ -177,18 +177,18 @@ function DashboardPanel() {
       {/* Faceted Radar Polygon (Technical System Metric) */}
       <polygon
         points="380,188 406,197 398,213 372,216 358,204 366,193"
-        fill="#25282A"
+        fill="#111827"
         fillOpacity="0.85"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.25"
       />
       {/* Radar node vertices */}
-      <circle cx="380" cy="188" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
-      <circle cx="406" cy="197" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
-      <circle cx="398" cy="213" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
-      <circle cx="372" cy="216" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
-      <circle cx="358" cy="204" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
-      <circle cx="366" cy="193" r="2.5" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
+      <circle cx="380" cy="188" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
+      <circle cx="406" cy="197" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
+      <circle cx="398" cy="213" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
+      <circle cx="372" cy="216" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
+      <circle cx="358" cy="204" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
+      <circle cx="366" cy="193" r="2.5" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
 
       {/* ─── Pane 4: Lower Right — System Status & Performance ─── */}
       <polygon
@@ -200,7 +200,7 @@ function DashboardPanel() {
       {/* Progress Bar 1 */}
       <line x1="342" y1="245" x2="375" y2="258" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
       <line x1="342" y1="256" x2="415" y2="284" stroke="#E8EBE9" strokeWidth="4" strokeLinecap="round" />
-      <line x1="342" y1="256" x2="395" y2="276" stroke="#25282A" strokeWidth="4" strokeLinecap="round" />
+      <line x1="342" y1="256" x2="395" y2="276" stroke="#111827" strokeWidth="4" strokeLinecap="round" />
 
       {/* Progress Bar 2 */}
       <line x1="342" y1="272" x2="385" y2="289" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
@@ -208,8 +208,8 @@ function DashboardPanel() {
       <line x1="342" y1="283" x2="402" y2="306" stroke="#6F7475" strokeWidth="4" strokeLinecap="round" />
 
       {/* Status indicator row */}
-      <circle cx="347" cy="299" r="4" fill="#25282A" />
-      <line x1="358" y1="303" x2="395" y2="317" stroke="#25282A" strokeWidth="2" strokeLinecap="round" />
+      <circle cx="347" cy="299" r="4" fill="#111827" />
+      <line x1="358" y1="303" x2="395" y2="317" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
     </g>
   );
 }
@@ -224,7 +224,7 @@ function FloatingInterfaceCard() {
       {/* Soft isometric drop shadow */}
       <polygon
         points="115,310 210,346 195,358 100,322"
-        fill="#25282A"
+        fill="#111827"
         opacity="0.08"
       />
 
@@ -233,26 +233,26 @@ function FloatingInterfaceCard() {
         points="110,110 205,147 205,305 110,268"
         fill="#FFFFFF"
         fillOpacity="0.96"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.25"
       />
 
       {/* Top header tab */}
-      <polygon points="110,110 155,127 155,140 110,123" fill="#25282A" />
+      <polygon points="110,110 155,127 155,140 110,123" fill="#111827" />
       <line x1="116" y1="120" x2="145" y2="131" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" />
 
       {/* Content wireframe text lines */}
-      <line x1="122" y1="145" x2="185" y2="169" stroke="#25282A" strokeWidth="2.5" strokeLinecap="round" />
+      <line x1="122" y1="145" x2="185" y2="169" stroke="#111827" strokeWidth="2.5" strokeLinecap="round" />
       <line x1="122" y1="158" x2="165" y2="175" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
       <line x1="122" y1="171" x2="195" y2="199" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
       <line x1="122" y1="184" x2="155" y2="197" stroke="#DDE1DF" strokeWidth="2" strokeLinecap="round" />
-      <line x1="122" y1="197" x2="175" y2="218" stroke="#25282A" strokeWidth="2" strokeLinecap="round" />
+      <line x1="122" y1="197" x2="175" y2="218" stroke="#111827" strokeWidth="2" strokeLinecap="round" />
       <line x1="122" y1="210" x2="190" y2="236" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
       <line x1="122" y1="223" x2="160" y2="238" stroke="#DDE1DF" strokeWidth="2" strokeLinecap="round" />
 
       {/* Bottom status badge widget */}
       <polygon points="122,238 185,262 185,282 122,258" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
-      <circle cx="134" cy="254" r="3" fill="#25282A" />
+      <circle cx="134" cy="254" r="3" fill="#111827" />
       <line x1="144" y1="258" x2="172" y2="269" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
     </g>
   );
@@ -267,7 +267,7 @@ function MiniAnalyticsPanel() {
       {/* Drop shadow */}
       <polygon
         points="440,325 510,352 498,362 428,335"
-        fill="#25282A"
+        fill="#111827"
         opacity="0.06"
       />
 
@@ -276,31 +276,31 @@ function MiniAnalyticsPanel() {
         points="435,260 505,287 505,348 435,321"
         fill="#FFFFFF"
         fillOpacity="0.96"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.25"
       />
 
       {/* Header status dot & metric title */}
-      <circle cx="447" cy="274" r="3" fill="#25282A" />
+      <circle cx="447" cy="274" r="3" fill="#111827" />
       <line x1="455" y1="277" x2="485" y2="288" stroke="#6F7475" strokeWidth="2" strokeLinecap="round" />
 
       {/* Sparkline polyline */}
       <polyline
         points="445,302 460,296 475,300 492,286"
         fill="none"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
       />
-      <circle cx="445" cy="302" r="1.5" fill="#25282A" />
-      <circle cx="460" cy="296" r="1.5" fill="#25282A" />
-      <circle cx="475" cy="300" r="1.5" fill="#25282A" />
-      <circle cx="492" cy="286" r="2" fill="#25282A" />
+      <circle cx="445" cy="302" r="1.5" fill="#111827" />
+      <circle cx="460" cy="296" r="1.5" fill="#111827" />
+      <circle cx="475" cy="300" r="1.5" fill="#111827" />
+      <circle cx="492" cy="286" r="2" fill="#111827" />
 
       {/* Micro metric bars */}
       <polygon points="450,307 455,309 455,317 450,315" fill="#6F7475" />
-      <polygon points="463,312 468,314 468,322 463,320" fill="#25282A" />
+      <polygon points="463,312 468,314 468,322 463,320" fill="#111827" />
       <polygon points="476,317 481,319 481,327 476,325" fill="#DDE1DF" />
 
       {/* Dashed connector line */}
@@ -320,20 +320,20 @@ function SecurityDataCard() {
       <polygon
         points="275,354 335,377 335,425 275,402"
         fill="#E8EBE9"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.25"
       />
       {/* Top folder tab */}
-      <polygon points="275,348 298,357 298,363 275,354" fill="#25282A" />
+      <polygon points="275,348 298,357 298,363 275,354" fill="#111827" />
       {/* Front pocket */}
       <polygon
         points="275,370 335,393 335,430 275,407"
         fill="#FFFFFF"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.25"
       />
       {/* Security padlock emblem */}
-      <polygon points="300,396 312,401 312,412 300,407" fill="#25282A" />
+      <polygon points="300,396 312,401 312,412 300,407" fill="#111827" />
       <path
         d="M 303,397 C 303,391 309,393 309,399"
         fill="none"
@@ -342,26 +342,26 @@ function SecurityDataCard() {
       />
 
       {/* ─── Stacked Isometric Documentation Sheets ─── */}
-      <polygon points="215,444 250,430 270,438 235,452" fill="#DDE1DF" stroke="#25282A" strokeWidth="0.75" />
-      <polygon points="215,440 250,426 270,434 235,448" fill="#E8EBE9" stroke="#25282A" strokeWidth="0.75" />
-      <polygon points="215,435 250,421 270,429 235,443" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
+      <polygon points="215,444 250,430 270,438 235,452" fill="#DDE1DF" stroke="#111827" strokeWidth="0.75" />
+      <polygon points="215,440 250,426 270,434 235,448" fill="#E8EBE9" stroke="#111827" strokeWidth="0.75" />
+      <polygon points="215,435 250,421 270,429 235,443" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
       {/* Wireframe text lines on top sheet */}
-      <line x1="223" y1="435" x2="245" y2="426" stroke="#25282A" strokeWidth="1.5" />
+      <line x1="223" y1="435" x2="245" y2="426" stroke="#111827" strokeWidth="1.5" />
       <line x1="227" y1="440" x2="255" y2="429" stroke="#6F7475" strokeWidth="1.5" />
       <line x1="231" y1="445" x2="250" y2="437" stroke="#DDE1DF" strokeWidth="1.5" />
 
       {/* ─── 3D Isometric Data Cubes ─── */}
       {/* Cube 1 */}
       <g className="hero-illustration__cube-1">
-        <polygon points="180,335 192,330 204,335 192,340" fill="#E8EBE9" stroke="#25282A" strokeWidth="1" />
-        <polygon points="180,335 192,340 192,354 180,349" fill="#DDE1DF" stroke="#25282A" strokeWidth="1" />
-        <polygon points="192,340 204,335 204,349 192,354" fill="#25282A" stroke="#25282A" strokeWidth="1" />
+        <polygon points="180,335 192,330 204,335 192,340" fill="#E8EBE9" stroke="#111827" strokeWidth="1" />
+        <polygon points="180,335 192,340 192,354 180,349" fill="#DDE1DF" stroke="#111827" strokeWidth="1" />
+        <polygon points="192,340 204,335 204,349 192,354" fill="#111827" stroke="#111827" strokeWidth="1" />
       </g>
       {/* Cube 2 */}
       <g className="hero-illustration__cube-2">
-        <polygon points="198,390 208,386 218,390 208,394" fill="#E8EBE9" stroke="#25282A" strokeWidth="1" />
-        <polygon points="198,390 208,394 208,406 198,402" fill="#DDE1DF" stroke="#25282A" strokeWidth="1" />
-        <polygon points="208,394 218,390 218,402 208,406" fill="#25282A" stroke="#25282A" strokeWidth="1" />
+        <polygon points="198,390 208,386 218,390 208,394" fill="#E8EBE9" stroke="#111827" strokeWidth="1" />
+        <polygon points="198,390 208,394 208,406 198,402" fill="#DDE1DF" stroke="#111827" strokeWidth="1" />
+        <polygon points="208,394 218,390 218,402 208,406" fill="#111827" stroke="#111827" strokeWidth="1" />
       </g>
     </g>
   );
@@ -382,29 +382,29 @@ function ConnectionLines() {
       <line x1="120" y1="280" x2="420" y2="400" stroke="#E8EBE9" strokeWidth="0.75" strokeDasharray="3 3" />
 
       {/* Floating Engineer Workstation (Bottom Left) */}
-      <polygon points="110,365 155,382 145,392 100,375" fill="#FFFFFF" stroke="#25282A" strokeWidth="1" />
+      <polygon points="110,365 155,382 145,392 100,375" fill="#FFFFFF" stroke="#111827" strokeWidth="1" />
       {/* Stylized geometric engineer figure & laptop */}
       <circle cx="130" cy="353" r="5" fill="#6F7475" />
-      <path d="M 125,360 L 135,364 L 132,380 L 122,376 Z" fill="#25282A" />
-      <polygon points="138,362 148,366 147,372 137,368" fill="#25282A" />
+      <path d="M 125,360 L 135,364 L 132,380 L 122,376 Z" fill="#111827" />
+      <polygon points="138,362 148,366 147,372 137,368" fill="#111827" />
       <polygon points="144,354 148,366 142,367 138,355" fill="#6F7475" />
 
       {/* Flexible routing cable connecting station to dashboard */}
       <path
         d="M 148,370 C 175,395 210,385 245,365 L 270,350"
         fill="none"
-        stroke="#25282A"
+        stroke="#111827"
         strokeWidth="1.5"
         strokeLinecap="round"
       />
 
       {/* Animated Breathing Pulse Nodes */}
       <g className="hero-illustration__pulse-node">
-        <circle cx="185" cy="383" r="4.5" fill="#25282A" />
+        <circle cx="185" cy="383" r="4.5" fill="#111827" />
         <circle cx="185" cy="383" r="2" fill="#FFFFFF" />
       </g>
       <g className="hero-illustration__pulse-node hero-illustration__pulse-node--delay">
-        <circle cx="245" cy="365" r="4.5" fill="#25282A" />
+        <circle cx="245" cy="365" r="4.5" fill="#111827" />
         <circle cx="245" cy="365" r="2" fill="#FFFFFF" />
       </g>
 
@@ -421,7 +421,7 @@ function ConnectionLines() {
 
 /**
  * HeroSoftwareIllustration: Coded isometric software-engineering illustration
- * matching the Evostackr cool-white and graphite design system.
+ * matching the Evostackr cool-white and midnight navy design system.
  */
 export function HeroSoftwareIllustration() {
   return (

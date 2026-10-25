@@ -29,7 +29,7 @@ export function Work() {
                   <rect width="560" height="380" fill="#E8EBE9" rx="2" />
                   {/* Abstract technical composition */}
                   <rect x="40" y="40" width="200" height="120" stroke="#D9DCDA" strokeWidth="1" fill="none" />
-                  <rect x="60" y="60" width="160" height="80" stroke="#25282A" strokeWidth="1" fill="#F5F6F5" />
+                  <rect x="60" y="60" width="160" height="80" stroke="#111827" strokeWidth="1" fill="#F5F6F5" />
                   <rect x="76" y="76" width="100" height="8" rx="1" fill="#DDE1DF" />
                   <rect x="76" y="92" width="70" height="8" rx="1" fill="#DDE1DF" />
                   <rect x="76" y="108" width="120" height="8" rx="1" fill="#DDE1DF" />
@@ -47,10 +47,10 @@ export function Work() {
                   <line x1="40" y1="200" x2="520" y2="200" stroke="#D9DCDA" strokeWidth="0.5" />
                   <rect x="40" y="220" width="140" height="120" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
                   <rect x="200" y="220" width="140" height="120" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
-                  <rect x="360" y="220" width="160" height="120" rx="2" fill="#25282A" />
+                  <rect x="360" y="220" width="160" height="120" rx="2" fill="#111827" />
                   {/* Connection lines */}
-                  <line x1="110" y1="200" x2="110" y2="220" stroke="#25282A" strokeWidth="1" />
-                  <line x1="270" y1="200" x2="270" y2="220" stroke="#25282A" strokeWidth="1" />
+                  <line x1="110" y1="200" x2="110" y2="220" stroke="#111827" strokeWidth="1" />
+                  <line x1="270" y1="200" x2="270" y2="220" stroke="#111827" strokeWidth="1" />
                   <line x1="440" y1="200" x2="440" y2="220" stroke="#BFC4C2" strokeWidth="1" />
                   {/* Labels */}
                   <text x="56" y="250" fill="#6F7475" fontSize="9" fontFamily="Inter, sans-serif">Module {index + 1}A</text>

@@ -704,7 +704,7 @@
 }
 
 .portfolio-card__link:hover {
-  color: #000000;
+  color: var(--color-brand-accent, #1E3A5F);
 }
 
 /* Responsive Breakpoints */

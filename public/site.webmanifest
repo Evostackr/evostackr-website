@@ -4,8 +4,8 @@
   "description": "Evostackr builds independent software products and engineers custom digital solutions.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#08090a",
-  "theme_color": "#08090a",
+  "background_color": "#111827",
+  "theme_color": "#111827",
   "icons": [
     {
       "src": "/evostackr-logo.png",

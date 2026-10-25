@@ -30,13 +30,13 @@
 }
 
 .wa-widget__trigger:hover {
-  background-color: #3a3d3f;
+  background-color: var(--color-brand-secondary, #172554);
   transform: translateY(-2px);
   border-color: rgba(255, 255, 255, 0.3);
 }
 
 .wa-widget__trigger:focus-visible {
-  outline: 2px solid var(--color-dark);
+  outline: 2px solid var(--color-brand-accent, var(--color-dark));
   outline-offset: 3px;
 }
 

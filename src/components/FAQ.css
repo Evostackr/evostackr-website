@@ -57,7 +57,7 @@
 }
 
 .faq__question:hover {
-  color: var(--color-text-primary, #08090a);
+  color: var(--color-brand-primary, #111827);
 }
 
 .faq__question-text {

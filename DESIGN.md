@@ -30,7 +30,7 @@ This protocol is mandatory for all developers, maintainers, and AI coding assist
 - **Official Brand Name**: `Evostackr`
 - **Domain**: `evostackr.in`
 - **Support Contact**: `support@evostackr.in` (Mailto URI: `mailto:support@evostackr.in`)
-- **Brand Mark / Logo**: Authoritative isometric graphite 'E' mark (`evostackr-logo.png`) featuring high-contrast faceted charcoal geometry with transparent background, matching the website's cool-white and graphite identity. Implemented via `<img>` in [Navigation.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/components/Navigation.tsx), [Footer.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/components/Footer.tsx), and standalone in [public/evostackr-logo.png](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/public/evostackr-logo.png) & [public/favicon.svg](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/public/favicon.svg).
+- **Brand Mark / Logo**: Authoritative isometric mark (`evostackr-logo.png`) featuring high-contrast faceted geometry with transparent background, matching the website's cool-white and midnight navy identity. Implemented via `<img>` in [Navigation.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/components/Navigation.tsx), [Footer.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/components/Footer.tsx), and standalone in [public/evostackr-logo.png](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/public/evostackr-logo.png) & [public/favicon.svg](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/public/favicon.svg).
 
 ### Website Purpose & Market Positioning
 Evostackr is an independent software company that develops, owns, and operates proprietary software products while providing custom software engineering, platform development, and technical consulting services to select clients.
@@ -51,7 +51,7 @@ The website communicates engineering credibility and product ownership rather th
 
 ### Visual Personality & Impression
 - **Tone**: Understated, precise, intellectual, and engineering-driven.
-- **Aesthetic**: Experimental asymmetric editorial layout, high-contrast cool off-white and dark graphite palette, architectural lines, and generous deliberate whitespace.
+- **Aesthetic**: Experimental asymmetric editorial layout, high-contrast cool off-white and midnight navy palette, architectural lines, and generous deliberate whitespace.
 - **Motion**: Restrained, micro-functional transitions only; zero gratuitous bouncy animations or decorative particle effects.
 
 ---
@@ -59,7 +59,7 @@ The website communicates engineering credibility and product ownership rather th
 ## B. Design Philosophy
 
 1. **Experimental Asymmetric Composition**: Avoids generic, predictable template grids. Sections use deliberate column imbalances (e.g., 5fr:7fr, 7fr:5fr, 1.2fr:1fr, 1fr:5fr:2fr) to create visual rhythm and guide reading flow.
-2. **Cool White & Graphite Palette**: Dominated by high-contrast neutral tones (`#F5F6F5` canvas and `#25282A` graphite). High-impact dark inverted panels are reserved specifically for the Development Services and Get in Touch sections.
+2. **Cool White & Midnight Navy Palette**: Dominated by high-contrast tones (`#F5F6F5` cool-white canvas and `#111827` midnight navy with `#172554` deep navy and `#1E3A5F` navy accent). High-impact dark inverted panels are reserved specifically for the Development Services and Get in Touch sections.
 3. **Editorial Typography**: Pairing modern, ultra-clean grotesque sans-serif (`Inter`) for structure, telemetry, and technical labels with an elegant high-contrast serif (`Playfair Display`) in italic weight for key emphasis words in section headings.
 4. **Restrained Technical Graphics**: Abstract, lightweight inline vector diagrams (coordinate axes, wireframe blocks, construction diagonals, telemetry markers) replacing stock photography or generic marketing illustrations.
 5. **Deliberate Whitespace**: Generous section padding (`8rem`–`10rem` desktop clamping) establishing breathing room, authority, and readability.
@@ -72,23 +72,28 @@ The website communicates engineering credibility and product ownership rather th
 
 ## C. Color Tokens
 
-All color tokens are declared in [:root](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/index.css#L1-L12). The system strictly forbids unauthorized hex values.
+All color tokens are declared in [:root](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/index.css#L1-L16). The system strictly forbids unauthorized hex values.
 
 | Token Name | Source Value | Usage / Description | Background / Foreground Pairing |
 | :--- | :--- | :--- | :--- |
-| `--color-bg` | `#F5F6F5` | Primary canvas & light section background. Cool off-white. | Primary text `#25282A`, borders `#D9DCDA` |
-| `--color-text` | `#25282A` | Primary text, headings, dark icons, and high-contrast wordmarks. Deep slate graphite. | Canvas `#F5F6F5`, surface `#E8EBE9` |
-| `--color-text-secondary` | `#6F7475` | Supporting descriptions, metadata labels, status dots, and subtle borders. | Canvas `#F5F6F5` |
-| `--color-surface` | `#E8EBE9` | Product visual containers, secondary surfaces, and About section canvas. | Content borders `#D9DCDA`, text `#25282A` |
-| `--color-surface-alt` | `#DDE1DF` | Secondary card details, SVG metric bars, and subtle fill elements. | Surface `#E8EBE9`, text `#25282A` |
+| `--color-brand-primary` | `#111827` | Primary brand Midnight Navy. Used for main headings, dark brand elements, and primary buttons. | Canvas `#F5F6F5`, surface `#E8EBE9` |
+| `--color-brand-secondary` | `#172554` | Secondary Deep Navy. Used for primary button hover and subtle dark brand accents. | Canvas `#F5F6F5`, text `#F5F6F5` |
+| `--color-brand-accent` | `#1E3A5F` | Interactive brand accent. Used for link hovers, focus-visible indicators, and selected wireframe details. | Canvas `#F5F6F5` |
+| `--color-bg` | `#F5F6F5` | Primary canvas & light section background. Cool off-white. | Primary text `#111827`, borders `#D9DCDA` |
+| `--color-text` | `var(--color-brand-primary)` (`#111827`) | Primary text, headings, dark icons, and high-contrast wordmarks. Deep Midnight Navy. | Canvas `#F5F6F5`, surface `#E8EBE9` |
+| `--color-text-secondary` | `#6F7475` | Supporting descriptions, metadata labels, status dots, and subtle borders. Retained neutral grey. | Canvas `#F5F6F5` |
+| `--color-surface` | `#E8EBE9` | Product visual containers, secondary surfaces, and About section canvas. | Content borders `#D9DCDA`, text `#111827` |
+| `--color-surface-alt` | `#DDE1DF` | Secondary card details, SVG metric bars, and subtle fill elements. | Surface `#E8EBE9`, text `#111827` |
 | `--color-border` | `#D9DCDA` | Structural borders, card outlines, horizontal dividers, and stat separators. | Canvas `#F5F6F5`, surface `#E8EBE9` |
-| `--color-dark` | `#25282A` | Dark section background for `Services` and `Contact` sections; primary button fill. | Dark text `#F5F6F5`, secondary `#BFC4C2` |
-| `--color-dark-text` | `#F5F6F5` | Primary text and headings rendered inside dark sections. | Dark background `#25282A` |
-| `--color-dark-text-secondary` | `#BFC4C2` | Supporting paragraphs and metadata labels inside dark sections. | Dark background `#25282A` |
+| `--color-dark` | `var(--color-brand-primary)` (`#111827`) | Dark section background for `Services` and `Contact` sections; primary button fill. | Dark text `#F5F6F5`, secondary `#BFC4C2` |
+| `--color-dark-surface` | `var(--color-brand-secondary)` (`#172554`) | Layered dark container background for elevated panels within dark sections. | Dark text `#F5F6F5` |
+| `--color-dark-text` | `#F5F6F5` | Primary text and headings rendered inside dark sections. | Dark background `#111827` |
+| `--color-dark-text-secondary` | `#BFC4C2` | Supporting paragraphs and metadata labels inside dark sections. Retained cool muted grey. | Dark background `#111827` |
 
 ### Special Context & State Colors
-- **Primary Button Hover Fill**: `#3a3d3f` (lightened graphite).
-- **Dark Section Primary Button Fill (`.btn--dark`)**: Background `#F5F6F5`, text `#25282A`, hover fill `#e0e3e1`.
+- **Primary Button Hover Fill**: `var(--color-brand-secondary)` (`#172554`).
+- **Focus Indicator**: `var(--color-brand-accent)` (`#1E3A5F`) outline with 2px offset.
+- **Dark Section Primary Button Fill (`.btn--dark`)**: Background `#F5F6F5`, text `#111827`, hover fill `#e0e3e1`.
 - **Navigation Glass Backdrop**: `rgba(245, 246, 245, 0.92)` with `backdrop-filter: blur(12px)`.
 - **Dark Section Divider Lines**: `rgba(255, 255, 255, 0.1)` default; `rgba(255, 255, 255, 0.25)` on service item hover.
 - **Dark Section SVG Graphics**: Geometric strokes use `rgba(255, 255, 255, 0.08)` to `0.25)`; fills use `rgba(255, 255, 255, 0.05)`.
@@ -313,8 +318,8 @@ Defined globally in [index.css](file:///c:/Users/ujwal/.gemini/antigravity-ide/s
 
 ## J. Assets and Iconography
 
-- **Brand Mark (`evostackr-logo.png`)**: Authoritative graphite/charcoal isometric "E" mark with faceted geometric planes and full transparency. Displayed via `<img>` across header, footer, and brand placements. Standalone vector base64 version in `favicon.svg` and `apple-touch-icon.svg`.
-- **Hero Software Illustration (`HeroSoftwareIllustration.tsx`)**: Bespoke, coded isometric software-engineering workspace illustration comprising a multi-pane terminal dashboard, floating interface panels, settings gear, connection lines with breathing pulse nodes, and security data card. Rendered via modular SVG components with restrained CSS animations and strict adherence to the cool-white and graphite palette.
+- **Brand Mark (`evostackr-logo.png`)**: Authoritative isometric "E" mark with faceted geometric planes and full transparency. Displayed via `<img>` across header, footer, and brand placements. Standalone vector base64 version in `favicon.svg` and `apple-touch-icon.svg`.
+- **Hero Software Illustration (`HeroSoftwareIllustration.tsx`)**: Bespoke, coded isometric software-engineering workspace illustration comprising a multi-pane terminal dashboard, floating interface panels, settings gear, connection lines with breathing pulse nodes, and security data card. Rendered via modular SVG components with restrained CSS animations and strict adherence to the cool-white and midnight navy palette.
 - **Iconography**: Minimal inline vector SVG icons. No external icon fonts (FontAwesome, Material Icons, etc.) are used or permitted.
 - **Interactive Arrows**: Standard Unicode right-arrow character (`→`) contained in `<span className="arrow" aria-hidden="true">→</span>`.
 - **Illustrations**: Bespoke inline SVGs in each component file depicting coordinate grids, structural wireframes, and simulated software interfaces.
@@ -367,7 +372,7 @@ software-company-site/
 The following rules are non-negotiable. Any change violating these invariants constitutes a visual regression:
 
 1. **NO Redesign Without Written Permission**: A feature update is never an excuse to restyle, modernize, or simplify the layout.
-2. **Color Invariant**: Do NOT introduce primary colors (blue, red, green, purple, yellow), vibrant gradients, or saturated accents. The palette is strictly cool white (`#F5F6F5`), graphite (`#25282A`), and neutral slate tones.
+2. **Color Invariant**: Do NOT introduce electric colors, multi-hue gradients, or unauthorized saturated accents. The palette is strictly cool white (`#F5F6F5`), Midnight Navy (`#111827`), Deep Navy (`#172554`), Navy Accent (`#1E3A5F`), and neutral slate/grey tones (`#D9DCDA`, `#E8EBE9`, `#DDE1DF`, `#6F7475`, `#BFC4C2`).
 3. **Typography Invariant**: Do NOT swap `Inter` or `Playfair Display` for other fonts. Do NOT italicize body copy or non-editorial headings.
 4. **Sharp Geometry Invariant**: Do NOT add rounded corners (`border-radius: 8px`, `12px`, etc.) to buttons, cards, or section containers. Corner radii must remain `0px`.
 5. **No Drop Shadows**: Do NOT add box shadows, drop shadows, or glow effects. Depth is achieved exclusively through tonal contrast and 1px borders.

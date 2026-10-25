@@ -1,12 +1,17 @@
 :root {
-  /* ─── Color System ─── */
+  /* ─── Color System (Midnight Navy Palette) ─── */
+  --color-brand-primary: #111827;
+  --color-brand-secondary: #172554;
+  --color-brand-accent: #1E3A5F;
+
   --color-bg: #F5F6F5;
-  --color-text: #25282A;
+  --color-text: var(--color-brand-primary);
   --color-text-secondary: #6F7475;
   --color-surface: #E8EBE9;
   --color-surface-alt: #DDE1DF;
   --color-border: #D9DCDA;
-  --color-dark: #25282A;
+  --color-dark: var(--color-brand-primary);
+  --color-dark-surface: var(--color-brand-secondary);
   --color-dark-text: #F5F6F5;
   --color-dark-text-secondary: #BFC4C2;
 
@@ -190,7 +195,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn:focus-visible {
-  outline: 2px solid var(--color-text);
+  outline: 2px solid var(--color-brand-accent);
   outline-offset: 2px;
 }
 
@@ -201,8 +206,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn--primary:hover {
-  background-color: #3a3d3f;
-  border-color: #3a3d3f;
+  background-color: var(--color-brand-secondary);
+  border-color: var(--color-brand-secondary);
 }
 
 .btn--secondary {

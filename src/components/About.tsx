@@ -47,28 +47,28 @@ export function About() {
               <rect x="20" y="140" width="160" height="1" fill="#D9DCDA" />
 
               {/* Modules */}
-              <rect x="20" y="20" width="70" height="36" fill="#25282A" />
+              <rect x="20" y="20" width="70" height="36" fill="#111827" />
               <rect x="100" y="60" width="80" height="36" fill="#E8EBE9" stroke="#D9DCDA" strokeWidth="1" />
               <rect x="20" y="100" width="50" height="36" fill="#DDE1DF" />
               <rect x="80" y="100" width="100" height="36" fill="#E8EBE9" stroke="#D9DCDA" strokeWidth="1" />
 
               {/* Connection structure */}
-              <line x1="55" y1="56" x2="55" y2="60" stroke="#25282A" strokeWidth="1" />
-              <line x1="140" y1="96" x2="140" y2="100" stroke="#25282A" strokeWidth="1" />
-              <line x1="45" y1="136" x2="45" y2="180" stroke="#25282A" strokeWidth="0.5" strokeDasharray="3 3" />
+              <line x1="55" y1="56" x2="55" y2="60" stroke="#111827" strokeWidth="1" />
+              <line x1="140" y1="96" x2="140" y2="100" stroke="#111827" strokeWidth="1" />
+              <line x1="45" y1="136" x2="45" y2="180" stroke="#111827" strokeWidth="0.5" strokeDasharray="3 3" />
 
               {/* Circle detail */}
               <circle cx="100" cy="220" r="50" stroke="#D9DCDA" strokeWidth="1" fill="none" />
-              <circle cx="100" cy="220" r="30" stroke="#25282A" strokeWidth="1" fill="none" />
-              <circle cx="100" cy="220" r="3" fill="#25282A" />
+              <circle cx="100" cy="220" r="30" stroke="#111827" strokeWidth="1" fill="none" />
+              <circle cx="100" cy="220" r="3" fill="#111827" />
 
               {/* Bottom grid */}
               <rect x="20" y="300" width="40" height="40" fill="#E8EBE9" />
-              <rect x="68" y="300" width="40" height="40" fill="#25282A" />
+              <rect x="68" y="300" width="40" height="40" fill="#111827" />
               <rect x="116" y="300" width="40" height="40" fill="#DDE1DF" />
               <rect x="20" y="348" width="40" height="40" fill="#DDE1DF" />
               <rect x="68" y="348" width="40" height="40" fill="#E8EBE9" />
-              <rect x="116" y="348" width="40" height="40" fill="#25282A" />
+              <rect x="116" y="348" width="40" height="40" fill="#111827" />
 
               {/* Labels */}
               <text x="170" y="42" fill="#BFC4C2" fontSize="8" fontFamily="Inter, sans-serif" fontWeight="500">A</text>
