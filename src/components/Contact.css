@@ -48,6 +48,9 @@
 }
 
 .contact__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
   margin-bottom: var(--space-lg);
 }
 

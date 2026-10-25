@@ -1,4 +1,4 @@
-import { useState, useMemo, useEffect, useCallback } from 'react';
+import { useState, useMemo, useCallback } from 'react';
 import './OptimizationSuite.css';
 import { runLiveAudit } from '../seo/auditEngine';
 import { calculateDimensionScores } from '../seo/scoringEngine';
@@ -6,8 +6,7 @@ import { topicClusters, searchIntentMappings } from '../seo/topicalAuthorityData
 import { entitySignals } from '../seo/entityData';
 import { aeoQuestionAnswers, llmCrawlerRules, aiQueryMonitoringItems } from '../seo/aeoGeoData';
 import { conversionFunnels, backlinkObservations } from '../seo/croData';
-import { pbAdapter, gscAdapter, psiAdapter } from '../seo/integrationAdapters';
-import type { PocketBaseSyncStatus } from '../seo/integrationAdapters';
+import { gscAdapter, psiAdapter } from '../seo/integrationAdapters';
 import type { AuditIssue, IssueSeverity } from '../seo/types';
 
 interface OptimizationSuiteProps {
@@ -31,31 +30,11 @@ export function OptimizationSuite({ onNavigateHome }: OptimizationSuiteProps) {
   const [searchQuery, setSearchQuery] = useState<string>('');
   const [auditIssues, setAuditIssues] = useState<AuditIssue[]>(() => runLiveAudit('/'));
   const [lastScannedTime, setLastScannedTime] = useState<string>(() => new Date().toLocaleTimeString());
-  const [pbSyncStatus, setPbSyncStatus] = useState<PocketBaseSyncStatus | null>(null);
-  const [isTestingPb, setIsTestingPb] = useState<boolean>(false);
 
   const handleRunAudit = useCallback(() => {
     const freshIssues = runLiveAudit('/');
     setAuditIssues(freshIssues);
     setLastScannedTime(new Date().toLocaleTimeString());
-  }, []);
-
-  const handleTestPocketBase = useCallback(async () => {
-    setIsTestingPb(true);
-    const status = await pbAdapter.testConnection();
-    setPbSyncStatus(status);
-    setIsTestingPb(false);
-  }, []);
-
-  useEffect(() => {
-    // Initial silent check of Parrot OS PocketBase adapter
-    let isMounted = true;
-    pbAdapter.testConnection().then((res) => {
-      if (isMounted) setPbSyncStatus(res);
-    });
-    return () => {
-      isMounted = false;
-    };
   }, []);
 
   const { dimensionScores, overallScore } = useMemo(() => {
@@ -102,7 +81,6 @@ export function OptimizationSuite({ onNavigateHome }: OptimizationSuiteProps) {
       integrations: {
         googleSearchConsole: gscAdapter.getStatus(),
         pageSpeedInsights: psiAdapter.getStatus(),
-        pocketBaseParrotOs: pbSyncStatus,
       },
     };
 
@@ -240,7 +218,7 @@ export function OptimizationSuite({ onNavigateHome }: OptimizationSuiteProps) {
               aria-selected={activeTab === 'integrations'}
               type="button"
             >
-              9. Integrations &amp; Remote Sync
+              9. Integrations &amp; API Adapters
             </button>
           </div>
         </div>
@@ -901,45 +879,11 @@ export function OptimizationSuite({ onNavigateHome }: OptimizationSuiteProps) {
           </div>
         )}
 
-        {/* TAB 9: INTEGRATIONS & REMOTE SYNC */}
+        {/* TAB 9: INTEGRATIONS & API ADAPTERS */}
         {activeTab === 'integrations' && (
           <div>
             <div className="opt-notice">
-              <strong>Integration Architecture &amp; Server Policies:</strong> Complies with the dedicated 24/7 Parrot OS server policy (<code>http://10.154.227.103:8090</code>) with multi-app isolation (<code>evostackr_seo_audits</code>). Zero unauthorized local servers.
-            </div>
-
-            {/* PocketBase Parrot OS Adapter */}
-            <div className="opt-adapter-card">
-              <div className="opt-adapter-header">
-                <div>
-                  <h3 className="opt-adapter-title">Dedicated Parrot OS PocketBase Adapter</h3>
-                  <p className="opt-adapter-body" style={{ margin: 0 }}>
-                    Target: <code>http://10.154.227.103:8090</code> — Collection: <code>evostackr_seo_audits</code>
-                  </p>
-                </div>
-                <div>
-                  <span
-                    className={`opt-badge ${
-                      pbSyncStatus?.isOnline ? 'opt-badge--pass' : 'opt-badge--warning'
-                    }`}
-                  >
-                    {pbSyncStatus?.isOnline ? 'Parrot OS Connected' : 'Local Fallback Storage Active'}
-                  </span>
-                </div>
-              </div>
-
-              <div className="opt-adapter-body">
-                {pbSyncStatus?.details || 'Testing connection to Parrot OS PocketBase server...'}
-              </div>
-
-              <button
-                onClick={handleTestPocketBase}
-                disabled={isTestingPb}
-                className="btn btn--secondary"
-                type="button"
-              >
-                {isTestingPb ? 'Connecting...' : 'Ping Parrot OS PocketBase'}
-              </button>
+              <strong>External Integration &amp; Telemetry Adapters:</strong> Connects to verified measurement platforms such as Google Search Console and Google PageSpeed Insights. Live analysis executes in-browser with zero external database dependencies.
             </div>
 
             {/* Google Search Console Adapter */}

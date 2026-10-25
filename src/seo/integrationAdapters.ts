@@ -1,10 +1,8 @@
 /**
- * Integration Adapter Layer for SEO, Performance & Remote Synchronization
+ * Integration Adapter Layer for SEO & Performance Diagnostics
  * 
- * Complies with the Mandatory Parrot OS Dedicated Server & Multi-App Isolation Policy:
- * - Dedicated Server: http://10.154.227.103:8090
- * - Multi-App Isolated Collection: `evostackr_seo_audits` & `evostackr_seo_settings`
- * - No standalone local mock/duplicate servers are spun up.
+ * Provides clean adapter contracts for verified third-party search and
+ * performance APIs (Google Search Console, Google PageSpeed Insights).
  */
 
 export interface GSCStatus {
@@ -21,16 +19,6 @@ export interface PageSpeedStatus {
   lastRun?: string;
   mobileScore?: number;
   desktopScore?: number;
-}
-
-export interface PocketBaseSyncStatus {
-  serverUrl: string;
-  collection: string;
-  isOnline: boolean;
-  lastSynced?: string;
-  totalSyncedAudits: number;
-  syncMode: 'remote_pocketbase' | 'local_fallback';
-  details: string;
 }
 
 export class GoogleSearchConsoleAdapter {
@@ -70,46 +58,6 @@ export class PageSpeedInsightsAdapter {
   }
 }
 
-export class PocketBaseAuditStorageAdapter {
-  private serverUrl: string = 'http://10.154.227.103:8090';
-  private collection: string = 'evostackr_seo_audits';
-
-  async testConnection(): Promise<PocketBaseSyncStatus> {
-    try {
-      const controller = new AbortController();
-      const timeoutId = setTimeout(() => controller.abort(), 2000);
-      const res = await fetch(`${this.serverUrl}/api/health`, {
-        signal: controller.signal,
-      });
-      clearTimeout(timeoutId);
-
-      if (res.ok) {
-        return {
-          serverUrl: this.serverUrl,
-          collection: this.collection,
-          isOnline: true,
-          syncMode: 'remote_pocketbase',
-          totalSyncedAudits: 1,
-          lastSynced: new Date().toISOString(),
-          details: `Connected to dedicated Parrot OS server (${this.serverUrl}). Multi-app isolated collection: ${this.collection}.`,
-        };
-      }
-    } catch {
-      // Server may be on local subnet or not reachable from this machine
-    }
-
-    // Graceful fallback to client storage without violating server management rules
-    return {
-      serverUrl: this.serverUrl,
-      collection: this.collection,
-      isOnline: false,
-      syncMode: 'local_fallback',
-      totalSyncedAudits: 0,
-      details: `Dedicated Parrot OS PocketBase (${this.serverUrl}) is configured for collection '${this.collection}'. In-browser storage fallback active until direct subnet ping succeeds.`,
-    };
-  }
-}
-
 export const gscAdapter = new GoogleSearchConsoleAdapter();
 export const psiAdapter = new PageSpeedInsightsAdapter();
-export const pbAdapter = new PocketBaseAuditStorageAdapter();
+

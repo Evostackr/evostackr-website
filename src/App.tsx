@@ -9,6 +9,7 @@ import { About } from './components/About';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
+import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
 
@@ -118,6 +119,7 @@ function App() {
         )}
       </main>
       <Footer onNavigate={navigate} />
+      <WhatsAppContactWidget />
     </>
   );
 }

@@ -1,6 +1,9 @@
 import './Contact.css';
+import { CONTACT_CONFIG, getWhatsAppMessageUrl } from '../config/contact';
 
 export function Contact() {
+  const waUrl = getWhatsAppMessageUrl(true);
+
   return (
     <section id="contact" className="contact section" aria-labelledby="contact-heading">
       <div className="container">
@@ -37,13 +40,22 @@ export function Contact() {
             </div>
 
             <div className="contact__actions">
-              <a href="mailto:support@evostackr.in" className="btn btn--dark">
-                support@evostackr.in <span className="arrow" aria-hidden="true">→</span>
+              <a href={`mailto:${CONTACT_CONFIG.supportEmail}`} className="btn btn--dark">
+                {CONTACT_CONFIG.supportEmail} <span className="arrow" aria-hidden="true">→</span>
+              </a>
+              <a
+                href={waUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn btn--dark contact__wa-link"
+                aria-label="Message Evostackr on WhatsApp"
+              >
+                WhatsApp: {CONTACT_CONFIG.whatsAppDisplay} <span className="arrow" aria-hidden="true">→</span>
               </a>
             </div>
 
             <p className="contact__note text-meta">
-              Official support: support@evostackr.in
+              Official support: {CONTACT_CONFIG.supportEmail} · WhatsApp: {CONTACT_CONFIG.whatsAppDisplay}
             </p>
           </div>
 
