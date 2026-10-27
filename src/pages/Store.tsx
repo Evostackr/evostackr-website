@@ -7,7 +7,7 @@ interface StoreProps {
   onNavigate?: (path: string, hash?: string) => void;
 }
 
-export function Store({ onNavigateHome }: StoreProps) {
+export function Store({ onNavigateHome, onNavigate }: StoreProps) {
   const hasProducts = storeProducts.length > 0;
 
   return (
@@ -59,7 +59,7 @@ export function Store({ onNavigateHome }: StoreProps) {
           <div className="container">
             <div className="store-catalogue__grid">
               {storeProducts.map((product) => (
-                <StoreProductCard key={product.id} product={product} />
+                <StoreProductCard key={product.id} product={product} onNavigate={onNavigate} />
               ))}
             </div>
           </div>

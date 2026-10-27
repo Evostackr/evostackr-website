@@ -13,6 +13,8 @@ import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
 import { Store } from './pages/Store';
+import { StoreProductDetail } from './pages/StoreProductDetail';
+import { storeProducts } from './data/storeProducts';
 
 function getInitialPath(): string {
   if (typeof window === 'undefined') return '/';
@@ -78,6 +80,23 @@ function App() {
       if (canonical) {
         canonical.setAttribute('href', 'https://evostackr.in/store');
       }
+    } else if (currentPath.startsWith('/store/')) {
+      const prodSlug = currentPath.replace('/store/', '').replace(/\/$/, '');
+      const prod = storeProducts.find((p) => p.slug === prodSlug);
+      if (prod) {
+        document.title = `${prod.name} — ${prod.category} | Evostackr`;
+        const metaDesc = document.querySelector('meta[name="description"]');
+        if (metaDesc) {
+          metaDesc.setAttribute(
+            'content',
+            'Explore EvoEdu Pro, a Laravel-based school and college management ERP with student admissions, attendance, examinations, fee management, HR, payroll, reporting, and administration tools.'
+          );
+        }
+        const canonical = document.querySelector('link[rel="canonical"]');
+        if (canonical) {
+          canonical.setAttribute('href', `https://evostackr.in/store/${prod.slug}`);
+        }
+      }
     } else if (isSeoSuite) {
       document.title = 'Optimization Suite & Search Intelligence | Evostackr';
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -109,6 +128,9 @@ function App() {
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
   const isStorePage = currentPath === '/store';
+  const matchedProduct = currentPath.startsWith('/store/')
+    ? storeProducts.find((p) => `/store/${p.slug}` === currentPath)
+    : null;
 
   return (
     <>
@@ -119,6 +141,12 @@ function App() {
       <main id="main-content">
         {isClosedTestingPage ? (
           <GooglePlayClosedTesting onNavigateHome={() => navigate('/')} />
+        ) : matchedProduct ? (
+          <StoreProductDetail
+            product={matchedProduct}
+            onNavigateHome={() => navigate('/')}
+            onNavigate={navigate}
+          />
         ) : isStorePage ? (
           <Store onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : isSeoSuite ? (

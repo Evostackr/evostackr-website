@@ -85,7 +85,7 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
               e.preventDefault();
               handleLinkClick('/store');
             }}
-            className={`nav__link link-underline ${currentPath === '/store' ? 'nav__link--active' : ''}`}
+            className={`nav__link link-underline ${currentPath === '/store' || currentPath.startsWith('/store/') ? 'nav__link--active' : ''}`}
           >
             Store
           </a>
@@ -210,7 +210,7 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
           </a>
           <a
             href="/store"
-            className="nav__mobile-link"
+            className={`nav__mobile-link ${currentPath === '/store' || currentPath.startsWith('/store/') ? 'nav__mobile-link--active' : ''}`}
             onClick={(e) => {
               e.preventDefault();
               handleLinkClick('/store');

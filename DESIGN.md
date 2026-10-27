@@ -401,8 +401,8 @@ When adding new products, features, or sections in the future:
    - The alternating visual layout (`case-study--reversed`) handles alternating layouts automatically.
 4. **Adding a Paid Digital Product to the Software Store**:
    - Add a new object to the `storeProducts` array in [src/data/storeProducts.ts](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/data/storeProducts.ts).
-   - Supply `id`, `slug`, `name`, `shortDescription`, `productType`, `price` (`displayPrice`), `logoUrl`, `screenshotUrls`, and `buyUrl` (direct Buy Me a Coffee listing).
-   - The Store page ([src/pages/Store.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/pages/Store.tsx)) automatically renders responsive `StoreProductCard` components when products are configured in `storeProducts`.
+   - Supply `id`, `slug`, `name`, `shortDescription`, `productType`, `price` (`displayPrice`), `logoUrl`, `screenshotUrls`, `screenshots`, `featureModules`, `techStack`, `systemRequirements`, and `buyUrl` (direct Buy Me a Coffee listing).
+   - The Store page ([src/pages/Store.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/pages/Store.tsx)) renders responsive `StoreProductCard` components, and individual products are viewable with interactive galleries on their detail route (`/store/:slug`).
 5. **Creating a New Component**:
    - Store inside `src/components/` with a paired `.css` stylesheet.
    - Consume CSS variables from `index.css` (`var(--color-*)`, `var(--space-*)`, `var(--fs-*)`).

@@ -4,6 +4,7 @@ import type { StoreProduct } from '../data/storeProducts';
 
 interface StoreProductCardProps {
   product: StoreProduct;
+  onNavigate?: (path: string, hash?: string) => void;
 }
 
 function ProductLogo({ logoUrl, name }: { logoUrl?: string; name: string }) {
@@ -21,53 +22,34 @@ function ProductLogo({ logoUrl, name }: { logoUrl?: string; name: string }) {
   return (
     <img
       src={logoUrl}
-      alt={`${name} icon`}
+      alt={`${name} logo`}
       className="store-card__logo"
-      width="48"
-      height="48"
+      width="56"
+      height="56"
       loading="lazy"
       onError={() => setHasError(true)}
     />
   );
 }
 
-function ScreenshotPreview({ screenshots, name }: { screenshots?: string[]; name: string }) {
-  const [failedIndices, setFailedIndices] = useState<Record<number, boolean>>({});
-
-  if (!screenshots || screenshots.length === 0) {
-    return null;
-  }
-
-  const validScreenshots = screenshots.filter((_, idx) => !failedIndices[idx]);
-
-  if (validScreenshots.length === 0) {
-    return null;
-  }
-
-  return (
-    <div className="store-card__preview-gallery" aria-label={`${name} screenshots`}>
-      {screenshots.map((url, index) => {
-        if (failedIndices[index]) return null;
-        return (
-          <div key={index} className="store-card__preview-frame">
-            <img
-              src={url}
-              alt={`${name} preview ${index + 1}`}
-              className="store-card__preview-img"
-              loading="lazy"
-              onError={() =>
-                setFailedIndices((prev) => ({ ...prev, [index]: true }))
-              }
-            />
-          </div>
-        );
-      })}
-    </div>
-  );
-}
-
-export function StoreProductCard({ product }: StoreProductCardProps) {
+export function StoreProductCard({ product, onNavigate }: StoreProductCardProps) {
+  const [imageError, setImageError] = useState(false);
+  const detailUrl = `/store/${product.slug}`;
   const hasBuyUrl = Boolean(product.buyUrl && product.buyUrl.trim().length > 0);
+
+  const handleCardClick = (e: React.MouseEvent) => {
+    // If the click was on the buy button or link, don't intercept
+    if ((e.target as HTMLElement).closest('.store-card__buy-btn')) {
+      return;
+    }
+    if (onNavigate) {
+      e.preventDefault();
+      onNavigate(detailUrl);
+    }
+  };
+
+  const previewScreenshot = product.screenshots?.[0]?.url || product.screenshotUrls?.[0];
+  const previewAlt = product.screenshots?.[0]?.alt || `${product.name} dashboard preview`;
 
   return (
     <article
@@ -79,16 +61,24 @@ export function StoreProductCard({ product }: StoreProductCardProps) {
           <ProductLogo logoUrl={product.logoUrl} name={product.name} />
           <div className="store-card__title-wrap">
             <div className="store-card__meta">
-              <span className="store-card__type text-meta">{product.productType}</span>
+              <span className="store-card__type text-meta">{product.category || product.productType}</span>
               {product.version && (
                 <span className="store-card__version text-meta">v{product.version}</span>
               )}
-              {product.status && (
-                <span className="store-card__status text-meta">{product.status}</span>
-              )}
             </div>
             <h3 id={`product-title-${product.id}`} className="store-card__name">
-              {product.name}
+              <a
+                href={detailUrl}
+                onClick={(e) => {
+                  if (onNavigate) {
+                    e.preventDefault();
+                    onNavigate(detailUrl);
+                  }
+                }}
+                className="store-card__title-link"
+              >
+                {product.name}
+              </a>
             </h3>
           </div>
         </div>
@@ -96,9 +86,9 @@ export function StoreProductCard({ product }: StoreProductCardProps) {
         {product.price && (
           <div className="store-card__price-badge">
             <span className="store-card__price-value">{product.price.displayPrice}</span>
-            {product.price.billingType && (
+            {product.price.note && (
               <span className="store-card__price-billing text-meta">
-                {product.price.billingType}
+                Verified on checkout
               </span>
             )}
           </div>
@@ -108,13 +98,41 @@ export function StoreProductCard({ product }: StoreProductCardProps) {
       <div className="store-card__body">
         <p className="store-card__short-desc">{product.shortDescription}</p>
 
-        {product.description && (
-          <p className="store-card__full-desc">{product.description}</p>
+        {/* Technology Highlights */}
+        {product.technologies && product.technologies.length > 0 && (
+          <div className="store-card__tech-row" aria-label="Core technologies">
+            {product.technologies.slice(0, 4).map((tech) => (
+              <span key={tech} className="store-card__tech-tag text-meta">
+                {tech}
+              </span>
+            ))}
+          </div>
         )}
 
+        {/* Preview Frame */}
+        {previewScreenshot && !imageError && (
+          <div
+            className="store-card__preview-frame"
+            onClick={handleCardClick}
+            style={{ cursor: 'pointer' }}
+          >
+            <img
+              src={previewScreenshot}
+              alt={previewAlt}
+              className="store-card__preview-img"
+              loading="lazy"
+              onError={() => setImageError(true)}
+            />
+            <div className="store-card__preview-overlay">
+              <span className="text-meta">View Product Specifications →</span>
+            </div>
+          </div>
+        )}
+
+        {/* Feature Highlights List */}
         {product.features && product.features.length > 0 && (
-          <ul className="store-card__features" aria-label="Key features">
-            {product.features.map((feat, idx) => (
+          <ul className="store-card__features" aria-label="Key highlights">
+            {product.features.slice(0, 3).map((feat, idx) => (
               <li key={idx} className="store-card__feature-item">
                 <span className="store-card__feature-marker" aria-hidden="true">■</span>
                 <span>{feat}</span>
@@ -122,41 +140,35 @@ export function StoreProductCard({ product }: StoreProductCardProps) {
             ))}
           </ul>
         )}
-
-        {product.platforms && product.platforms.length > 0 && (
-          <div className="store-card__platforms">
-            <span className="store-card__platforms-label text-meta">Platforms:</span>
-            <div className="store-card__platform-tags">
-              {product.platforms.map((platform) => (
-                <span key={platform} className="store-card__platform-tag">
-                  {platform}
-                </span>
-              ))}
-            </div>
-          </div>
-        )}
-
-        <ScreenshotPreview screenshots={product.screenshotUrls} name={product.name} />
       </div>
 
       <div className="store-card__footer">
-        {hasBuyUrl ? (
+        <a
+          href={detailUrl}
+          onClick={(e) => {
+            if (onNavigate) {
+              e.preventDefault();
+              onNavigate(detailUrl);
+            }
+          }}
+          className="btn btn--secondary store-card__detail-btn"
+          aria-label={`View details for ${product.name}`}
+        >
+          View Product <span className="arrow" aria-hidden="true">→</span>
+        </a>
+
+        {hasBuyUrl && (
           <a
             href={product.buyUrl}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn btn--primary store-card__cta"
-            aria-label={`Get ${product.name} on Buy Me a Coffee`}
+            className="btn btn--primary store-card__buy-btn"
+            aria-label={`Buy ${product.name} on Buy Me a Coffee`}
           >
-            Get on Buy Me a Coffee <span className="arrow" aria-hidden="true">↗</span>
+            Buy Software <span className="arrow" aria-hidden="true">↗</span>
           </a>
-        ) : (
-          <span className="store-card__unavailable text-meta text-secondary">
-            Listing pending publication
-          </span>
         )}
       </div>
     </article>
   );
 }
-

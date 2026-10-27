@@ -37,6 +37,17 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://evostackr.in/store/evoedu-pro</loc>
+    <lastmod>2026-10-27</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/logo.png</image:loc>
+      <image:title>EvoEdu Pro — School and College Management ERP</image:title>
+      <image:caption>Official logo of EvoEdu Pro Educational ERP</image:caption>
+    </image:image>
+  </url>
+  <url>
     <loc>https://evostackr.in/#work</loc>
     <lastmod>2026-10-24</lastmod>
     <changefreq>monthly</changefreq>
