@@ -52,6 +52,7 @@ export interface StoreProduct {
   description?: string;
   price?: StoreProductPrice;
   logoUrl?: string;
+  cardPreviewUrl?: string;
   screenshotUrls?: string[];
   screenshots?: StoreScreenshot[];
   buyUrl?: string;
@@ -99,6 +100,7 @@ export const storeProducts: StoreProduct[] = [
     },
     buyUrl: 'https://buymeacoffee.com/evostackr/e/591724',
     logoUrl: '/images/store/evoedu-pro/logo.png',
+    cardPreviewUrl: '/images/store/evoedu-pro/dashboard-showcase.png',
     screenshotUrls: [
       '/images/store/evoedu-pro/dark-dashboard.png',
       '/images/store/evoedu-pro/dashboard-showcase.png',

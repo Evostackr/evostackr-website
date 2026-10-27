@@ -48,8 +48,10 @@ export function StoreProductCard({ product, onNavigate }: StoreProductCardProps)
     }
   };
 
-  const previewScreenshot = product.screenshots?.[0]?.url || product.screenshotUrls?.[0];
-  const previewAlt = product.screenshots?.[0]?.alt || `${product.name} dashboard preview`;
+  const previewScreenshot = product.cardPreviewUrl || product.screenshots?.[0]?.url || product.screenshotUrls?.[0];
+  const previewAlt = product.cardPreviewUrl
+    ? `${product.name} dashboard showcase preview`
+    : (product.screenshots?.[0]?.alt || `${product.name} dashboard preview`);
 
   return (
     <article
