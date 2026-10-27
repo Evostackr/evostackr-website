@@ -15,9 +15,11 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
     url,
     caption: `Screenshot ${i + 1}`,
     alt: `${product.name} interface preview ${i + 1}`,
+    label: `Image ${i + 1}`,
   }));
 
   const activeScreenshot = screenshots[activeImageIndex] || screenshots[0];
+  const secondaryScreenshots = screenshots.slice(1);
 
   return (
     <div className="product-detail">
@@ -150,7 +152,7 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
               </div>
             </div>
 
-            {/* Right Column: Hero Screenshot Display */}
+            {/* Right Column: Hero Screenshot Display & Gallery */}
             {activeScreenshot && (
               <div className="product-detail__media-column">
                 <div className="product-detail__stage-frame">
@@ -162,38 +164,62 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
                   />
                   <div className="product-detail__stage-caption">
                     <span className="text-meta">{activeScreenshot.caption}</span>
+                    {activeImageIndex !== 0 && (
+                      <button
+                        type="button"
+                        onClick={() => setActiveImageIndex(0)}
+                        className="product-detail__stage-reset-btn text-meta"
+                        aria-label="Return to primary dashboard preview"
+                      >
+                        ✕ Main Dashboard
+                      </button>
+                    )}
                   </div>
                 </div>
 
-                {/* Screenshot Thumbnails */}
-                {screenshots.length > 1 && (
+                {/* Horizontal Thumbnail Strip for Secondary Screenshots */}
+                {secondaryScreenshots.length > 0 && (
                   <div
                     className="product-detail__thumb-gallery"
                     role="tablist"
-                    aria-label="Product screenshots gallery"
+                    aria-label="Secondary product screenshots"
                   >
-                    {screenshots.map((s, idx) => (
-                      <button
-                        key={idx}
-                        type="button"
-                        role="tab"
-                        aria-selected={activeImageIndex === idx}
-                        onClick={() => setActiveImageIndex(idx)}
-                        className={`product-detail__thumb-btn ${
-                          activeImageIndex === idx ? 'product-detail__thumb-btn--active' : ''
-                        }`}
-                      >
-                        <img
-                          src={s.url}
-                          alt={`Thumbnail: ${s.caption}`}
-                          className="product-detail__thumb-img"
-                          loading="lazy"
-                        />
-                        <span className="product-detail__thumb-label text-meta">
-                          {idx + 1}. {s.caption}
-                        </span>
-                      </button>
-                    ))}
+                    {secondaryScreenshots.map((s, idx) => {
+                      const actualIndex = idx + 1;
+                      const isSelected = activeImageIndex === actualIndex;
+
+                      return (
+                        <button
+                          key={actualIndex}
+                          type="button"
+                          role="tab"
+                          aria-selected={isSelected}
+                          aria-label={`View ${s.caption}`}
+                          onClick={() => {
+                            if (isSelected) {
+                              setActiveImageIndex(0);
+                            } else {
+                              setActiveImageIndex(actualIndex);
+                            }
+                          }}
+                          className={`product-detail__thumb-btn ${
+                            isSelected ? 'product-detail__thumb-btn--active' : ''
+                          }`}
+                        >
+                          <div className="product-detail__thumb-frame">
+                            <img
+                              src={s.url}
+                              alt={s.alt}
+                              className="product-detail__thumb-img"
+                              loading="lazy"
+                            />
+                          </div>
+                          <span className="product-detail__thumb-label text-meta">
+                            {s.label || s.caption}
+                          </span>
+                        </button>
+                      );
+                    })}
                   </div>
                 )}
               </div>

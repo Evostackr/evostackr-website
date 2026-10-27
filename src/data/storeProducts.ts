@@ -20,6 +20,7 @@ export interface StoreScreenshot {
   url: string;
   caption: string;
   alt: string;
+  label?: string;
 }
 
 export interface StoreFeatureModule {
@@ -108,28 +109,33 @@ export const storeProducts: StoreProduct[] = [
     screenshots: [
       {
         url: '/images/store/evoedu-pro/dark-dashboard.png',
-        caption: 'Dark Dashboard Overview',
+        caption: 'Primary Dashboard Overview',
         alt: 'EvoEdu Pro modern dark mode admin dashboard interface',
+        label: 'Main Dashboard',
       },
       {
         url: '/images/store/evoedu-pro/attendance-dashboard.png',
         caption: 'Attendance Management Screen',
         alt: 'EvoEdu Pro daily attendance tracking and status management',
+        label: 'Attendance',
       },
       {
         url: '/images/store/evoedu-pro/monthly-attendance.png',
         caption: 'Monthly Attendance Analytics',
         alt: 'EvoEdu Pro monthly attendance reports and breakdown',
+        label: 'Monthly View',
       },
       {
         url: '/images/store/evoedu-pro/analytics-dashboard.png',
         caption: 'Analytics & Academic Metrics',
         alt: 'EvoEdu Pro comprehensive institutional analytics and telemetry',
+        label: 'Analytics',
       },
       {
         url: '/images/store/evoedu-pro/dashboard-showcase.png',
         caption: 'Dashboard Multi-Device Showcase',
         alt: 'EvoEdu Pro responsive admin dashboard showcase',
+        label: 'Showcase',
       },
     ],
     platforms: ['Web / Self-Hosted', 'PHP 8.2+', 'MySQL 8.0+ / MariaDB', 'Apache / Nginx / LiteSpeed'],
