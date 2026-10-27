@@ -49,6 +49,20 @@ export function Footer({ onNavigate }: FooterProps) {
             <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Products</h3>
               <ul className="footer__nav-list">
+                <li>
+                  <a
+                    href="/store"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/store');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Software Store
+                  </a>
+                </li>
                 {products.map((product) => (
                   <li key={product.id}>
                     {product.url ? (

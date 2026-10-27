@@ -1,0 +1,241 @@
+/* ─── Store Product Card Component ─── */
+.store-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-xl);
+  transition: border-color var(--transition-base), transform var(--transition-base);
+  position: relative;
+}
+
+.store-card:hover {
+  border-color: var(--color-brand-primary);
+}
+
+.store-card--featured {
+  border-color: var(--color-brand-primary);
+  background: linear-gradient(180deg, var(--color-surface) 0%, var(--color-bg) 100%);
+}
+
+/* Header & Identity */
+.store-card__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: var(--space-md);
+  margin-bottom: var(--space-lg);
+  padding-bottom: var(--space-md);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.store-card__identity {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--space-md);
+}
+
+.store-card__logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+  padding: 4px;
+}
+
+.store-card__logo-fallback {
+  width: 48px;
+  height: 48px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  font-family: var(--font-primary);
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
+}
+
+.store-card__title-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.store-card__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.store-card__type {
+  color: var(--color-text-secondary);
+}
+
+.store-card__version {
+  background-color: var(--color-surface);
+  color: var(--color-brand-primary);
+  padding: 2px 6px;
+  font-size: var(--fs-meta);
+  border: 1px solid var(--color-border);
+}
+
+.store-card__status {
+  color: var(--color-brand-accent);
+}
+
+.store-card__name {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color-brand-primary);
+  line-height: var(--lh-snug);
+}
+
+/* Price Badge */
+.store-card__price-badge {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  flex-shrink: 0;
+}
+
+.store-card__price-value {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
+  letter-spacing: -0.02em;
+}
+
+.store-card__price-billing {
+  color: var(--color-text-secondary);
+  font-size: var(--fs-meta);
+}
+
+/* Body */
+.store-card__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+  flex-grow: 1;
+}
+
+.store-card__short-desc {
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  color: var(--color-text);
+}
+
+.store-card__full-desc {
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+}
+
+.store-card__features {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+  padding: var(--space-sm) 0;
+  border-top: 1px dashed var(--color-border);
+  border-bottom: 1px dashed var(--color-border);
+}
+
+.store-card__feature-item {
+  display: flex;
+  align-items: baseline;
+  gap: var(--space-xs);
+  font-size: var(--fs-small);
+  color: var(--color-text);
+}
+
+.store-card__feature-marker {
+  font-size: 0.5rem;
+  color: var(--color-brand-primary);
+  flex-shrink: 0;
+}
+
+.store-card__platforms {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  flex-wrap: wrap;
+}
+
+.store-card__platforms-label {
+  color: var(--color-text-secondary);
+}
+
+.store-card__platform-tags {
+  display: flex;
+  gap: var(--space-xs);
+  flex-wrap: wrap;
+}
+
+.store-card__platform-tag {
+  font-size: var(--fs-meta);
+  padding: 2px 8px;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+}
+
+/* Screenshots Preview */
+.store-card__preview-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: var(--space-sm);
+  margin-top: var(--space-xs);
+}
+
+.store-card__preview-frame {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface);
+}
+
+.store-card__preview-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Footer & CTA */
+.store-card__footer {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.store-card__cta {
+  width: 100%;
+  justify-content: center;
+}
+
+.store-card__unavailable {
+  letter-spacing: 0.05em;
+}
+
+@media (max-width: 640px) {
+  .store-card__header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .store-card__price-badge {
+    align-items: flex-start;
+  }
+}
+

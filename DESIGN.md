@@ -399,7 +399,11 @@ When adding new products, features, or sections in the future:
    - Add a new entry to the `caseStudies` array in [src/data.ts](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/data.ts).
    - Include `problem`, `solution`, and an array of `technologies`.
    - The alternating visual layout (`case-study--reversed`) handles alternating layouts automatically.
-4. **Creating a New Component**:
+4. **Adding a Paid Digital Product to the Software Store**:
+   - Add a new object to the `storeProducts` array in [src/data/storeProducts.ts](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/data/storeProducts.ts).
+   - Supply `id`, `slug`, `name`, `shortDescription`, `productType`, `price` (`displayPrice`), `logoUrl`, `screenshotUrls`, and `buyUrl` (direct Buy Me a Coffee listing).
+   - The Store page ([src/pages/Store.tsx](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratch/software-company-site/src/pages/Store.tsx)) automatically switches from the intentional empty state to rendering responsive `StoreProductCard` components.
+5. **Creating a New Component**:
    - Store inside `src/components/` with a paired `.css` stylesheet.
    - Consume CSS variables from `index.css` (`var(--color-*)`, `var(--space-*)`, `var(--fs-*)`).
    - Match existing button (`.btn--primary`, `.btn--secondary`) and label (`.text-meta`, `.section-label`) conventions.

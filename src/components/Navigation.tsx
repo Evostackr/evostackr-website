@@ -80,6 +80,16 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             Products
           </a>
           <a
+            href="/store"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('/store');
+            }}
+            className={`nav__link link-underline ${currentPath === '/store' ? 'nav__link--active' : ''}`}
+          >
+            Store
+          </a>
+          <a
             href={isHome ? '#services' : '/#services'}
             onClick={(e) => {
               if (!isHome) {
@@ -197,6 +207,16 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             }}
           >
             Products
+          </a>
+          <a
+            href="/store"
+            className="nav__mobile-link"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('/store');
+            }}
+          >
+            Store
           </a>
           <a
             href={isHome ? '#services' : '/#services'}

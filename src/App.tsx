@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
+import { Store } from './pages/Store';
 
 function getInitialPath(): string {
   if (typeof window === 'undefined') return '/';
@@ -64,6 +65,19 @@ function App() {
       if (canonical) {
         canonical.setAttribute('href', 'https://evostackr.in/services/google-play-closed-testing');
       }
+    } else if (currentPath === '/store') {
+      document.title = 'Software Store | Evostackr';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Discover software built to make digital work simpler. Explore premium tools and digital products from Evostackr.'
+        );
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://evostackr.in/store');
+      }
     } else if (isSeoSuite) {
       document.title = 'Optimization Suite & Search Intelligence | Evostackr';
       const metaDesc = document.querySelector('meta[name="description"]');
@@ -94,6 +108,7 @@ function App() {
   }, [currentPath, isSeoSuite]);
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
+  const isStorePage = currentPath === '/store';
 
   return (
     <>
@@ -104,6 +119,8 @@ function App() {
       <main id="main-content">
         {isClosedTestingPage ? (
           <GooglePlayClosedTesting onNavigateHome={() => navigate('/')} />
+        ) : isStorePage ? (
+          <Store onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : isSeoSuite ? (
           <OptimizationSuite onNavigateHome={() => navigate('/')} />
         ) : (
