@@ -1,13 +1,18 @@
-/* ─── Store Product Card Component ─── */
+/* ─── Store Product Card Component (Square & Fully Contained) ─── */
 .store-card {
+  width: 100%;
+  max-width: 640px;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   background-color: var(--color-bg);
   border: 1px solid var(--color-border);
   padding: var(--space-xl);
-  transition: border-color var(--transition-base), transform var(--transition-base);
   position: relative;
+  min-width: 0;
+  overflow: hidden;
+  transition: border-color var(--transition-base);
 }
 
 .store-card:hover {
@@ -18,26 +23,43 @@
   border-color: var(--color-brand-primary);
 }
 
+/* 1. Balanced Square on Desktop */
+@media (min-width: 768px) {
+  .store-card {
+    aspect-ratio: 1 / 1;
+  }
+}
+
+@media (max-width: 767px) {
+  .store-card {
+    aspect-ratio: auto;
+    padding: var(--space-lg);
+  }
+}
+
 /* Header & Identity */
 .store-card__header {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
   gap: var(--space-md);
-  margin-bottom: var(--space-lg);
+  margin-bottom: var(--space-md);
   padding-bottom: var(--space-md);
   border-bottom: 1px solid var(--color-border);
+  min-width: 0;
 }
 
 .store-card__identity {
   display: flex;
   align-items: flex-start;
   gap: var(--space-md);
+  min-width: 0;
+  flex: 1 1 auto;
 }
 
 .store-card__logo {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   object-fit: contain;
   flex-shrink: 0;
   border: 1px solid var(--color-border);
@@ -46,8 +68,8 @@
 }
 
 .store-card__logo-fallback {
-  width: 56px;
-  height: 56px;
+  width: 52px;
+  height: 52px;
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -64,6 +86,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-width: 0;
 }
 
 .store-card__meta {
@@ -71,6 +94,7 @@
   align-items: center;
   gap: var(--space-xs);
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .store-card__type {
@@ -80,7 +104,7 @@
 .store-card__version {
   background-color: var(--color-surface);
   color: var(--color-brand-primary);
-  padding: 2px 6px;
+  padding: 1px 6px;
   font-size: var(--fs-meta);
   border: 1px solid var(--color-border);
 }
@@ -91,6 +115,7 @@
   letter-spacing: -0.01em;
   color: var(--color-brand-primary);
   line-height: var(--lh-snug);
+  overflow-wrap: break-word;
 }
 
 .store-card__title-link {
@@ -102,19 +127,24 @@
   color: var(--color-brand-accent);
 }
 
-/* Price Badge */
+/* Price Badge — Fully Contained */
 .store-card__price-badge {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  text-align: right;
   flex-shrink: 0;
+  min-width: 0;
+  max-width: 48%;
 }
 
 .store-card__price-value {
-  font-size: var(--fs-h3);
+  font-size: clamp(1rem, 1.35vw, 1.25rem);
   font-weight: var(--fw-bold);
   color: var(--color-brand-primary);
   letter-spacing: -0.02em;
+  overflow-wrap: break-word;
+  line-height: var(--lh-snug);
 }
 
 .store-card__price-billing {
@@ -127,17 +157,23 @@
 .store-card__body {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
-  flex-grow: 1;
+  gap: var(--space-sm);
+  flex: 1 1 auto;
+  min-height: 0;
+  overflow: hidden;
 }
 
 .store-card__short-desc {
-  font-size: var(--fs-body);
+  font-size: var(--fs-small);
   line-height: var(--lh-normal);
-  color: var(--color-text);
+  color: var(--color-text-secondary);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
-/* Technology Tags */
+/* Tech Tags */
 .store-card__tech-row {
   display: flex;
   gap: var(--space-xs);
@@ -146,26 +182,29 @@
 
 .store-card__tech-tag {
   font-size: var(--fs-meta);
-  padding: 3px 8px;
+  padding: 2px 7px;
   background-color: var(--color-surface);
   border: 1px solid var(--color-border);
   color: var(--color-brand-primary);
 }
 
-/* Screenshot Preview */
+/* Screenshot Preview — Constrained */
 .store-card__preview-frame {
   position: relative;
-  aspect-ratio: 16 / 10;
+  aspect-ratio: 16 / 9;
+  width: 100%;
+  max-height: 180px;
   overflow: hidden;
   border: 1px solid var(--color-border);
   background-color: var(--color-surface);
-  margin: var(--space-xs) 0;
+  flex-shrink: 0;
 }
 
 .store-card__preview-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: top;
   display: block;
   transition: transform var(--transition-slow);
 }
@@ -197,44 +236,56 @@
 .store-card__features {
   display: flex;
   flex-direction: column;
-  gap: var(--space-xs);
-  padding: var(--space-sm) 0;
+  gap: 3px;
+  padding: var(--space-xs) 0;
   border-top: 1px dashed var(--color-border);
   border-bottom: 1px dashed var(--color-border);
+  min-width: 0;
 }
 
 .store-card__feature-item {
   display: flex;
   align-items: baseline;
   gap: var(--space-xs);
-  font-size: var(--fs-small);
+  font-size: var(--fs-meta);
   color: var(--color-text);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .store-card__feature-marker {
-  font-size: 0.5rem;
+  font-size: 0.45rem;
   color: var(--color-brand-primary);
   flex-shrink: 0;
 }
 
-/* Footer & Actions */
+/* Footer & Actions — Contained inside border */
 .store-card__footer {
-  margin-top: var(--space-xl);
-  padding-top: var(--space-md);
+  margin-top: var(--space-md);
+  padding-top: var(--space-sm);
   border-top: 1px solid var(--color-border);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: var(--space-sm);
+  gap: var(--space-md);
+  min-width: 0;
+  flex-shrink: 0;
 }
 
 .store-card__detail-btn,
 .store-card__buy-btn {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   justify-content: center;
+  font-size: var(--fs-small);
+  padding: 0.65rem 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
-@media (max-width: 640px) {
+@media (max-width: 520px) {
   .store-card__header {
     flex-direction: column;
     align-items: flex-start;
@@ -242,6 +293,8 @@
 
   .store-card__price-badge {
     align-items: flex-start;
+    text-align: left;
+    max-width: 100%;
   }
 
   .store-card__footer {
