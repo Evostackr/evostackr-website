@@ -101,10 +101,10 @@ export const storeProducts: StoreProduct[] = [
     logoUrl: '/images/store/evoedu-pro/logo.png',
     screenshotUrls: [
       '/images/store/evoedu-pro/dark-dashboard.png',
-      '/images/store/evoedu-pro/attendance-dashboard.png',
-      '/images/store/evoedu-pro/monthly-attendance.png',
-      '/images/store/evoedu-pro/analytics-dashboard.png',
       '/images/store/evoedu-pro/dashboard-showcase.png',
+      '/images/store/evoedu-pro/analytics-dashboard.png',
+      '/images/store/evoedu-pro/monthly-attendance.png',
+      '/images/store/evoedu-pro/attendance-dashboard.png',
     ],
     screenshots: [
       {
@@ -114,16 +114,10 @@ export const storeProducts: StoreProduct[] = [
         label: 'Main Dashboard',
       },
       {
-        url: '/images/store/evoedu-pro/attendance-dashboard.png',
-        caption: 'Attendance Management Screen',
-        alt: 'EvoEdu Pro daily attendance tracking and status management',
-        label: 'Attendance',
-      },
-      {
-        url: '/images/store/evoedu-pro/monthly-attendance.png',
-        caption: 'Monthly Attendance Analytics',
-        alt: 'EvoEdu Pro monthly attendance reports and breakdown',
-        label: 'Monthly View',
+        url: '/images/store/evoedu-pro/dashboard-showcase.png',
+        caption: 'Dashboard Multi-Device Showcase',
+        alt: 'EvoEdu Pro responsive admin dashboard showcase',
+        label: 'Showcase',
       },
       {
         url: '/images/store/evoedu-pro/analytics-dashboard.png',
@@ -132,10 +126,16 @@ export const storeProducts: StoreProduct[] = [
         label: 'Analytics',
       },
       {
-        url: '/images/store/evoedu-pro/dashboard-showcase.png',
-        caption: 'Dashboard Multi-Device Showcase',
-        alt: 'EvoEdu Pro responsive admin dashboard showcase',
-        label: 'Showcase',
+        url: '/images/store/evoedu-pro/monthly-attendance.png',
+        caption: 'Monthly Attendance Analytics',
+        alt: 'EvoEdu Pro monthly attendance reports and breakdown',
+        label: 'Monthly View',
+      },
+      {
+        url: '/images/store/evoedu-pro/attendance-dashboard.png',
+        caption: 'Attendance Management Screen',
+        alt: 'EvoEdu Pro daily attendance tracking and status management',
+        label: 'Attendance',
       },
     ],
     platforms: ['Web / Self-Hosted', 'PHP 8.2+', 'MySQL 8.0+ / MariaDB', 'Apache / Nginx / LiteSpeed'],
