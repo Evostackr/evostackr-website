@@ -104,6 +104,18 @@
   color: #FFFFFF;
 }
 
+/* ─── Services Footer Action ─── */
+.services__footer {
+  margin-top: var(--space-2xl);
+  display: flex;
+  justify-content: flex-start;
+}
+
+.services__view-all-btn {
+  display: inline-flex;
+  align-items: center;
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .services__layout {

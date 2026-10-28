@@ -78,3 +78,4 @@ export function ProductsPage({ onNavigateHome }: ProductsPageProps) {
     </div>
   );
 }
+

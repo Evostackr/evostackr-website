@@ -212,3 +212,4 @@ export function ProductCard({ product, variant = 'compact' }: ProductCardProps) 
     </article>
   );
 }
+

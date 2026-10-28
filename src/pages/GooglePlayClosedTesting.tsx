@@ -13,6 +13,7 @@ import { closedTestingApps, type ClosedTestingApp } from '../data';
 
 interface GooglePlayClosedTestingProps {
   onNavigateHome: () => void;
+  onNavigate?: (path: string, hash?: string) => void;
 }
 
 function AppIcon({ iconPath, name }: { iconPath: string; name: string }) {
@@ -78,7 +79,7 @@ function PortfolioCard({ app }: { app: ClosedTestingApp }) {
   );
 }
 
-export function GooglePlayClosedTesting({ onNavigateHome }: GooglePlayClosedTestingProps) {
+export function GooglePlayClosedTesting({ onNavigateHome, onNavigate }: GooglePlayClosedTestingProps) {
   const [conversionState, setConversionState] = useState<CurrencyConversionState>(() => {
     const cached = getCachedExchangeRate();
     if (cached) {
@@ -143,13 +144,14 @@ export function GooglePlayClosedTesting({ onNavigateHome }: GooglePlayClosedTest
             <button
               type="button"
               onClick={() => {
-                onNavigateHome();
-                setTimeout(() => {
-                  const el = document.getElementById('services');
-                  el?.scrollIntoView({ behavior: 'smooth' });
-                }, 50);
+                if (onNavigate) {
+                  onNavigate('/services');
+                } else {
+                  onNavigateHome();
+                }
               }}
               className="breadcrumbs-link"
+              aria-label="Return to Services catalogue"
             >
               Services
             </button>
@@ -485,7 +487,13 @@ export function GooglePlayClosedTesting({ onNavigateHome }: GooglePlayClosedTest
               </a>
               <button
                 type="button"
-                onClick={onNavigateHome}
+                onClick={() => {
+                  if (onNavigate) {
+                    onNavigate('/services');
+                  } else {
+                    onNavigateHome();
+                  }
+                }}
                 className="btn btn--secondary service-contact__back-btn"
               >
                 Explore other services <span className="arrow" aria-hidden="true">→</span>

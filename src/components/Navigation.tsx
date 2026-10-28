@@ -88,26 +88,14 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             Store
           </a>
           <a
-            href={isHome ? '#services' : '/#services'}
-            onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#services');
-              }
-            }}
-            className="nav__link link-underline"
-          >
-            Services
-          </a>
-          <a
-            href="/services/google-play-closed-testing"
+            href="/services"
             onClick={(e) => {
               e.preventDefault();
-              handleLinkClick('/services/google-play-closed-testing');
+              handleLinkClick('/services');
             }}
-            className={`nav__link link-underline ${currentPath === '/services/google-play-closed-testing' ? 'nav__link--active' : ''}`}
+            className={`nav__link link-underline ${currentPath === '/services' || currentPath.startsWith('/services/') ? 'nav__link--active' : ''}`}
           >
-            Closed Testing
+            Services
           </a>
           <a
             href={isHome ? '#work' : '/#work'}
@@ -213,28 +201,14 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             Store
           </a>
           <a
-            href={isHome ? '#services' : '/#services'}
-            className="nav__mobile-link"
+            href="/services"
+            className={`nav__mobile-link ${currentPath === '/services' || currentPath.startsWith('/services/') ? 'nav__mobile-link--active' : ''}`}
             onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#services');
-              } else {
-                closeMenu();
-              }
+              e.preventDefault();
+              handleLinkClick('/services');
             }}
           >
             Services
-          </a>
-          <a
-            href="/services/google-play-closed-testing"
-            className="nav__mobile-link"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/services/google-play-closed-testing');
-            }}
-          >
-            Closed Testing
           </a>
           <a
             href={isHome ? '#work' : '/#work'}

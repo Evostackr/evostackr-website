@@ -93,3 +93,4 @@ export const products: Product[] = [
     published: true,
   },
 ];
+

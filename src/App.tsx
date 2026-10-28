@@ -13,6 +13,7 @@ import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
 import { ProductsPage } from './pages/ProductsPage';
+import { ServicesPage } from './pages/ServicesPage';
 import { Store } from './pages/Store';
 import { StoreProductDetail } from './pages/StoreProductDetail';
 import { storeProducts } from './data/storeProducts';
@@ -55,7 +56,20 @@ function App() {
     currentPath === '/optimization';
 
   useEffect(() => {
-    if (currentPath === '/services/google-play-closed-testing') {
+    if (currentPath === '/services') {
+      document.title = 'Services — Software Development & Publishing Support | Evostackr';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          "Explore Evostackr's software development, digital engineering, and Google Play publishing support services."
+        );
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://evostackr.in/services');
+      }
+    } else if (currentPath === '/services/google-play-closed-testing') {
       document.title = 'Google Play Closed Testing Services | Evostackr';
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) {
@@ -141,6 +155,7 @@ function App() {
   }, [currentPath, isSeoSuite]);
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
+  const isServicesPage = currentPath === '/services';
   const isProductsPage = currentPath === '/products';
   const isStorePage = currentPath === '/store';
   const matchedProduct = currentPath.startsWith('/store/')
@@ -155,7 +170,15 @@ function App() {
       <Navigation currentPath={currentPath} onNavigate={navigate} />
       <main id="main-content">
         {isClosedTestingPage ? (
-          <GooglePlayClosedTesting onNavigateHome={() => navigate('/')} />
+          <GooglePlayClosedTesting
+            onNavigateHome={() => navigate('/')}
+            onNavigate={navigate}
+          />
+        ) : isServicesPage ? (
+          <ServicesPage
+            onNavigateHome={() => navigate('/')}
+            onNavigate={navigate}
+          />
         ) : isProductsPage ? (
           <ProductsPage onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : matchedProduct ? (

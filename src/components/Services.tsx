@@ -2,10 +2,13 @@ import './Services.css';
 import { services } from '../data';
 
 interface ServicesProps {
-  onNavigate?: (path: string) => void;
+  onNavigate?: (path: string, hash?: string) => void;
 }
 
 export function Services({ onNavigate }: ServicesProps) {
+  // Homepage displays only 2-3 featured services (maximum of 3)
+  const featuredServices = services.filter((s) => s.published && s.featured).slice(0, 3);
+
   return (
     <section id="services" className="services section" aria-labelledby="services-heading">
       <div className="container">
@@ -28,41 +31,53 @@ export function Services({ onNavigate }: ServicesProps) {
           </div>
 
           <div className="services__list">
-            {services.map((service, index) => (
+            {featuredServices.map((service, index) => (
               <article className="service-item" key={service.id}>
                 <div className="service-item__number text-meta">
                   {String(index + 1).padStart(2, '0')}
                 </div>
                 <div className="service-item__content">
+                  {service.startingPrice && (
+                    <span className="service-item__badge text-meta">
+                      Starting from {service.startingPrice}
+                    </span>
+                  )}
                   <h3 className="service-item__title">{service.title}</h3>
-                  <p className="service-item__description">{service.description}</p>
+                  <p className="service-item__description">{service.shortDescription || service.description}</p>
+                  {service.detailUrl && (
+                    <a
+                      href={service.detailUrl}
+                      onClick={(e) => {
+                        if (onNavigate) {
+                          e.preventDefault();
+                          onNavigate(service.detailUrl!);
+                        }
+                      }}
+                      className="service-item__link link-underline"
+                    >
+                      View service details &amp; pricing <span className="arrow" aria-hidden="true">→</span>
+                    </a>
+                  )}
                 </div>
               </article>
             ))}
 
-            {/* Specialized Google Play Closed Testing Service Item */}
-            <article className="service-item" key="google-play-closed-testing">
-              <div className="service-item__number text-meta">06</div>
-              <div className="service-item__content">
-                <span className="service-item__badge text-meta">Starting from ₹1,245 INR</span>
-                <h3 className="service-item__title">Google Play Closed Testing</h3>
-                <p className="service-item__description">
-                  Structured support for the Google Play closed testing track, tester engagement coordination, and release workflow readiness.
-                </p>
-                <a
-                  href="/services/google-play-closed-testing"
-                  onClick={(e) => {
-                    if (onNavigate) {
-                      e.preventDefault();
-                      onNavigate('/services/google-play-closed-testing');
-                    }
-                  }}
-                  className="service-item__link link-underline"
-                >
-                  View service details &amp; pricing <span className="arrow" aria-hidden="true">→</span>
-                </a>
-              </div>
-            </article>
+            {/* View All Services action navigating to /services */}
+            <div className="services__footer">
+              <a
+                href="/services"
+                onClick={(e) => {
+                  if (onNavigate) {
+                    e.preventDefault();
+                    onNavigate('/services');
+                  }
+                }}
+                className="btn btn--dark services__view-all-btn"
+                aria-label="View all development and publishing services"
+              >
+                View All Services <span className="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
           </div>
         </div>
       </div>

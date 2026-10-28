@@ -1,11 +1,7 @@
 export type { Product } from './data/products';
 export { products } from './data/products';
-
-export interface Service {
-  id: string;
-  title: string;
-  description: string;
-}
+export type { Service } from './data/services';
+export { services } from './data/services';
 
 export interface CaseStudy {
   id: string;
@@ -16,34 +12,6 @@ export interface CaseStudy {
   technologies: string[];
   url?: string;
 }
-
-export const services: Service[] = [
-  {
-    id: 'websites',
-    title: 'Custom Website Development',
-    description: 'Purpose-built websites engineered for performance, accessibility, and business outcomes. No templates. No compromise.',
-  },
-  {
-    id: 'web-apps',
-    title: 'Web Application Development',
-    description: 'Interactive web applications with complex state, real-time data, and robust architecture. From internal tools to customer-facing platforms.',
-  },
-  {
-    id: 'saas',
-    title: 'SaaS Platform Development',
-    description: 'Multi-tenant software platforms with subscription management, user provisioning, and scalable infrastructure from day one.',
-  },
-  {
-    id: 'business-software',
-    title: 'Business Software & Automation',
-    description: "Operational software that eliminates manual processes. Workflow automation, data pipelines, and systems that work while you don't.",
-  },
-  {
-    id: 'integrations',
-    title: 'API Integrations & Custom Engineering',
-    description: 'Third-party integrations, custom APIs, data synchronization, and the technical glue that connects your systems into a coherent whole.',
-  },
-];
 
 export const caseStudies: CaseStudy[] = [
   {

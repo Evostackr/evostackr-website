@@ -94,6 +94,20 @@ export function Footer({ onNavigate }: FooterProps) {
             <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Services</h3>
               <ul className="footer__nav-list">
+                <li>
+                  <a
+                    href="/services"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/services');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    All Services
+                  </a>
+                </li>
                 <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">Web Development</a></li>
                 <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">Web Applications</a></li>
                 <li><a href="#services" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#services'); } }} className="footer__nav-link link-underline">SaaS Platforms</a></li>
