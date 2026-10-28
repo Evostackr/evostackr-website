@@ -68,14 +68,12 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
 
         <nav className="nav__links" role="navigation" aria-label="Main navigation">
           <a
-            href={isHome ? '#products' : '/#products'}
+            href="/products"
             onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#products');
-              }
+              e.preventDefault();
+              handleLinkClick('/products');
             }}
-            className="nav__link link-underline"
+            className={`nav__link link-underline ${currentPath === '/products' ? 'nav__link--active' : ''}`}
           >
             Products
           </a>
@@ -195,15 +193,11 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
       >
         <nav className="nav__mobile-links" aria-label="Mobile navigation">
           <a
-            href={isHome ? '#products' : '/#products'}
-            className="nav__mobile-link"
+            href="/products"
+            className={`nav__mobile-link ${currentPath === '/products' ? 'nav__mobile-link--active' : ''}`}
             onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#products');
-              } else {
-                closeMenu();
-              }
+              e.preventDefault();
+              handleLinkClick('/products');
             }}
           >
             Products

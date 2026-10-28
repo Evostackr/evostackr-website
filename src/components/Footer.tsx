@@ -51,6 +51,20 @@ export function Footer({ onNavigate }: FooterProps) {
               <ul className="footer__nav-list">
                 <li>
                   <a
+                    href="/products"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/products');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    All Products
+                  </a>
+                </li>
+                <li>
+                  <a
                     href="/store"
                     onClick={(e) => {
                       if (onNavigate) {

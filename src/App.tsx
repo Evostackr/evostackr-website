@@ -12,6 +12,7 @@ import { Footer } from './components/Footer';
 import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
+import { ProductsPage } from './pages/ProductsPage';
 import { Store } from './pages/Store';
 import { StoreProductDetail } from './pages/StoreProductDetail';
 import { storeProducts } from './data/storeProducts';
@@ -66,6 +67,19 @@ function App() {
       const canonical = document.querySelector('link[rel="canonical"]');
       if (canonical) {
         canonical.setAttribute('href', 'https://evostackr.in/services/google-play-closed-testing');
+      }
+    } else if (currentPath === '/products') {
+      document.title = 'Products — Independent Software Portfolio | Evostackr';
+      const metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) {
+        metaDesc.setAttribute(
+          'content',
+          'Explore independent software products designed to solve specific problems by Evostackr, including SMS Campaign Manager, Fabricate, WhatsApp Past Member Extractor, 24IDChat, and TempEmailFree.'
+        );
+      }
+      const canonical = document.querySelector('link[rel="canonical"]');
+      if (canonical) {
+        canonical.setAttribute('href', 'https://evostackr.in/products');
       }
     } else if (currentPath === '/store') {
       document.title = 'Software Store | Evostackr';
@@ -127,6 +141,7 @@ function App() {
   }, [currentPath, isSeoSuite]);
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
+  const isProductsPage = currentPath === '/products';
   const isStorePage = currentPath === '/store';
   const matchedProduct = currentPath.startsWith('/store/')
     ? storeProducts.find((p) => `/store/${p.slug}` === currentPath)
@@ -141,6 +156,8 @@ function App() {
       <main id="main-content">
         {isClosedTestingPage ? (
           <GooglePlayClosedTesting onNavigateHome={() => navigate('/')} />
+        ) : isProductsPage ? (
+          <ProductsPage onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : matchedProduct ? (
           <StoreProductDetail
             product={matchedProduct}
@@ -154,7 +171,7 @@ function App() {
         ) : (
           <>
             <Hero />
-            <Products />
+            <Products onNavigate={navigate} />
             <Services onNavigate={navigate} />
             <Work />
             <About />

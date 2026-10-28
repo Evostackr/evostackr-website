@@ -1,12 +1,5 @@
-export interface Product {
-  id: string;
-  name: string;
-  description: string;
-  category: string;
-  status?: string;
-  url?: string;
-  featured?: boolean;
-}
+export type { Product } from './data/products';
+export { products } from './data/products';
 
 export interface Service {
   id: string;
@@ -23,50 +16,6 @@ export interface CaseStudy {
   technologies: string[];
   url?: string;
 }
-
-export const products: Product[] = [
-  {
-    id: 'sms-campaign-manager',
-    name: 'SMS Campaign Manager',
-    description: 'Turn any Android phone into an automated, private bulk SMS dispatch engine with Dual-SIM support and zero API markups.',
-    category: 'Mobile System',
-    status: 'Live',
-    url: 'https://dir.evostackr.in/#/project/sms-campaign-manager',
-    featured: true,
-  },
-  {
-    id: 'fabricate',
-    name: 'Fabricate',
-    description: 'A product studio that selects promising startup ideas and builds them into functional apps and websites at no development cost.',
-    category: 'Venture Studio',
-    status: 'Live',
-    url: 'https://dir.evostackr.in/#/project/fabricate',
-  },
-  {
-    id: 'whatsapp-past-member-extractor',
-    name: 'WhatsApp Past Member Extractor',
-    description: 'Extract and export past members who left or were removed from WhatsApp Web groups to CSV, Excel, and VCF.',
-    category: 'Browser Utility',
-    status: 'Live',
-    url: 'https://dir.evostackr.in/#/project/whatsapp-past-member-extractor',
-  },
-  {
-    id: '24idchat',
-    name: '24IDChat',
-    description: 'Real-time anonymous chat room platform powered by unique 24-hour disposable identities and self-purging streams.',
-    category: 'Communication Platform',
-    status: 'Live',
-    url: 'https://dir.evostackr.in/#/project/24idchat',
-  },
-  {
-    id: 'tempemailfree',
-    name: 'TempEmailFree',
-    description: 'Instant, secure, and disposable temporary email generator with real-time inbox auto-refresh and automated OTP detection.',
-    category: 'Privacy Utility',
-    status: 'Live',
-    url: 'https://dir.evostackr.in/#/project/tempemailfree',
-  },
-];
 
 export const services: Service[] = [
   {
