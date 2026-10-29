@@ -138,11 +138,11 @@
   font-weight: var(--fw-semibold);
   line-height: var(--lh-tight);
   color: var(--color-text);
-  transition: opacity var(--transition-fast);
+  transition: color var(--transition-fast);
 }
 
 .nav__mobile-link:hover {
-  opacity: 0.6;
+  color: var(--color-brand-secondary);
 }
 
 .nav__mobile-link:focus-visible {

@@ -56,7 +56,6 @@
 
 .contact__note {
   color: var(--color-dark-text-secondary);
-  opacity: 0.6;
   font-style: italic;
 }
 
