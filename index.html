@@ -63,7 +63,10 @@
     <!-- Typography Preconnect -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+    <noscript>
+      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
+    </noscript>
 
     <!-- Structured Data (JSON-LD Graph Schema for SEO, Rich Results, and Knowledge Graph) -->
     <script type="application/ld+json">
@@ -300,18 +303,133 @@
           <p>Evostackr is an independent software company building proprietary products and delivering custom web, SaaS, and automation engineering.</p>
           <a href="/products">Explore our products</a>
           <a href="/#contact">Get in touch</a>
+          <ul>
+            <li><strong>8+ Independent Products Shipped:</strong> Production utilities including SMS Campaign Manager, Fabricate, Pink PDF, and CodeVault with verified specifications.</li>
+            <li><strong>11+ Google Play Applications:</strong> Deployed Android applications verified on the official Google Play Store.</li>
+            <li><strong>Zero-Telemetry Privacy:</strong> Client-side cryptographic engines with zero persistent activity logging.</li>
+          </ul>
         </section>
-        <section aria-label="Products">
+
+        <section id="products" aria-label="Independent Software Products">
           <h2>Independent software products. Engineered with intention.</h2>
           <p>Software designed, built, and operated by Evostackr to solve specific problems with precision.</p>
+          <ul>
+            <li>
+              <h3>SMS Campaign Manager</h3>
+              <p>Native Android Dual-SIM bulk SMS dispatch engine featuring automated contact list management, scheduling, and direct hardware modem utilization with no cloud intermediary.</p>
+              <a href="https://dir.evostackr.in/#/project/sms-campaign-manager">View project details</a>
+            </li>
+            <li>
+              <h3>Fabricate</h3>
+              <p>Startup venture studio model and modular software engine designed to prototype, validate, and launch real-world digital applications rapidly.</p>
+            </li>
+            <li>
+              <h3>WhatsApp Past Member Extractor</h3>
+              <p>Browser utility extension enabling community managers to export historical group participant data securely without API restrictions.</p>
+            </li>
+            <li>
+              <h3>24IDChat</h3>
+              <p>Ephemeral, anonymous web communication platform with zero identity registration, encrypted temporary rooms, and automatic message expiration.</p>
+              <a href="https://dir.evostackr.in/#/project/24idchat">View project details</a>
+            </li>
+            <li>
+              <h3>TempEmailFree</h3>
+              <p>Automated disposable email inbox and verification generator providing instant temporary addresses for QA testing, signups, and privacy protection.</p>
+              <a href="https://dir.evostackr.in/#/project/tempemailfree">View project details</a>
+            </li>
+          </ul>
         </section>
-        <section aria-label="Services">
+
+        <section id="services" aria-label="Custom Software Engineering Services">
           <h2>Have a problem worth solving?</h2>
           <p>We design and engineer custom digital solutions around your requirements, workflows, and business goals.</p>
+          <ul>
+            <li><strong>Web Development:</strong> High-performance modern websites engineered for conversion, search visibility, and responsive speed.</li>
+            <li><strong>Web Applications:</strong> Robust full-stack browser applications with responsive interfaces and scalable state management.</li>
+            <li><strong>SaaS Platforms:</strong> Multi-tenant software-as-a-service architecture with authentication, subscription billing, and administrative dashboards.</li>
+            <li><strong>Business Software:</strong> Workflow automation utilities, internal operational tools, and custom business management software.</li>
+            <li><strong>API &amp; Integrations:</strong> Secure RESTful and GraphQL API services connecting databases, webhooks, and third-party SaaS tools.</li>
+            <li><strong>Google Play Closed Testing:</strong> Comprehensive 14-day production access compliance support with 20 verified opt-in human testers satisfying Play Console criteria.</li>
+          </ul>
         </section>
-        <section aria-label="About Evostackr">
+
+        <section id="about" aria-label="About Evostackr, Commercial Proof, and Methodology">
           <h2>We build software that works.</h2>
           <p>We're an independent software company. We design, build, and operate our own digital products — and we bring that same engineering discipline to custom software we develop for others.</p>
+          <p>Our work is rooted in practical problem-solving. Every product we ship and every system we build starts with a real requirement, not a trend. We care about useful software: reliable, maintainable, and built to serve its purpose without unnecessary complexity.</p>
+          
+          <div data-trust-signals="commercial-proof">
+            <h3>Verified Deliverables &amp; Commercial Proof</h3>
+            <article data-trust-signal="commercial-proof">
+              <h4>01 • Commercial Proof</h4>
+              <ul>
+                <li><strong>8+ Independent Products Shipped:</strong> Production utilities including SMS Campaign Manager, Pink PDF, CodeVault, and Fabricate with public architectural specifications.</li>
+                <li><strong>11+ Google Play Applications:</strong> Deployed Android applications verified on the official Play Store with public package identifiers.</li>
+                <li><strong>Instant Source Delivery:</strong> Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.</li>
+              </ul>
+              <cite>Source: <a href="https://dir.evostackr.in/">Evostackr Project Directory ↗</a></cite>
+            </article>
+
+            <article data-trust-signal="methodology">
+              <h4>02 • Methodology</h4>
+              <ul>
+                <li><strong>Zero-Telemetry Standard:</strong> In-browser WebAssembly cryptography (Pink PDF) and local background engines (SMS Campaign Manager) execute with 100% client-side privacy.</li>
+                <li><strong>Google Play Compliance Protocol:</strong> 20 verified opt-in human testers actively tracked over 14 continuous days satisfying Google Play Console publishing criteria.</li>
+                <li><strong>Edge-First Security Architecture:</strong> Deployed on Cloudflare Edge with strict Content Security Policy, HSTS preload, and sub-200ms TTFB globally.</li>
+              </ul>
+              <cite>Methodology: <a href="/services/google-play-closed-testing">14-Day Testing Protocol Documentation →</a></cite>
+            </article>
+
+            <article data-trust-signal="provenance">
+              <h4>03 • Provenance</h4>
+              <ul>
+                <li><strong>Engineering Authorship:</strong> Engineered, maintained, and operated directly by the core Evostackr engineering team in Jharkhand, India.</li>
+                <li><strong>Public Code Repositories:</strong> Open developer resources, UI component templates, and platform schemas hosted on our verified GitHub organization.</li>
+                <li><strong>Audited Review Dates:</strong> System architecture, security headers, and compliance verified regularly. Current audit cycle: <time dateTime="2026-10">October 2026</time>.</li>
+              </ul>
+              <cite>Provenance: <a href="https://github.com/Evostackr">github.com/Evostackr ↗</a></cite>
+            </article>
+
+            <article data-trust-signal="commercial-guarantee">
+              <h4>04 • Guarantees</h4>
+              <ul>
+                <li><strong>Direct Engineer Access:</strong> Direct communication with software engineers via official WhatsApp and email with zero gatekeepers.</li>
+                <li><strong>24-Hour Response SLA:</strong> Guaranteed technical response within 24 business hours for all project and closed-testing inquiries.</li>
+                <li><strong>Transparent Fixed Pricing:</strong> Clear, upfront starting rates from ₹1,245 INR / $49 USD with confirmed terms prior to engagement.</li>
+              </ul>
+              <cite>Guarantees: <a href="mailto:support@evostackr.in">support@evostackr.in</a></cite>
+            </article>
+          </div>
+        </section>
+
+        <section id="faq" aria-label="Frequently Asked Questions">
+          <h2>Frequently Asked Questions</h2>
+          <article>
+            <h3>What is Evostackr and what does the company build?</h3>
+            <p>Evostackr is an independent software development company. We build and operate proprietary digital products while providing custom software engineering services for businesses, startups, and developers worldwide.</p>
+          </article>
+          <article>
+            <h3>What products has Evostackr developed?</h3>
+            <p>Evostackr has built and shipped five primary software projects: SMS Campaign Manager (a native Android Dual-SIM bulk SMS dispatch engine), Fabricate (a venture studio engineering promising startup ideas), WhatsApp Past Member Extractor (a browser utility for group participant data export), 24IDChat (an ephemeral anonymous messaging platform), and TempEmailFree (an automated disposable inbox and OTP generator).</p>
+          </article>
+          <article>
+            <h3>What custom development services does Evostackr offer?</h3>
+            <p>Evostackr offers custom website engineering, complex web application development, scalable multi-tenant SaaS platform development, business process automation tools, Google Play closed testing support, and third-party API integrations.</p>
+          </article>
+          <article>
+            <h3>How does Evostackr build custom software differently from typical agencies?</h3>
+            <p>Unlike conventional agencies that rely on rigid templates or contract factories, Evostackr operates as product creators. We build software with maintainable architecture, robust TypeScript code, purposeful user experience, and long-term scalability without bloat or recurring technical debt.</p>
+          </article>
+          <article>
+            <h3>How can I contact Evostackr to discuss a project or product?</h3>
+            <p>You can reach Evostackr directly via our official support email at support@evostackr.in or visit our project directory at https://dir.evostackr.in/ to inspect our software portfolio.</p>
+          </article>
+        </section>
+
+        <section id="contact" aria-label="Contact Evostackr">
+          <h2>Start a conversation.</h2>
+          <p>Have a product idea, a custom software requirement, or need Google Play closed-testing support? Reach out directly to our engineering team.</p>
+          <a href="mailto:support@evostackr.in">support@evostackr.in</a>
         </section>
       </main>
       <footer>

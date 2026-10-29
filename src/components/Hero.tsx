@@ -40,7 +40,7 @@ export function Hero() {
       </div>
 
       <div className="hero__bottom container">
-        <div className="hero__stats" data-trust-signals="commercial-proof" aria-label="Verified commercial metrics and compliance standards">
+        <div className="hero__stats" data-trust-signal="commercial-proof" data-trust-signals="commercial-proof" aria-label="Verified commercial metrics and compliance standards">
           <div className="hero__stat">
             <span className="hero__stat-label text-meta">Independent Products</span>
             <span className="hero__stat-value">8+ live</span>
