@@ -19,9 +19,9 @@
 
 .hero__headline {
   font-size: var(--fs-hero);
-  font-weight: var(--fw-extrabold);
+  font-weight: var(--fw-bold);
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.025em;
   margin-bottom: var(--space-lg);
   color: var(--color-text);
 }

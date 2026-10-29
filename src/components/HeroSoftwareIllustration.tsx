@@ -409,10 +409,10 @@ function ConnectionLines() {
       </g>
 
       {/* Technical coordinate labels */}
-      <text x="40" y="475" fill="#6F7475" fontSize="9" fontFamily="Inter, sans-serif" fontWeight="500">
+      <text x="40" y="475" fill="#525658" fontSize="9" fontFamily="Inter, sans-serif" fontWeight="500">
         SYS // 0x48
       </text>
-      <text x="440" y="115" fill="#6F7475" fontSize="9" fontFamily="Inter, sans-serif" fontWeight="500">
+      <text x="440" y="115" fill="#525658" fontSize="9" fontFamily="Inter, sans-serif" fontWeight="500">
         CORE // V2
       </text>
     </g>

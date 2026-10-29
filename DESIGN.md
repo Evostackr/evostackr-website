@@ -81,7 +81,7 @@ All color tokens are declared in [:root](file:///c:/Users/ujwal/.gemini/antigrav
 | `--color-brand-accent` | `#1E3A5F` | Interactive brand accent. Used for link hovers, focus-visible indicators, and selected wireframe details. | Canvas `#F5F6F5` |
 | `--color-bg` | `#F5F6F5` | Primary canvas & light section background. Cool off-white. | Primary text `#111827`, borders `#D9DCDA` |
 | `--color-text` | `var(--color-brand-primary)` (`#111827`) | Primary text, headings, dark icons, and high-contrast wordmarks. Deep Midnight Navy. | Canvas `#F5F6F5`, surface `#E8EBE9` |
-| `--color-text-secondary` | `#6F7475` | Supporting descriptions, metadata labels, status dots, and subtle borders. Retained neutral grey. | Canvas `#F5F6F5` |
+| `--color-text-secondary` | `#525658` | Supporting descriptions, metadata labels, status dots, and subtle borders. High-contrast neutral graphite (WCAG AA 6.85:1 compliant). | Canvas `#F5F6F5` |
 | `--color-surface` | `#E8EBE9` | Product visual containers, secondary surfaces, and About section canvas. | Content borders `#D9DCDA`, text `#111827` |
 | `--color-surface-alt` | `#DDE1DF` | Secondary card details, SVG metric bars, and subtle fill elements. | Surface `#E8EBE9`, text `#111827` |
 | `--color-border` | `#D9DCDA` | Structural borders, card outlines, horizontal dividers, and stat separators. | Canvas `#F5F6F5`, surface `#E8EBE9` |
@@ -97,7 +97,7 @@ All color tokens are declared in [:root](file:///c:/Users/ujwal/.gemini/antigrav
 - **Navigation Glass Backdrop**: `rgba(245, 246, 245, 0.92)` with `backdrop-filter: blur(12px)`.
 - **Dark Section Divider Lines**: `rgba(255, 255, 255, 0.1)` default; `rgba(255, 255, 255, 0.25)` on service item hover.
 - **Dark Section SVG Graphics**: Geometric strokes use `rgba(255, 255, 255, 0.08)` to `0.25)`; fills use `rgba(255, 255, 255, 0.05)`.
-- **Status Indicator Dot**: `#6F7475` (6px circular dot).
+- **Status Indicator Dot**: `var(--color-text-secondary)` (`#525658`, 6px circular dot).
 
 ---
 
@@ -121,11 +121,11 @@ Configured in [index.html](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratc
 - `--fw-regular`: `400` (Standard body text, descriptions)
 - `--fw-medium`: `500` (Buttons, metadata labels, links, subheadings)
 - `--fw-semibold`: `600` (Product titles, principle titles, navigation branding)
-- `--fw-bold`: `700` (Section headings h1/h2)
-- `--fw-extrabold`: `800` (Hero display headline)
+- `--fw-bold`: `700` (Section headings h1/h2, hero display headline)
+- `--fw-extrabold`: `800` (Dense accent numerals, bold badges)
 
 ### Fluid Typography Scale (CSS Clamps)
-- `--fs-hero`: `clamp(3rem, 6vw + 1rem, 5.5rem)` (Line height: `1.05`, Letter spacing: `-0.03em`)
+- `--fs-hero`: `clamp(2.5rem, 4.5vw + 0.5rem, 3.875rem)` (Line height: `1.05`, Letter spacing: `-0.025em`)
 - `--fs-h1`: `clamp(2.25rem, 3.5vw + 0.5rem, 3.25rem)` (Line height: `1.1`, Letter spacing: `-0.02em`)
 - `--fs-h2`: `clamp(1.75rem, 2.5vw + 0.25rem, 2.5rem)` (Line height: `1.1`, Letter spacing: `-0.02em`)
 - `--fs-h3`: `clamp(1.25rem, 1.5vw + 0.25rem, 1.75rem)` (Line height: `1.25`, Letter spacing: `-0.01em`)
