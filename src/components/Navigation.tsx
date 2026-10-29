@@ -98,18 +98,6 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             Services
           </a>
           <a
-            href={isHome ? '#work' : '/#work'}
-            onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#work');
-              }
-            }}
-            className="nav__link link-underline"
-          >
-            Work
-          </a>
-          <a
             href={isHome ? '#about' : '/#about'}
             onClick={(e) => {
               if (!isHome) {
@@ -209,20 +197,6 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             }}
           >
             Services
-          </a>
-          <a
-            href={isHome ? '#work' : '/#work'}
-            className="nav__mobile-link"
-            onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#work');
-              } else {
-                closeMenu();
-              }
-            }}
-          >
-            Work
           </a>
           <a
             href={isHome ? '#about' : '/#about'}

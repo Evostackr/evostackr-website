@@ -134,7 +134,6 @@ export function Footer({ onNavigate }: FooterProps) {
               <h3 className="footer__nav-title text-meta">Company</h3>
               <ul className="footer__nav-list">
                 <li><a href="#about" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#about'); } }} className="footer__nav-link link-underline">About</a></li>
-                <li><a href="#work" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#work'); } }} className="footer__nav-link link-underline">Work</a></li>
                 <li><a href="#faq" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#faq'); } }} className="footer__nav-link link-underline">FAQ</a></li>
                 <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
                 <li><a href="/rss.xml" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>

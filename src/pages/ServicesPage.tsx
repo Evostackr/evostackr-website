@@ -62,3 +62,4 @@ export function ServicesPage({ onNavigateHome, onNavigate }: ServicesPageProps) 
     </div>
   );
 }
+

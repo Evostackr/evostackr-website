@@ -57,8 +57,8 @@ export const conversionFunnels: ConversionFunnel[] = [
       },
       {
         stepIndex: 2,
-        name: 'Reviewing Technical Case Studies',
-        targetElement: '#work',
+        name: 'Reviewing Products & Technical Specifications',
+        targetElement: '#products',
         actionType: 'interaction',
         frictionPoints: ['Lack of concrete technical stack disclosure'],
         optimizationHypothesis: 'Display real technologies used (Kotlin, Room SQLite, Jetpack Compose, React 19, WebSockets) to validate architectural credibility.',

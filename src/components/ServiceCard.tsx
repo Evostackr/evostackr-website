@@ -92,3 +92,4 @@ export function ServiceCard({ service, onNavigate }: ServiceCardProps) {
     </article>
   );
 }
+

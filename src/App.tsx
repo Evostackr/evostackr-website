@@ -4,7 +4,6 @@ import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Products } from './components/Products';
 import { Services } from './components/Services';
-import { Work } from './components/Work';
 import { About } from './components/About';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
@@ -196,7 +195,6 @@ function App() {
             <Hero />
             <Products onNavigate={navigate} />
             <Services onNavigate={navigate} />
-            <Work />
             <About />
             <FAQ />
             <Contact />
