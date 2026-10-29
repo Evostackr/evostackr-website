@@ -19,7 +19,7 @@ export function Services({ onNavigate }: ServicesProps) {
               <span className="section-label__text">Development Services</span>
             </div>
             <h2 id="services-heading" className="services__title">
-              Have a problem<br />
+              Have a problem <br />
               worth <span className="text-editorial">solving?</span>
             </h2>
             <p className="services__subtitle">

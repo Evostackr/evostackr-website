@@ -12,7 +12,7 @@ export function Hero() {
           </div>
 
           <h1 className="hero__headline">
-            Software should<br />
+            Software should <br />
             do <span className="text-editorial">more.</span>
           </h1>
 

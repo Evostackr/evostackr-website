@@ -15,7 +15,7 @@ export function Contact() {
             </div>
 
             <h2 id="contact-heading" className="contact__title">
-              Let's build something<br />
+              Let's build something <br />
               that <span className="text-editorial">matters.</span>
             </h2>
 

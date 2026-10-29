@@ -14,7 +14,7 @@ export function About() {
 
           <div className="about__content">
             <h2 id="about-heading" className="about__title">
-              We build software<br />
+              We build software <br />
               that <span className="text-editorial">works.</span>
             </h2>
 
