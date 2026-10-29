@@ -26,6 +26,23 @@
   color: var(--color-text);
 }
 
+.hero__eyebrow {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-lg);
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  line-height: var(--lh-normal);
+}
+
+.hero__headline-text {
+  display: block;
+}
+
 .hero__subheadline {
   font-size: var(--fs-h3);
   font-weight: var(--fw-medium);

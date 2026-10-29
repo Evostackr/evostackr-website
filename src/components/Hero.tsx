@@ -6,14 +6,15 @@ export function Hero() {
     <section className="hero section" aria-label="Introduction">
       <div className="hero__inner container">
         <div className="hero__content">
-          <div className="section-label">
-            <span className="section-label__line" />
-            <span className="section-label__text">Independent Software Company</span>
-          </div>
-
           <h1 className="hero__headline">
-            Software should <br />
-            do <span className="text-editorial">more.</span>
+            <span className="hero__eyebrow">
+              <span className="section-label__line" aria-hidden="true" />
+              <span className="section-label__text">Evostackr • Independent Software Products</span>
+            </span>
+            <span className="hero__headline-text">
+              Software should <br />
+              do <span className="text-editorial">more.</span>
+            </span>
           </h1>
 
           <p className="hero__subheadline">

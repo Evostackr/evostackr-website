@@ -145,7 +145,7 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
           }}
           className="nav__cta btn btn--primary"
         >
-          Start a project <span className="arrow" aria-hidden="true">→</span>
+          Get in touch <span className="arrow" aria-hidden="true">→</span>
         </a>
 
         <button
@@ -253,7 +253,7 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             }
           }}
         >
-          Start a project <span className="arrow" aria-hidden="true">→</span>
+          Get in touch <span className="arrow" aria-hidden="true">→</span>
         </a>
       </div>
     </header>
