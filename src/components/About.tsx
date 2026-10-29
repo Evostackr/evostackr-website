@@ -113,7 +113,7 @@ export function About() {
 
           <div className="about__proof-grid">
             {/* Card 1: Commercial Proof & Deliverables */}
-            <article className="about__proof-card">
+            <article className="about__proof-card" data-trust-signal="commercial-proof">
               <div className="about__proof-card-header">
                 <span className="about__proof-badge text-meta">01 • Commercial Proof</span>
                 <h4 className="about__proof-card-title">Production Software &amp; Deliverables</h4>
@@ -129,13 +129,13 @@ export function About() {
                   <strong>Instant Source Delivery:</strong> Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.
                 </li>
               </ul>
-              <div className="about__proof-cite text-meta">
+              <cite className="about__proof-cite text-meta">
                 Source: <a href="https://dir.evostackr.in/" target="_blank" rel="noopener noreferrer" className="link-underline">Evostackr Project Directory ↗</a>
-              </div>
+              </cite>
             </article>
 
             {/* Card 2: Security & Privacy Methodology */}
-            <article className="about__proof-card">
+            <article className="about__proof-card" data-trust-signal="methodology">
               <div className="about__proof-card-header">
                 <span className="about__proof-badge text-meta">02 • Methodology</span>
                 <h4 className="about__proof-card-title">Privacy &amp; Engineering Standards</h4>
@@ -151,13 +151,13 @@ export function About() {
                   <strong>Edge-First Security Architecture:</strong> Deployed on Cloudflare Edge with strict Content Security Policy, HSTS preload, and sub-200ms TTFB globally.
                 </li>
               </ul>
-              <div className="about__proof-cite text-meta">
+              <cite className="about__proof-cite text-meta">
                 Methodology: <a href="/services/google-play-closed-testing" className="link-underline">14-Day Testing Protocol Documentation →</a>
-              </div>
+              </cite>
             </article>
 
             {/* Card 3: Authorship & Data Provenance */}
-            <article className="about__proof-card">
+            <article className="about__proof-card" data-trust-signal="provenance">
               <div className="about__proof-card-header">
                 <span className="about__proof-badge text-meta">03 • Provenance</span>
                 <h4 className="about__proof-card-title">Authorship &amp; Public Code</h4>
@@ -170,16 +170,16 @@ export function About() {
                   <strong>Public Code Repositories:</strong> Open developer resources, UI component templates, and platform schemas hosted on our verified GitHub organization.
                 </li>
                 <li className="about__proof-item">
-                  <strong>Audited Review Dates:</strong> System architecture, security headers, and compliance verified regularly. Current audit cycle: <strong>October 2026</strong>.
+                  <strong>Audited Review Dates:</strong> System architecture, security headers, and compliance verified regularly. Current audit cycle: <strong><time dateTime="2026-10">October 2026</time></strong>.
                 </li>
               </ul>
-              <div className="about__proof-cite text-meta">
+              <cite className="about__proof-cite text-meta">
                 Provenance: <a href="https://github.com/Evostackr" target="_blank" rel="noopener noreferrer" className="link-underline">github.com/Evostackr ↗</a>
-              </div>
+              </cite>
             </article>
 
             {/* Card 4: Support SLA & Commercial Terms */}
-            <article className="about__proof-card">
+            <article className="about__proof-card" data-trust-signal="commercial-guarantee">
               <div className="about__proof-card-header">
                 <span className="about__proof-badge text-meta">04 • Guarantees</span>
                 <h4 className="about__proof-card-title">Direct Engineering SLA &amp; Pricing</h4>
@@ -195,9 +195,9 @@ export function About() {
                   <strong>Transparent Fixed Pricing:</strong> Clear, upfront starting rates (from ₹1,245 INR / $49 USD) with confirmed terms prior to engagement.
                 </li>
               </ul>
-              <div className="about__proof-cite text-meta">
-                Support: <a href="mailto:support@evostackr.in" className="link-underline">support@evostackr.in</a>
-              </div>
+              <cite className="about__proof-cite text-meta">
+                Guarantees: <a href="mailto:support@evostackr.in" className="link-underline">support@evostackr.in</a>
+              </cite>
             </article>
           </div>
         </div>
