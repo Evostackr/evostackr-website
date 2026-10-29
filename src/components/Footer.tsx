@@ -43,6 +43,20 @@ export function Footer({ onNavigate }: FooterProps) {
             <p className="footer__tagline">
               Independent software products and custom development for real-world problems.
             </p>
+            <div className="footer__badge">
+              <a
+                href="https://www.freescan.app/api/badges/free-score/report?url=https%3A%2F%2Fevostackr.in"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <img
+                  src="https://www.freescan.app/api/badges/free-score?url=https%3A%2F%2Fevostackr.in&theme=light"
+                  alt="evostackr.in FreeScan score"
+                  height="60"
+                  style={{ display: 'block', height: 'auto', maxWidth: '100%', width: 'auto' }}
+                />
+              </a>
+            </div>
           </div>
 
           <nav className="footer__nav" aria-label="Footer navigation">

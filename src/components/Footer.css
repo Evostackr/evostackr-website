@@ -42,6 +42,15 @@
   line-height: var(--lh-relaxed);
 }
 
+.footer__badge {
+  margin-top: var(--space-lg);
+}
+
+.footer__badge a {
+  display: inline-block;
+  line-height: 0;
+}
+
 /* ─── Navigation ─── */
 .footer__nav {
   display: grid;
