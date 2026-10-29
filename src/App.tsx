@@ -87,7 +87,7 @@ function App() {
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          'Explore independent software products designed to solve specific problems by Evostackr, including SMS Campaign Manager, Fabricate, WhatsApp Past Member Extractor, 24IDChat, and TempEmailFree.'
+          'Explore independent software products designed to solve specific problems by Evostackr, including SMS Campaign Manager, Fabricate, WhatsApp Past Member Extractor, 24IDChat, TempEmailFree, Pink PDF, My Piano, and CodeVault.'
         );
       }
       const canonical = document.querySelector('link[rel="canonical"]');

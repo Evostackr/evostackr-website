@@ -145,6 +145,86 @@ export function ProductVisual({ product }: { product: Product }) {
         <rect x="72" y="202" width="220" height="6" rx="1" fill="#D9DCDA" />
       </svg>
     ),
+    'pink-pdf': (
+      <svg viewBox="0 0 400 240" fill="none" className="product-card__svg" aria-label="Pink PDF browser utility mockup">
+        <rect x="0" y="0" width="400" height="240" fill="#E8EBE9" rx="2" />
+        {/* Document toolbar */}
+        <rect x="24" y="20" width="140" height="10" rx="2" fill="#111827" />
+        <rect x="24" y="38" width="180" height="6" rx="1" fill="#D9DCDA" />
+        {/* PDF Page Container */}
+        <rect x="24" y="60" width="160" height="156" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <rect x="40" y="76" width="90" height="8" rx="1" fill="#111827" />
+        <rect x="40" y="92" width="128" height="5" rx="1" fill="#DDE1DF" />
+        <rect x="40" y="104" width="116" height="5" rx="1" fill="#DDE1DF" />
+        <rect x="40" y="116" width="120" height="5" rx="1" fill="#DDE1DF" />
+        <rect x="40" y="128" width="80" height="5" rx="1" fill="#DDE1DF" />
+        {/* Security / Wasm Badge */}
+        <rect x="40" y="152" width="100" height="20" rx="2" fill="#111827" />
+        <circle cx="52" cy="162" r="4" fill="#F5F6F5" />
+        {/* Tool modules grid */}
+        <rect x="200" y="60" width="176" height="44" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <rect x="216" y="74" width="80" height="7" rx="1" fill="#111827" />
+        <rect x="216" y="86" width="110" height="5" rx="1" fill="#6F7475" />
+        <rect x="200" y="116" width="176" height="44" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <rect x="216" y="130" width="90" height="7" rx="1" fill="#111827" />
+        <rect x="216" y="142" width="120" height="5" rx="1" fill="#6F7475" />
+        <rect x="200" y="172" width="176" height="44" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <rect x="216" y="186" width="70" height="7" rx="1" fill="#111827" />
+        <rect x="216" y="198" width="100" height="5" rx="1" fill="#6F7475" />
+      </svg>
+    ),
+    'my-piano': (
+      <svg viewBox="0 0 400 240" fill="none" className="product-card__svg" aria-label="My Piano virtual keyboard mockup">
+        <rect x="0" y="0" width="400" height="240" fill="#E8EBE9" rx="2" />
+        {/* Synth header */}
+        <rect x="24" y="20" width="130" height="10" rx="2" fill="#111827" />
+        <rect x="24" y="38" width="160" height="6" rx="1" fill="#D9DCDA" />
+        {/* Octave visualizer */}
+        <rect x="260" y="20" width="116" height="24" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <rect x="272" y="30" width="60" height="6" rx="1" fill="#111827" />
+        {/* Waveform / audio telemetry bar */}
+        <rect x="24" y="60" width="352" height="34" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        <line x1="40" y1="77" x2="360" y2="77" stroke="#D9DCDA" strokeWidth="1" />
+        <polyline points="40,77 70,68 100,84 130,70 160,82 190,72 220,80 250,71 280,83 310,74 340,77" stroke="#111827" strokeWidth="1.5" fill="none" />
+        {/* Piano Keyboard Base (88-key preview) */}
+        <rect x="24" y="106" width="352" height="110" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        {/* White keys */}
+        {[0, 25, 50, 75, 100, 125, 150, 175, 200, 225, 250, 275, 300, 325].map((x, i) => (
+          <rect key={`wk-${i}`} x={25 + x} y="107" width="24" height="108" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        ))}
+        {/* Black keys */}
+        {[42, 67, 117, 142, 167, 217, 242, 292, 317, 342].map((x, i) => (
+          <rect key={`bk-${i}`} x={x} y="107" width="14" height="66" rx="1" fill="#111827" />
+        ))}
+      </svg>
+    ),
+    'codevault': (
+      <svg viewBox="0 0 400 240" fill="none" className="product-card__svg" aria-label="CodeVault developer resources platform mockup">
+        <rect x="0" y="0" width="400" height="240" fill="#E8EBE9" rx="2" />
+        {/* Platform header */}
+        <rect x="24" y="20" width="120" height="10" rx="2" fill="#111827" />
+        <rect x="24" y="38" width="190" height="6" rx="1" fill="#D9DCDA" />
+        {/* Code editor / repository container */}
+        <rect x="24" y="60" width="352" height="156" rx="2" fill="#F5F6F5" stroke="#D9DCDA" strokeWidth="1" />
+        {/* Tab bar */}
+        <rect x="24" y="60" width="352" height="28" fill="#DDE1DF" />
+        <rect x="36" y="70" width="60" height="10" rx="1" fill="#111827" />
+        <rect x="108" y="70" width="50" height="10" rx="1" fill="#6F7475" />
+        <rect x="170" y="70" width="56" height="10" rx="1" fill="#6F7475" />
+        {/* Code lines */}
+        <rect x="40" y="104" width="70" height="6" rx="1" fill="#111827" />
+        <rect x="120" y="104" width="140" height="6" rx="1" fill="#D9DCDA" />
+        <rect x="56" y="120" width="90" height="6" rx="1" fill="#6F7475" />
+        <rect x="156" y="120" width="100" height="6" rx="1" fill="#D9DCDA" />
+        <rect x="72" y="136" width="120" height="6" rx="1" fill="#111827" />
+        <rect x="56" y="152" width="60" height="6" rx="1" fill="#6F7475" />
+        <rect x="40" y="168" width="80" height="6" rx="1" fill="#111827" />
+        {/* Tags / Badge highlights */}
+        <rect x="40" y="190" width="56" height="16" rx="1" fill="#DDE1DF" />
+        <rect x="104" y="190" width="64" height="16" rx="1" fill="#DDE1DF" />
+        <rect x="176" y="190" width="48" height="16" rx="1" fill="#111827" />
+      </svg>
+    ),
   };
 
   if (visuals[product.id]) {
