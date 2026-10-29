@@ -1,14 +1,19 @@
 import type { ReactNode } from 'react';
 import type { Product } from '../data/products';
 
-export function ProductVisual({ product }: { product: Product }) {
+export function ProductVisual({ product, variant = 'compact' }: { product: Product; variant?: 'featured' | 'compact' }) {
   if (product.image) {
+    const isFeatured = variant === 'featured';
     return (
       <img
         src={product.image}
-        alt={`${product.name} preview`}
+        alt={`${product.name} interface preview screenshot`}
         className="product-card__img"
-        loading="lazy"
+        loading={isFeatured ? 'eager' : 'lazy'}
+        fetchPriority={isFeatured ? 'high' : 'auto'}
+        width="1900"
+        height="875"
+        decoding="async"
       />
     );
   }
@@ -262,7 +267,7 @@ export function ProductCard({ product, variant = 'compact' }: ProductCardProps) 
       key={product.id}
     >
       <div className="product-card__visual">
-        <ProductVisual product={product} />
+        <ProductVisual product={product} variant={variant} />
       </div>
       <div className="product-card__content">
         <div className="product-card__meta">

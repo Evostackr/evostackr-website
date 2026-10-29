@@ -55,9 +55,13 @@
 
 .product-card__img {
   width: 100%;
-  height: 100%;
+  height: auto;
+  aspect-ratio: 1900 / 875;
   object-fit: cover;
+  object-position: top center;
   display: block;
+  border: 1px solid var(--color-border);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
   transition: transform var(--transition-slow);
 }
 
