@@ -1,5 +1,6 @@
 import { useState, useEffect, useCallback } from 'react';
 import './App.css';
+import { SEOHead } from './components/SEOHead';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
 import { Products } from './components/Products';
@@ -54,105 +55,6 @@ function App() {
     currentPath === '/system/seo' ||
     currentPath === '/optimization';
 
-  useEffect(() => {
-    if (currentPath === '/services') {
-      document.title = 'Services — Software Development & Publishing Support | Evostackr';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          "Explore Evostackr's software development, digital engineering, and Google Play publishing support services."
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/services');
-      }
-    } else if (currentPath === '/services/google-play-closed-testing') {
-      document.title = 'Google Play Closed Testing Services | Evostackr';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          "Explore Evostackr's Google Play closed testing support for Android developers. 20 verified testers and 14-day tracking starting from ₹1,245 INR."
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/services/google-play-closed-testing');
-      }
-    } else if (currentPath === '/products') {
-      document.title = 'Products — Independent Software Portfolio | Evostackr';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Explore independent software products built by Evostackr, designed to solve specific problems across mobile, privacy, utilities, and developer tools.'
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/products');
-      }
-    } else if (currentPath === '/store') {
-      document.title = 'Software Store | Evostackr';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Discover software built to make digital work simpler. Explore premium tools and digital products from Evostackr.'
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/store');
-      }
-    } else if (currentPath.startsWith('/store/')) {
-      const prodSlug = currentPath.replace('/store/', '').replace(/\/$/, '');
-      const prod = storeProducts.find((p) => p.slug === prodSlug);
-      if (prod) {
-        document.title = `${prod.name} — ${prod.category} | Evostackr`;
-        const metaDesc = document.querySelector('meta[name="description"]');
-        if (metaDesc) {
-          metaDesc.setAttribute(
-            'content',
-            'Explore EvoEdu Pro, an all-in-one Laravel 12 school and college ERP for admissions, attendance, exams, fees, payroll, and academic management.'
-          );
-        }
-        const canonical = document.querySelector('link[rel="canonical"]');
-        if (canonical) {
-          canonical.setAttribute('href', `https://evostackr.in/store/${prod.slug}`);
-        }
-      }
-    } else if (isSeoSuite) {
-      document.title = 'Optimization Suite & Search Intelligence | Evostackr';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Evostackr Unified Optimization Suite: Complete Technical SEO, AEO, GEO, SXO, and AI Search Intelligence Architecture.'
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/admin/seo');
-      }
-    } else {
-      document.title = 'Evostackr — Independent Software Products & Custom Engineering';
-      const metaDesc = document.querySelector('meta[name="description"]');
-      if (metaDesc) {
-        metaDesc.setAttribute(
-          'content',
-          'Evostackr is an independent software company building proprietary products and delivering custom web, SaaS, and automation engineering.'
-        );
-      }
-      const canonical = document.querySelector('link[rel="canonical"]');
-      if (canonical) {
-        canonical.setAttribute('href', 'https://evostackr.in/');
-      }
-    }
-  }, [currentPath, isSeoSuite]);
-
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
   const isServicesPage = currentPath === '/services';
   const isProductsPage = currentPath === '/products';
@@ -163,6 +65,7 @@ function App() {
 
   return (
     <>
+      <SEOHead currentPath={currentPath} />
       <a href="#main-content" className="skip-link">
         Skip to main content
       </a>

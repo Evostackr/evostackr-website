@@ -8,8 +8,8 @@
     <priority>1.0</priority>
     <image:image>
       <image:loc>https://evostackr.in/evostackr-logo.png</image:loc>
-      <image:title>Evostackr — Independent Software Products and Custom Development</image:title>
-      <image:caption>Official logo and visual identity of Evostackr</image:caption>
+      <image:title>Evostackr — Independent Software Products and Custom Engineering</image:title>
+      <image:caption>Official visual identity of Evostackr</image:caption>
     </image:image>
   </url>
   <url>
@@ -17,6 +17,41 @@
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/sms-campaign-manager.png</image:loc>
+      <image:title>SMS Campaign Manager — Dual-SIM Bulk SMS Dispatch Engine</image:title>
+      <image:caption>Native Android bulk SMS application for automated customer outreach</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/fabricate.png</image:loc>
+      <image:title>Fabricate — Venture Product Studio</image:title>
+      <image:caption>Startup engineering model prototyping and launching validated applications</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/whatsapp-past-member-extractor.png</image:loc>
+      <image:title>WhatsApp Past Member Extractor</image:title>
+      <image:caption>Browser automation extension for exporting historical WhatsApp Web group members</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/24idchat.png</image:loc>
+      <image:title>24IDChat — Ephemeral Anonymous Real-Time Chat</image:title>
+      <image:caption>Real-time anonymous messaging platform powered by 24-hour disposable cryptographic IDs</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/tempemailfree.png</image:loc>
+      <image:title>TempEmailFree — Instant Disposable Email Generator</image:title>
+      <image:caption>Automated temporary email inbox with real-time OTP verification code detection</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/pink-pdf.png</image:loc>
+      <image:title>Pink PDF — WebAssembly Client-Side PDF Suite</image:title>
+      <image:caption>100% private in-browser PDF utilities powered by WebAssembly</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/products/codevault.png</image:loc>
+      <image:title>CodeVault — Developer Resources and Source Code</image:title>
+      <image:caption>Open developer templates, full-stack architectures, and UI code components</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://evostackr.in/services</loc>
@@ -35,22 +70,47 @@
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/dashboard-showcase.png</image:loc>
+      <image:title>Evostackr Software Store — Premium Digital Products</image:title>
+      <image:caption>Production software packages with direct source code access</image:caption>
+    </image:image>
   </url>
   <url>
     <loc>https://evostackr.in/store/evoedu-pro</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
+    <priority>0.9</priority>
     <image:image>
       <image:loc>https://evostackr.in/images/store/evoedu-pro/logo.png</image:loc>
       <image:title>EvoEdu Pro — School and College Management ERP</image:title>
       <image:caption>Official logo of EvoEdu Pro Educational ERP</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/dashboard-showcase.png</image:loc>
+      <image:title>EvoEdu Pro — Multi-Device Showcase</image:title>
+      <image:caption>Responsive admin dashboard interface for institutional governance</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/dark-dashboard.png</image:loc>
+      <image:title>EvoEdu Pro — Dark Theme Admin Dashboard</image:title>
+      <image:caption>Ultra-modern FilamentPHP v3 administrative interface</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/analytics-dashboard.png</image:loc>
+      <image:title>EvoEdu Pro — Academic Analytics and Telemetry</image:title>
+      <image:caption>Institutional performance and student metric analysis</image:caption>
+    </image:image>
+    <image:image>
+      <image:loc>https://evostackr.in/images/store/evoedu-pro/monthly-attendance.png</image:loc>
+      <image:title>EvoEdu Pro — Attendance Management</image:title>
+      <image:caption>Comprehensive attendance tracking and automated reporting</image:caption>
     </image:image>
   </url>
   <url>
     <loc>https://evostackr.in/admin/seo</loc>
     <lastmod>2026-10-29</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
+    <priority>0.7</priority>
   </url>
 </urlset>

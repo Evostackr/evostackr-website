@@ -1,5 +1,5 @@
 # robots.txt for https://evostackr.in/
-# Optimized for Google, Bing, and AI Search Engines (ChatGPT, Claude, Perplexity, Gemini, Copilot)
+# Optimized for Google, Bing, and Modern AI Search Engines (ChatGPT, Claude, Gemini, Perplexity, Copilot, Apple Intelligence)
 
 User-agent: *
 Allow: /
@@ -11,6 +11,9 @@ User-agent: Googlebot
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+
+User-agent: MSNBot
 Allow: /
 
 User-agent: Slurp
@@ -25,11 +28,21 @@ Allow: /
 User-agent: YandexBot
 Allow: /
 
-# Generative AI & Answer Engine Crawlers (AEO / GEO)
-User-agent: GPTBot
+# OpenAI — ChatGPT Search, Browsing, and Assistants
+User-agent: OAI-SearchBot
 Allow: /
 
 User-agent: ChatGPT-User
+Allow: /
+
+User-agent: GPTBot
+Allow: /
+
+# Anthropic — Claude Search, User Fetches, and Crawlers
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: Claude-User
 Allow: /
 
 User-agent: ClaudeBot
@@ -38,25 +51,63 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# Perplexity AI — Real-time Search and User Queries
 User-agent: PerplexityBot
 Allow: /
 
+User-agent: Perplexity-User
+Allow: /
+
+# Google — Gemini Data Use, Grounding, and Extended Crawlers
 User-agent: Google-Extended
+Allow: /
+
+# Apple — Siri, Spotlight, and Safari Search
+User-agent: Applebot
 Allow: /
 
 User-agent: Applebot-Extended
 Allow: /
 
+# Microsoft — Copilot and Bing Discovery
+User-agent: BingPreview
+Allow: /
+
+# Amazon — Alexa and Rufus Shopping/Search
+User-agent: Amzn-SearchBot
+Allow: /
+
+User-agent: Amzn-User
+Allow: /
+
 User-agent: Amazonbot
 Allow: /
 
-User-agent: cohere-ai
+# Mistral AI — Search and Retrieval
+User-agent: MistralAI-Index
 Allow: /
 
+User-agent: MistralAI-User
+Allow: /
+
+# Meta — Meta AI Search and User Fetches
 User-agent: Meta-ExternalAgent
 Allow: /
 
+User-agent: Meta-ExternalFetcher
+Allow: /
+
 User-agent: FacebookBot
+Allow: /
+
+# Cohere, ByteDance, Diffbot, and Research Crawlers
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
 Allow: /
 
 User-agent: Omgilibot
@@ -65,6 +116,6 @@ Allow: /
 User-agent: CCBot
 Allow: /
 
-# Crawl Delay & Host Directives
+# Host and Sitemap Directives
 Host: https://evostackr.in
 Sitemap: https://evostackr.in/sitemap.xml

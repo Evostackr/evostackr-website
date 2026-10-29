@@ -6,6 +6,7 @@
 - **Name**: Evostackr
 - **Official Website**: https://evostackr.in
 - **Project Directory**: https://dir.evostackr.in
+- **Software Store**: https://evostackr.in/store
 - **Official Support Email**: support@evostackr.in
 - **Brand Domain**: evostackr.in
 - **Type**: Independent Software Company & Engineering Studio
@@ -19,29 +20,48 @@
    - **URL**: https://dir.evostackr.in/#/project/sms-campaign-manager
    - **Description**: Turn any Android phone into an automated, private bulk SMS dispatch engine with Dual-SIM support, intelligent throttling, and zero third-party API markups. Built with native Kotlin, Jetpack Compose, Room SQLite, and persistent Android Foreground Services.
 
-2. **Fabricate**
+2. **24IDChat**
+   - **Category**: Communication Platform / Ephemeral Messaging
+   - **Status**: Live
+   - **URL**: https://24idchat.evostackr.in/
+   - **Project Specification**: https://dir.evostackr.in/#/project/24idchat
+   - **Description**: High-speed, anonymous real-time chat platform powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and automated 24-hour message deletion with zero data retention.
+
+3. **EvoEdu Pro**
+   - **Category**: Educational ERP / PHP Source Code
+   - **Status**: Available
+   - **URL**: https://evostackr.in/store/evoedu-pro
+   - **Description**: All-in-one modern School and College Management ERP built on Laravel 12 and FilamentPHP v3. Features admissions, attendance, exams, fees with Stripe, HR, payroll, library, and full unencrypted source code access.
+
+4. **Fabricate**
    - **Category**: Venture Studio / Startup Incubation
    - **Status**: Live
    - **URL**: https://dir.evostackr.in/#/project/fabricate
    - **Description**: A product studio that selects promising startup concepts and engineers them into fully functional web and mobile applications at zero initial development cost.
 
-3. **WhatsApp Past Member Extractor**
+5. **WhatsApp Past Member Extractor**
    - **Category**: Browser Utility / Data Automation
    - **Status**: Live
    - **URL**: https://dir.evostackr.in/#/project/whatsapp-past-member-extractor
    - **Description**: Browser automation utility that safely parses, filters, and exports past group members who departed or were removed from WhatsApp Web groups into CSV, Excel, and VCF formats.
 
-4. **24IDChat**
-   - **Category**: Communication Platform / Ephemeral Messaging
-   - **Status**: Live
-   - **URL**: https://dir.evostackr.in/#/project/24idchat
-   - **Description**: High-speed, anonymous real-time chat platform powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and automated 24-hour message deletion with no data retention.
-
-5. **TempEmailFree**
+6. **TempEmailFree**
    - **Category**: Privacy Utility / Disposable Email
    - **Status**: Live
    - **URL**: https://dir.evostackr.in/#/project/tempemailfree
    - **Description**: Instant, secure disposable temporary email generator with real-time inbox auto-refresh and algorithmic OTP verification code detection.
+
+7. **Pink PDF**
+   - **Category**: Client-Side Cryptographic Tool / WebAssembly
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/pink-pdf
+   - **Description**: 100% private in-browser PDF suite with 33+ tools running via WebAssembly and client-side encryption with zero server uploads.
+
+8. **CodeVault**
+   - **Category**: Open Developer Resources & Free Source Code
+   - **Status**: Live
+   - **URL**: https://dir.evostackr.in/#/project/codevault
+   - **Description**: Open developer repository offering free production source code, full-stack application templates, UI component kits, and custom engineering services.
 
 ## Custom Software Development Services
 

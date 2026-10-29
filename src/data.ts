@@ -30,7 +30,7 @@ export const caseStudies: CaseStudy[] = [
     problem: 'Existing messaging platforms require permanent phone numbers or accounts, exposing user identities and retaining persistent logs.',
     solution: 'Designed and built an ephemeral messaging platform with unique 24-hour rotating identities, sub-15ms WebSocket delivery, and automated 24h disposal.',
     technologies: ['React 19', 'TypeScript', 'WebSocket', 'Node.js', 'Vite'],
-    url: 'https://dir.evostackr.in/#/project/24idchat',
+    url: 'https://24idchat.evostackr.in/',
   },
   {
     id: 'tempemailfree-case',

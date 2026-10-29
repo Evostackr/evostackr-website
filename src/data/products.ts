@@ -80,7 +80,7 @@ export const products: Product[] = [
     category: 'Communication Platform',
     status: 'Live',
     image: '/images/products/24idchat.png',
-    url: 'https://dir.evostackr.in/#/project/24idchat',
+    url: 'https://24idchat.evostackr.in/',
     featured: false,
     published: true,
   },

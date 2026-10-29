@@ -106,8 +106,35 @@
           "award": "8+ Independent Products Shipped, 11+ Google Play Deployed Applications",
           "sameAs": [
             "https://github.com/Evostackr",
-            "https://dir.evostackr.in/"
+            "https://dir.evostackr.in/",
+            "https://24idchat.evostackr.in/"
           ],
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Evostackr Software Products & Engineering Services",
+            "itemListElement": [
+              {
+                "@type": "OfferCatalog",
+                "name": "Independent Software Products",
+                "url": "https://evostackr.in/products"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Digital Software Store",
+                "url": "https://evostackr.in/store"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Software Engineering Services",
+                "url": "https://evostackr.in/services"
+              },
+              {
+                "@type": "OfferCatalog",
+                "name": "Google Play Closed Testing Support",
+                "url": "https://evostackr.in/services/google-play-closed-testing"
+              }
+            ]
+          },
           "knowsAbout": [
             "Software Engineering",
             "Android Development",
@@ -133,6 +160,14 @@
           "publisher": {
             "@id": "https://evostackr.in/#organization"
           },
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://evostackr.in/products?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          },
           "inLanguage": "en-US"
         },
         {
@@ -149,31 +184,25 @@
               "@type": "ListItem",
               "position": 2,
               "name": "Products",
-              "item": "https://evostackr.in/#products"
+              "item": "https://evostackr.in/products"
             },
             {
               "@type": "ListItem",
               "position": 3,
               "name": "Services",
-              "item": "https://evostackr.in/#services"
+              "item": "https://evostackr.in/services"
             },
             {
               "@type": "ListItem",
               "position": 4,
-              "name": "About",
-              "item": "https://evostackr.in/#about"
+              "name": "Software Store",
+              "item": "https://evostackr.in/store"
             },
             {
               "@type": "ListItem",
               "position": 5,
-              "name": "FAQ",
-              "item": "https://evostackr.in/#faq"
-            },
-            {
-              "@type": "ListItem",
-              "position": 6,
-              "name": "Contact",
-              "item": "https://evostackr.in/#contact"
+              "name": "Google Play Closed Testing",
+              "item": "https://evostackr.in/services/google-play-closed-testing"
             }
           ]
         },
@@ -217,7 +246,10 @@
           "name": "24IDChat",
           "applicationCategory": "CommunicationApplication",
           "description": "Real-time anonymous chat room platform powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and self-purging message streams.",
-          "url": "https://dir.evostackr.in/#/project/24idchat",
+          "url": "https://24idchat.evostackr.in/",
+          "sameAs": [
+            "https://dir.evostackr.in/#/project/24idchat"
+          ],
           "author": {
             "@id": "https://evostackr.in/#organization"
           }
@@ -229,6 +261,49 @@
           "applicationCategory": "UtilityApplication",
           "description": "Instant, secure disposable temporary email generator with real-time inbox auto-refresh and algorithmic OTP verification code detection.",
           "url": "https://dir.evostackr.in/#/project/tempemailfree",
+          "author": {
+            "@id": "https://evostackr.in/#organization"
+          }
+        },
+        {
+          "@type": ["SoftwareApplication", "Product"],
+          "@id": "https://evostackr.in/store/evoedu-pro#product",
+          "name": "EvoEdu Pro",
+          "operatingSystem": "Web / Self-Hosted (PHP 8.2+, Laravel 12, MySQL)",
+          "applicationCategory": "EducationalApplication",
+          "description": "All-in-one school and college management ERP built with Laravel 12 and FilamentPHP v3 for admissions, attendance, exams, fees, payroll, and administration.",
+          "url": "https://evostackr.in/store/evoedu-pro",
+          "image": "https://evostackr.in/images/store/evoedu-pro/dashboard-showcase.png",
+          "offers": {
+            "@type": "Offer",
+            "price": "3999",
+            "priceCurrency": "INR",
+            "priceValidUntil": "2027-12-31",
+            "availability": "https://schema.org/InStock",
+            "url": "https://evostackr.in/store/evoedu-pro"
+          },
+          "author": {
+            "@id": "https://evostackr.in/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://evostackr.in/#pink-pdf",
+          "name": "Pink PDF",
+          "applicationCategory": "UtilitiesApplication",
+          "description": "100% private in-browser PDF suite with 33+ tools running via WebAssembly and client-side encryption.",
+          "url": "https://dir.evostackr.in/#/project/pink-pdf",
+          "author": {
+            "@id": "https://evostackr.in/#organization"
+          }
+        },
+        {
+          "@type": "SoftwareApplication",
+          "@id": "https://evostackr.in/#codevault",
+          "name": "CodeVault",
+          "applicationCategory": "DeveloperApplication",
+          "description": "Open developer repository providing free production source code, full-stack application templates, and UI component kits.",
+          "url": "https://dir.evostackr.in/#/project/codevault",
           "author": {
             "@id": "https://evostackr.in/#organization"
           }
@@ -332,12 +407,25 @@
             <li>
               <h3>24IDChat</h3>
               <p>Ephemeral, anonymous web communication platform with zero identity registration, encrypted temporary rooms, and automatic message expiration.</p>
-              <a href="https://dir.evostackr.in/#/project/24idchat">View project details</a>
+              <a href="https://24idchat.evostackr.in/" target="_blank" rel="noopener noreferrer">Launch 24IDChat live platform</a>
+              <a href="https://dir.evostackr.in/#/project/24idchat">View architecture details</a>
             </li>
             <li>
               <h3>TempEmailFree</h3>
               <p>Automated disposable email inbox and verification generator providing instant temporary addresses for QA testing, signups, and privacy protection.</p>
               <a href="https://dir.evostackr.in/#/project/tempemailfree">View project details</a>
+            </li>
+          </ul>
+        </section>
+
+        <section id="store" aria-label="Software Store and Source Packages">
+          <h2>Digital Software Store</h2>
+          <p>Production-ready downloadable software packages and full unencrypted source code with zero recurring fees.</p>
+          <ul>
+            <li>
+              <h3>EvoEdu Pro — School &amp; College Management ERP</h3>
+              <p>All-in-one institutional ERP built on Laravel 12 and FilamentPHP v3. Automates admissions, attendance, multi-term examinations, fee management with Stripe, HR, payroll, library, and student ID cards. Starting at ₹3,999 INR / $49 USD with complete source code.</p>
+              <a href="/store/evoedu-pro">Explore EvoEdu Pro</a>
             </li>
           </ul>
         </section>
