@@ -74,7 +74,7 @@ function App() {
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          "Explore Evostackr's Google Play closed testing support for Android developers. Starting from ₹1,245 INR, with an indicative USD price based on the available exchange rate."
+          "Explore Evostackr's Google Play closed testing support for Android developers. 20 verified testers and 14-day tracking starting from ₹1,245 INR."
         );
       }
       const canonical = document.querySelector('link[rel="canonical"]');
@@ -87,7 +87,7 @@ function App() {
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          'Explore independent software products designed to solve specific problems by Evostackr, including SMS Campaign Manager, Fabricate, WhatsApp Past Member Extractor, 24IDChat, TempEmailFree, Pink PDF, My Piano, and CodeVault.'
+          'Explore independent software products built by Evostackr, designed to solve specific problems across mobile, privacy, utilities, and developer tools.'
         );
       }
       const canonical = document.querySelector('link[rel="canonical"]');
@@ -116,7 +116,7 @@ function App() {
         if (metaDesc) {
           metaDesc.setAttribute(
             'content',
-            'Explore EvoEdu Pro, a Laravel-based school and college management ERP with student admissions, attendance, examinations, fee management, HR, payroll, reporting, and administration tools.'
+            'Explore EvoEdu Pro, an all-in-one Laravel 12 school and college ERP for admissions, attendance, exams, fees, payroll, and academic management.'
           );
         }
         const canonical = document.querySelector('link[rel="canonical"]');
@@ -143,7 +143,7 @@ function App() {
       if (metaDesc) {
         metaDesc.setAttribute(
           'content',
-          'Evostackr is an independent software company building proprietary products (SMS Campaign Manager, Fabricate, 24IDChat, TempEmailFree) and delivering custom web, SaaS, and automation engineering.'
+          'Evostackr is an independent software company building proprietary products and delivering custom web, SaaS, and automation engineering.'
         );
       }
       const canonical = document.querySelector('link[rel="canonical"]');
