@@ -54,7 +54,7 @@ export function Contact() {
               </a>
             </div>
 
-            <p className="contact__note text-meta">
+            <p className="contact__note">
               Official support: {CONTACT_CONFIG.supportEmail} · WhatsApp: {CONTACT_CONFIG.whatsAppDisplay}
             </p>
           </div>

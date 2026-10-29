@@ -130,7 +130,7 @@ Configured in [index.html](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratc
 - `--fs-h2`: `clamp(1.75rem, 2.5vw + 0.25rem, 2.5rem)` (Line height: `1.1`, Letter spacing: `-0.02em`)
 - `--fs-h3`: `clamp(1.25rem, 1.5vw + 0.25rem, 1.75rem)` (Line height: `1.25`, Letter spacing: `-0.01em`)
 - `--fs-body`: `clamp(1rem, 0.5vw + 0.875rem, 1.125rem)` (Line height: `1.55`–`1.7`, Letter spacing: `normal`)
-- `--fs-small`: `clamp(0.8125rem, 0.25vw + 0.75rem, 0.875rem)` (Line height: `1.55`–`1.7`)
+- `--fs-small`: `clamp(0.875rem, 0.25vw + 0.8125rem, 0.9375rem)` (Line height: `1.55`–`1.7`, min 14px across all viewports)
 - `--fs-meta`: `clamp(0.6875rem, 0.2vw + 0.625rem, 0.8125rem)` (Letter spacing: `0.08em`–`0.1em`, uppercase)
 
 ### Line Heights
@@ -198,7 +198,7 @@ Configured in [index.html](file:///c:/Users/ujwal/.gemini/antigravity-ide/scratc
     do <span className="text-editorial">more.</span>
   </h1>
   ```
-- **Actions**: Dual CTA button grouping (`.btn--primary` "Explore our products" and `.btn--secondary` "Build with us").
+- **Actions**: Dual CTA button grouping (`.btn--primary` "Explore our products" and `.btn--secondary` "Get in touch").
 - **Bottom Telemetry Bar**: Pinned to hero bottom with top border `1px solid var(--color-border)`. Displays structured metrics: "5 shipped" and "Products & Engineering".
 
 ### 3. Products Showcase (`Products.tsx` / `Products.css`)

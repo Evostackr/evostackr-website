@@ -28,8 +28,8 @@ export function Hero() {
             <a href="#products" className="btn btn--primary">
               Explore our products <span className="arrow" aria-hidden="true">→</span>
             </a>
-            <a href="#services" className="btn btn--secondary">
-              Build with us <span className="arrow" aria-hidden="true">→</span>
+            <a href="#contact" className="btn btn--secondary">
+              Get in touch <span className="arrow" aria-hidden="true">→</span>
             </a>
           </div>
         </div>

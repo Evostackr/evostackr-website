@@ -24,7 +24,7 @@
   --fs-h2: clamp(1.75rem, 2.5vw + 0.25rem, 2.5rem);
   --fs-h3: clamp(1.25rem, 1.5vw + 0.25rem, 1.75rem);
   --fs-body: clamp(1rem, 0.5vw + 0.875rem, 1.125rem);
-  --fs-small: clamp(0.8125rem, 0.25vw + 0.75rem, 0.875rem);
+  --fs-small: clamp(0.875rem, 0.25vw + 0.8125rem, 0.9375rem);
   --fs-meta: clamp(0.6875rem, 0.2vw + 0.625rem, 0.8125rem);
 
   --fw-regular: 400;

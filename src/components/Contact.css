@@ -55,6 +55,7 @@
 }
 
 .contact__note {
+  font-size: var(--fs-small);
   color: var(--color-dark-text-secondary);
   font-style: italic;
 }

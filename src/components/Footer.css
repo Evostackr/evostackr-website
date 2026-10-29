@@ -84,7 +84,7 @@
 }
 
 .footer__copyright {
-  font-size: var(--fs-meta);
+  font-size: var(--fs-small);
   color: var(--color-text-secondary);
 }
 
