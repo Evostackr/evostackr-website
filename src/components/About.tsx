@@ -95,6 +95,112 @@ export function About() {
             <p className="about__principle-text">Real solutions for real problems. No feature bloat, no over-engineering. Software that does what it needs to do, well.</p>
           </div>
         </div>
+
+        {/* Credibility, Commercial Proof & Engineering Methodology */}
+        <div className="about__proof-section trust-signals" id="credibility-and-proof" aria-label="Commercial proof, engineering methodology, and data provenance">
+          <div className="about__proof-header">
+            <div className="section-label">
+              <span className="section-label__line" />
+              <span className="section-label__text">Proof &amp; Methodology</span>
+            </div>
+            <h3 className="about__proof-title">
+              Verifiable deliverables, open methodology, and complete provenance.
+            </h3>
+            <p className="about__proof-subtitle">
+              We operate with full technical transparency. Every metric, deliverable, and security guarantee is backed by live production code and verifiable public citations.
+            </p>
+          </div>
+
+          <div className="about__proof-grid">
+            {/* Card 1: Commercial Proof & Deliverables */}
+            <article className="about__proof-card">
+              <div className="about__proof-card-header">
+                <span className="about__proof-badge text-meta">01 • Commercial Proof</span>
+                <h4 className="about__proof-card-title">Production Software &amp; Deliverables</h4>
+              </div>
+              <ul className="about__proof-list">
+                <li className="about__proof-item">
+                  <strong>8+ Independent Products Shipped:</strong> Production utilities including SMS Campaign Manager, Pink PDF, CodeVault, and Fabricate with public architectural specifications.
+                </li>
+                <li className="about__proof-item">
+                  <strong>11+ Google Play Applications:</strong> Deployed Android applications verified on the official Play Store with public package identifiers.
+                </li>
+                <li className="about__proof-item">
+                  <strong>Instant Source Delivery:</strong> Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.
+                </li>
+              </ul>
+              <div className="about__proof-cite text-meta">
+                Source: <a href="https://dir.evostackr.in/" target="_blank" rel="noopener noreferrer" className="link-underline">Evostackr Project Directory ↗</a>
+              </div>
+            </article>
+
+            {/* Card 2: Security & Privacy Methodology */}
+            <article className="about__proof-card">
+              <div className="about__proof-card-header">
+                <span className="about__proof-badge text-meta">02 • Methodology</span>
+                <h4 className="about__proof-card-title">Privacy &amp; Engineering Standards</h4>
+              </div>
+              <ul className="about__proof-list">
+                <li className="about__proof-item">
+                  <strong>Zero-Telemetry Standard:</strong> In-browser WebAssembly cryptography (Pink PDF) and local background engines (SMS Campaign Manager) execute with 100% client-side privacy.
+                </li>
+                <li className="about__proof-item">
+                  <strong>Google Play Compliance Protocol:</strong> 20 verified opt-in human testers actively tracked over 14 continuous days satisfying Google Play Console publishing criteria.
+                </li>
+                <li className="about__proof-item">
+                  <strong>Edge-First Security Architecture:</strong> Deployed on Cloudflare Edge with strict Content Security Policy, HSTS preload, and sub-200ms TTFB globally.
+                </li>
+              </ul>
+              <div className="about__proof-cite text-meta">
+                Methodology: <a href="/services/google-play-closed-testing" className="link-underline">14-Day Testing Protocol Documentation →</a>
+              </div>
+            </article>
+
+            {/* Card 3: Authorship & Data Provenance */}
+            <article className="about__proof-card">
+              <div className="about__proof-card-header">
+                <span className="about__proof-badge text-meta">03 • Provenance</span>
+                <h4 className="about__proof-card-title">Authorship &amp; Public Code</h4>
+              </div>
+              <ul className="about__proof-list">
+                <li className="about__proof-item">
+                  <strong>Engineering Authorship:</strong> Engineered, maintained, and operated directly by the core Evostackr engineering team (Jharkhand, India).
+                </li>
+                <li className="about__proof-item">
+                  <strong>Public Code Repositories:</strong> Open developer resources, UI component templates, and platform schemas hosted on our verified GitHub organization.
+                </li>
+                <li className="about__proof-item">
+                  <strong>Audited Review Dates:</strong> System architecture, security headers, and compliance verified regularly. Current audit cycle: <strong>October 2026</strong>.
+                </li>
+              </ul>
+              <div className="about__proof-cite text-meta">
+                Provenance: <a href="https://github.com/Evostackr" target="_blank" rel="noopener noreferrer" className="link-underline">github.com/Evostackr ↗</a>
+              </div>
+            </article>
+
+            {/* Card 4: Support SLA & Commercial Terms */}
+            <article className="about__proof-card">
+              <div className="about__proof-card-header">
+                <span className="about__proof-badge text-meta">04 • Guarantees</span>
+                <h4 className="about__proof-card-title">Direct Engineering SLA &amp; Pricing</h4>
+              </div>
+              <ul className="about__proof-list">
+                <li className="about__proof-item">
+                  <strong>Direct Engineer Access:</strong> Communication directly with software engineers via official WhatsApp and email—no automated bots or sales gatekeepers.
+                </li>
+                <li className="about__proof-item">
+                  <strong>24-Hour Response SLA:</strong> Guaranteed technical response within 24 business hours for all project and closed-testing inquiries.
+                </li>
+                <li className="about__proof-item">
+                  <strong>Transparent Fixed Pricing:</strong> Clear, upfront starting rates (from ₹1,245 INR / $49 USD) with confirmed terms prior to engagement.
+                </li>
+              </ul>
+              <div className="about__proof-cite text-meta">
+                Support: <a href="mailto:support@evostackr.in" className="link-underline">support@evostackr.in</a>
+              </div>
+            </article>
+          </div>
+        </div>
       </div>
     </section>
   );

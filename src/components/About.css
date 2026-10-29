@@ -80,6 +80,113 @@
   line-height: var(--lh-relaxed);
 }
 
+/* ─── Proof & Methodology Section ─── */
+.about__proof-section {
+  margin-top: var(--space-4xl);
+  padding-top: var(--space-4xl);
+  border-top: 1px solid var(--color-border);
+}
+
+.about__proof-header {
+  max-width: 680px;
+  margin-bottom: var(--space-3xl);
+}
+
+.about__proof-title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  letter-spacing: -0.02em;
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+  color: var(--color-text);
+}
+
+.about__proof-subtitle {
+  font-size: var(--fs-body);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+}
+
+.about__proof-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2xl);
+}
+
+.about__proof-card {
+  background-color: var(--color-bg);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+  transition: border-color var(--transition-base);
+}
+
+.about__proof-card:hover {
+  border-color: var(--color-text-secondary);
+}
+
+.about__proof-card-header {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-xs);
+}
+
+.about__proof-badge {
+  color: var(--color-brand-accent);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.about__proof-card-title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-semibold);
+  letter-spacing: -0.01em;
+  color: var(--color-text);
+}
+
+.about__proof-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-md);
+}
+
+.about__proof-item {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  line-height: var(--lh-relaxed);
+  position: relative;
+  padding-left: var(--space-md);
+}
+
+.about__proof-item::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  color: var(--color-brand-primary);
+  font-weight: var(--fw-bold);
+}
+
+.about__proof-item strong {
+  color: var(--color-text);
+  font-weight: var(--fw-semibold);
+}
+
+.about__proof-cite {
+  margin-top: auto;
+  padding-top: var(--space-md);
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-secondary);
+}
+
+.about__proof-cite a {
+  color: var(--color-text);
+}
+
 /* ─── Responsive ─── */
 @media (max-width: 1024px) {
   .about__layout {
@@ -89,6 +196,11 @@
 
   .about__visual {
     display: none;
+  }
+
+  .about__proof-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-xl);
   }
 }
 
@@ -100,5 +212,13 @@
 
   .about__layout {
     margin-bottom: var(--space-3xl);
+  }
+
+  .about__proof-card {
+    padding: var(--space-xl);
+  }
+
+  .about__proof-title {
+    font-size: var(--fs-h3);
   }
 }

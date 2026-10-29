@@ -42,12 +42,20 @@ export function Hero() {
       <div className="hero__bottom container">
         <div className="hero__stats">
           <div className="hero__stat">
-            <span className="hero__stat-label text-meta">Products</span>
-            <span className="hero__stat-value">5 shipped</span>
+            <span className="hero__stat-label text-meta">Independent Products</span>
+            <span className="hero__stat-value">8+ live</span>
           </div>
           <div className="hero__stat">
-            <span className="hero__stat-label text-meta">Focus</span>
-            <span className="hero__stat-value">Products & Engineering</span>
+            <span className="hero__stat-label text-meta">Google Play Apps</span>
+            <span className="hero__stat-value">11+ deployed</span>
+          </div>
+          <div className="hero__stat">
+            <span className="hero__stat-label text-meta">Testing Guarantee</span>
+            <span className="hero__stat-value">14-day compliance</span>
+          </div>
+          <div className="hero__stat">
+            <span className="hero__stat-label text-meta">Privacy Standard</span>
+            <span className="hero__stat-value">100% client-side</span>
           </div>
         </div>
       </div>
