@@ -43,4 +43,4 @@ When connecting this repository to **Cloudflare Pages**:
 
 ### Included Cloudflare Pages Configurations
 - **`public/_redirects`**: Automatically handles Single Page Application (SPA) routing fallback (`/* /index.html 200`).
-- **`public/_headers`**: Enforces security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`) and long-term immutable caching for static assets in `/assets/*`.
+- **`public/_headers`**: Enforces common public security headers (`Content-Security-Policy`, `X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`, `Strict-Transport-Security`, `Permissions-Policy`) and long-term immutable caching for static assets in `/assets/*`.
