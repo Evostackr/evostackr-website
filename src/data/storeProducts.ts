@@ -5,7 +5,7 @@
  * - Local static data module (no database, no backend CMS, no API).
  * - Future-ready typed contract for manual product entry.
  * - Real local product data for EvoEdu Pro with assets in /images/store/evoedu-pro/
- * - Purchase links direct to verified Buy Me a Coffee digital product URLs.
+ * - Purchase links direct to verified Payhip digital product URLs.
  */
 
 export interface StoreProductPrice {
@@ -98,7 +98,7 @@ export const storeProducts: StoreProduct[] = [
       billingType: 'one-time',
       note: 'Tiered licensing (Regular & Extended) available on checkout',
     },
-    buyUrl: 'https://buymeacoffee.com/evostackr/e/591724',
+    buyUrl: 'https://payhip.com/b/pPFgv',
     logoUrl: '/images/store/evoedu-pro/logo.png',
     cardPreviewUrl: '/images/store/evoedu-pro/dashboard-showcase.png',
     screenshotUrls: [

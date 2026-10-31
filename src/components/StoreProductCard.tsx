@@ -165,7 +165,7 @@ export function StoreProductCard({ product, onNavigate }: StoreProductCardProps)
             target="_blank"
             rel="noopener noreferrer"
             className="btn btn--primary store-card__buy-btn"
-            aria-label={`Buy ${product.name} on Buy Me a Coffee`}
+            aria-label={`Buy ${product.name} on Payhip`}
           >
             Buy Software <span className="arrow" aria-hidden="true">↗</span>
           </a>

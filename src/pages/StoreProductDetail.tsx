@@ -130,9 +130,9 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn btn--primary product-detail__buy-btn"
-                      aria-label={`Buy ${product.name} on Buy Me a Coffee`}
+                      aria-label={`Buy ${product.name} on Payhip`}
                     >
-                      Get on Buy Me a Coffee <span className="arrow" aria-hidden="true">↗</span>
+                      Buy Now <span className="arrow" aria-hidden="true">↗</span>
                     </a>
                   )}
                   <button
@@ -147,7 +147,7 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
                 </div>
 
                 <p className="product-detail__fulfillment-note text-meta text-secondary">
-                  ✓ Instant unencrypted source download provided directly upon checkout via Buy Me a Coffee.
+                  ✓ Instant unencrypted source download provided directly upon checkout via Payhip.
                 </p>
               </div>
             </div>
@@ -380,12 +380,12 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn btn--primary"
-                  aria-label="Open Buy Me a Coffee product checkout"
+                  aria-label={`Buy ${product.name} license on Payhip`}
                 >
-                  Buy License on Buy Me a Coffee <span className="arrow" aria-hidden="true">↗</span>
+                  Buy License on Payhip <span className="arrow" aria-hidden="true">↗</span>
                 </a>
                 <span className="product-detail__checkout-disclaimer text-meta text-secondary">
-                  * Final tier selection and secure fulfillment take place on the official Buy Me a Coffee checkout page.
+                  * Final tier selection and secure fulfillment take place on the official Payhip checkout page.
                 </span>
               </div>
             </div>
