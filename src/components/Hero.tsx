@@ -47,8 +47,8 @@ export function Hero() {
             <span className="hero__stat-value">8+ live</span>
           </div>
           <div className="hero__stat">
-            <span className="hero__stat-label text-meta">Google Play Apps</span>
-            <span className="hero__stat-value">11+ deployed</span>
+            <span className="hero__stat-label text-meta">Apps Closed Tested</span>
+            <span className="hero__stat-value">11+</span>
           </div>
           <div className="hero__stat">
             <span className="hero__stat-label text-meta">Testing Guarantee</span>
