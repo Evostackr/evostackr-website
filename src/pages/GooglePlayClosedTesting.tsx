@@ -89,6 +89,15 @@ export function GooglePlayClosedTesting({ onNavigateHome, onNavigate, onRequestQ
       window.dispatchEvent(new CustomEvent('open-contact-widget'));
     }
   };
+
+  const handleDiscussApp = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onRequestQuote) {
+      onRequestQuote();
+    } else {
+      window.dispatchEvent(new CustomEvent('open-contact-widget'));
+    }
+  };
   const [conversionState, setConversionState] = useState<CurrencyConversionState>(() => {
     const cached = getCachedExchangeRate();
     if (cached) {
@@ -191,13 +200,16 @@ export function GooglePlayClosedTesting({ onNavigateHome, onNavigate, onRequestQ
               </p>
 
               <div className="service-hero__actions">
-                <a
-                  href="mailto:support@evostackr.in?subject=Google%20Play%20Closed%20Testing%20Inquiry"
+                <button
+                  type="button"
+                  onClick={handleDiscussApp}
                   className="btn btn--primary"
-                  aria-label="Discuss your app with Evostackr via email"
+                  data-contact-trigger="true"
+                  aria-label="Discuss your app and contact Evostackr"
+                  aria-haspopup="dialog"
                 >
                   Discuss your app <span className="arrow" aria-hidden="true">→</span>
-                </a>
+                </button>
                 <a href="#how-it-works" className="btn btn--secondary">
                   How it works <span className="arrow" aria-hidden="true">↓</span>
                 </a>
