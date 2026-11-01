@@ -75,6 +75,7 @@ function App() {
           <GooglePlayClosedTesting
             onNavigateHome={() => navigate('/')}
             onNavigate={navigate}
+            onRequestQuote={() => window.dispatchEvent(new CustomEvent('open-contact-widget'))}
           />
         ) : isServicesPage ? (
           <ServicesPage

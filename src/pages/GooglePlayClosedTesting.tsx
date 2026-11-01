@@ -14,6 +14,7 @@ import { closedTestingApps, type ClosedTestingApp } from '../data';
 interface GooglePlayClosedTestingProps {
   onNavigateHome: () => void;
   onNavigate?: (path: string, hash?: string) => void;
+  onRequestQuote?: () => void;
 }
 
 function AppIcon({ iconPath, name }: { iconPath: string; name: string }) {
@@ -79,7 +80,15 @@ function PortfolioCard({ app }: { app: ClosedTestingApp }) {
   );
 }
 
-export function GooglePlayClosedTesting({ onNavigateHome, onNavigate }: GooglePlayClosedTestingProps) {
+export function GooglePlayClosedTesting({ onNavigateHome, onNavigate, onRequestQuote }: GooglePlayClosedTestingProps) {
+  const handleRequestQuote = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (onRequestQuote) {
+      onRequestQuote();
+    } else {
+      window.dispatchEvent(new CustomEvent('open-contact-widget'));
+    }
+  };
   const [conversionState, setConversionState] = useState<CurrencyConversionState>(() => {
     const cached = getCachedExchangeRate();
     if (cached) {
@@ -250,12 +259,16 @@ export function GooglePlayClosedTesting({ onNavigateHome, onNavigate }: GooglePl
                 </div>
 
                 <div className="price-card__cta">
-                  <a
-                    href="mailto:support@evostackr.in?subject=Google%20Play%20Closed%20Testing%20Quote"
+                  <button
+                    type="button"
+                    onClick={handleRequestQuote}
                     className="btn btn--secondary btn--full"
+                    data-contact-trigger="true"
+                    aria-label="Request quote for your app and contact Evostackr"
+                    aria-haspopup="dialog"
                   >
                     Request quote for your app <span className="arrow" aria-hidden="true">→</span>
-                  </a>
+                  </button>
                 </div>
               </aside>
             </div>

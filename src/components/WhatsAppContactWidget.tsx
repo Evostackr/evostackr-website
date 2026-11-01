@@ -7,20 +7,59 @@ import {
   getSupportEmailUrl,
 } from '../config/contact';
 
-export function WhatsAppContactWidget() {
-  const [isOpen, setIsOpen] = useState<boolean>(false);
+export interface WhatsAppContactWidgetProps {
+  isOpen?: boolean;
+  onOpen?: () => void;
+  onClose?: () => void;
+}
+
+export function WhatsAppContactWidget({
+  isOpen: controlledIsOpen,
+  onOpen,
+  onClose,
+}: WhatsAppContactWidgetProps = {}) {
+  const [internalIsOpen, setInternalIsOpen] = useState<boolean>(false);
   const [deviceAware, setDeviceAware] = useState<boolean>(true);
   const widgetRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
 
-  const toggleOpen = useCallback(() => {
-    setIsOpen((prev) => !prev);
-  }, []);
+  const isControlled = controlledIsOpen !== undefined;
+  const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
+
+  const openPopup = useCallback(() => {
+    if (isControlled) {
+      onOpen?.();
+    } else {
+      setInternalIsOpen(true);
+    }
+  }, [isControlled, onOpen]);
 
   const closePopup = useCallback(() => {
-    setIsOpen(false);
+    if (isControlled) {
+      onClose?.();
+    } else {
+      setInternalIsOpen(false);
+    }
     triggerRef.current?.focus();
-  }, []);
+  }, [isControlled, onClose]);
+
+  const toggleOpen = useCallback(() => {
+    if (isOpen) {
+      closePopup();
+    } else {
+      openPopup();
+    }
+  }, [isOpen, closePopup, openPopup]);
+
+  // Listen for external trigger events (e.g., "Request quote for your app")
+  useEffect(() => {
+    const handleExternalOpen = () => {
+      openPopup();
+    };
+
+    window.addEventListener('open-contact-widget', handleExternalOpen);
+    return () => window.removeEventListener('open-contact-widget', handleExternalOpen);
+  }, [openPopup]);
 
   // Close on Escape key press
   useEffect(() => {
@@ -37,19 +76,23 @@ export function WhatsAppContactWidget() {
     return () => window.removeEventListener('keydown', handleKeyDown);
   }, [isOpen, closePopup]);
 
-  // Close on click outside widget container
+  // Close on click outside widget container (ignoring triggers with data-contact-trigger)
   useEffect(() => {
     if (!isOpen) return;
 
     const handleClickOutside = (e: MouseEvent) => {
+      const target = e.target as HTMLElement | null;
+      if (target?.closest('[data-contact-trigger]')) {
+        return;
+      }
       if (widgetRef.current && !widgetRef.current.contains(e.target as Node)) {
-        setIsOpen(false);
+        closePopup();
       }
     };
 
     document.addEventListener('mousedown', handleClickOutside);
     return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, [isOpen]);
+  }, [isOpen, closePopup]);
 
   const messageUrl = getWhatsAppMessageUrl(deviceAware);
   const voiceCallUrl = getWhatsAppCallUrl(deviceAware);
@@ -94,7 +137,7 @@ export function WhatsAppContactWidget() {
               target="_blank"
               rel="noopener noreferrer"
               className="wa-action-btn"
-              onClick={() => setIsOpen(false)}
+              onClick={() => closePopup()}
             >
               <div className="wa-action-btn__icon-wrap" aria-hidden="true">
                 <svg className="wa-action-btn__icon" viewBox="0 0 24 24">
@@ -118,7 +161,7 @@ export function WhatsAppContactWidget() {
               target="_blank"
               rel="noopener noreferrer"
               className="wa-action-btn"
-              onClick={() => setIsOpen(false)}
+              onClick={() => closePopup()}
             >
               <div className="wa-action-btn__icon-wrap" aria-hidden="true">
                 <svg className="wa-action-btn__icon" viewBox="0 0 24 24">
@@ -140,7 +183,7 @@ export function WhatsAppContactWidget() {
             <a
               href={emailUrl}
               className="wa-action-btn"
-              onClick={() => setIsOpen(false)}
+              onClick={() => closePopup()}
             >
               <div className="wa-action-btn__icon-wrap" aria-hidden="true">
                 <svg className="wa-action-btn__icon" viewBox="0 0 24 24">
