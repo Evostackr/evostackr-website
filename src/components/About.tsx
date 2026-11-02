@@ -123,7 +123,7 @@ export function About() {
                   <strong>8+ Independent Products Shipped:</strong> Production utilities including SMS Campaign Manager, Pink PDF, CodeVault, and Fabricate with public architectural specifications.
                 </li>
                 <li className="about__proof-item">
-                  <strong>11+ Google Play Applications:</strong> Deployed Android applications verified on the official Play Store with public package identifiers.
+                  <strong>11+ Apps Closed Tested:</strong> Android applications for which Evostackr provided Google Play Closed Testing support.
                 </li>
                 <li className="about__proof-item">
                   <strong>Instant Source Delivery:</strong> Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.
