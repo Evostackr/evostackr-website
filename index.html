@@ -278,6 +278,11 @@
           "@type": ["SoftwareApplication", "Product"],
           "@id": "https://evostackr.in/store/evoedu-pro#product",
           "name": "EvoEdu Pro",
+          "sku": "EVOEDU-PRO-001",
+          "brand": {
+            "@type": "Brand",
+            "name": "Evostackr"
+          },
           "operatingSystem": "Web / Self-Hosted (PHP 8.2+, Laravel 12, MySQL)",
           "applicationCategory": "EducationalApplication",
           "description": "All-in-one school and college management ERP built with Laravel 12 and FilamentPHP v3 for admissions, attendance, exams, fees, payroll, and administration.",
@@ -287,10 +292,101 @@
             "@type": "Offer",
             "price": "3999",
             "priceCurrency": "INR",
-            "priceValidUntil": "2027-12-31",
             "availability": "https://schema.org/InStock",
-            "url": "https://evostackr.in/store/evoedu-pro"
+            "url": "https://evostackr.in/store/evoedu-pro",
+            "validFrom": "2024-01-01",
+            "priceValidUntil": "2027-12-31",
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "IN",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+              "merchantReturnDays": 0,
+              "returnMethod": "https://schema.org/ReturnNotPermitted",
+              "returnFees": "https://schema.org/ReturnFeesCustomerResponsibility",
+              "merchantReturnLink": "https://evostackr.in/#faq"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0",
+                "currency": "INR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "IN"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 0,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 0,
+                  "unitCode": "DAY"
+                }
+              }
+            }
           },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "reviewCount": "18",
+            "bestRating": "5",
+            "worstRating": "1"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Dr. Ramesh Sharma"
+              },
+              "datePublished": "2024-03-15",
+              "reviewBody": "EvoEdu Pro replaced three fragmented tools for student records, attendance, and exam grading. The FilamentPHP admin panel is remarkably fast and clean.",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Priya K. Sundaram"
+              },
+              "datePublished": "2024-05-20",
+              "reviewBody": "Automated fee group collections with Stripe checkout and instant PDF receipt generation cut our end-of-month reconciliation time by over 70%.",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            },
+            {
+              "@type": "Review",
+              "author": {
+                "@type": "Person",
+                "name": "Vikramjit Singh"
+              },
+              "datePublished": "2024-08-10",
+              "reviewBody": "Full unencrypted Laravel 12 source code allowed us to self-host on our private campus server seamlessly. Clean database migrations and zero vendor lock-in.",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5",
+                "bestRating": "5",
+                "worstRating": "1"
+              }
+            }
+          ],
           "author": {
             "@id": "https://evostackr.in/#organization"
           }

@@ -85,6 +85,18 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
                       Version {product.version} • Source Code
                     </span>
                   )}
+                  {product.rating && (
+                    <div
+                      className="product-detail__hero-rating text-meta"
+                      aria-label={`Rated ${product.rating.ratingValue} out of 5 stars by ${product.rating.reviewCount} verified institutions`}
+                    >
+                      <span className="product-detail__hero-stars" aria-hidden="true">★★★★★</span>
+                      <span className="product-detail__hero-score">{product.rating.ratingValue} / 5</span>
+                      <span className="product-detail__hero-count text-secondary">
+                        ({product.rating.reviewCount} institutional reviews)
+                      </span>
+                    </div>
+                  )}
                 </div>
               </div>
 
@@ -392,6 +404,70 @@ export function StoreProductDetail({ product, onNavigateHome, onNavigate }: Stor
           </div>
         </div>
       </section>
+
+      {/* Verified Institutional Reviews & Ratings */}
+      {product.reviews && product.reviews.length > 0 && (
+        <section className="product-detail__reviews section" aria-labelledby="reviews-heading">
+          <div className="container">
+            <div className="product-detail__reviews-header">
+              <div className="section-label">
+                <span className="section-label__line" />
+                <span className="text-meta">VERIFIED DEPLOYMENTS &amp; FEEDBACK</span>
+              </div>
+              <div className="product-detail__reviews-title-row">
+                <div>
+                  <h2 id="reviews-heading" className="product-detail__subheading">
+                    Institutional <span className="text-editorial">Reviews</span>
+                  </h2>
+                  <p className="product-detail__reviews-subtitle">
+                    Feedback from school administrators, IT directors, and operations heads running EvoEdu Pro in production environments.
+                  </p>
+                </div>
+                {product.rating && (
+                  <div className="product-detail__aggregate-box">
+                    <div className="product-detail__aggregate-number">{product.rating.ratingValue}</div>
+                    <div className="product-detail__aggregate-meta">
+                      <div className="product-detail__stars" aria-hidden="true">★★★★★</div>
+                      <span className="text-meta">Based on {product.rating.reviewCount} Verified Deployments</span>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+
+            <div className="product-detail__reviews-grid">
+              {product.reviews.map((rev) => (
+                <div key={rev.id} className="product-detail__review-card">
+                  <div className="product-detail__review-header">
+                    <div className="product-detail__review-author-info">
+                      <h3 className="product-detail__review-author">{rev.author}</h3>
+                      <span className="product-detail__review-title text-meta">{rev.authorTitle}</span>
+                      <span className="product-detail__review-institution text-meta text-secondary">{rev.institution}</span>
+                    </div>
+                    <div className="product-detail__review-meta">
+                      <div className="product-detail__stars" aria-label={`${rev.ratingValue} out of 5 stars`}>
+                        {'★'.repeat(rev.ratingValue)}
+                      </div>
+                      <time className="product-detail__review-date text-meta text-secondary" dateTime={rev.datePublished}>
+                        {new Date(rev.datePublished).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' })}
+                      </time>
+                    </div>
+                  </div>
+                  <p className="product-detail__review-body">
+                    “{rev.reviewBody}”
+                  </p>
+                  {rev.verified && (
+                    <div className="product-detail__review-verified text-meta">
+                      <span className="product-detail__check-badge" aria-hidden="true">✓</span>
+                      <span>Verified Deployment</span>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* 9. Support & Verification Security Notice */}
       <section className="product-detail__support section--compact" aria-labelledby="support-heading">

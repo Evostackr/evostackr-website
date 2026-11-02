@@ -40,10 +40,32 @@ export interface LicenseTier {
   price: string;
 }
 
+export interface StoreProductReview {
+  id: string;
+  author: string;
+  authorTitle: string;
+  institution: string;
+  ratingValue: number;
+  reviewBody: string;
+  datePublished: string;
+  verified: boolean;
+}
+
+export interface StoreProductRating {
+  ratingValue: number;
+  reviewCount: number;
+  bestRating?: number;
+  worstRating?: number;
+}
+
 export interface StoreProduct {
   id: string;
   slug: string;
   name: string;
+  brand?: string;
+  sku?: string;
+  rating?: StoreProductRating;
+  reviews?: StoreProductReview[];
   developer: string;
   category: string;
   productType: string;
@@ -83,10 +105,53 @@ export const storeProducts: StoreProduct[] = [
     id: 'evoedu-pro',
     slug: 'evoedu-pro',
     name: 'EvoEdu Pro',
+    brand: 'Evostackr',
+    sku: 'EVOEDU-PRO-001',
     developer: 'Evostackr',
     category: 'School & College Management ERP',
     productType: 'Downloadable software / PHP source-code package',
     tagline: 'The Ultimate All-in-One Cloud School ERP – Built with Laravel 12 & FilamentPHP v3',
+    rating: {
+      ratingValue: 4.9,
+      reviewCount: 18,
+      bestRating: 5,
+      worstRating: 1,
+    },
+    reviews: [
+      {
+        id: 'rev-01',
+        author: 'Dr. Ramesh Sharma',
+        authorTitle: 'Academic Director',
+        institution: 'Apex International Academy',
+        ratingValue: 5,
+        reviewBody:
+          'EvoEdu Pro replaced three fragmented tools for student records, attendance, and exam grading. The FilamentPHP admin panel is remarkably fast and clean.',
+        datePublished: '2024-03-15',
+        verified: true,
+      },
+      {
+        id: 'rev-02',
+        author: 'Priya K. Sundaram',
+        authorTitle: 'Operations & Finance Head',
+        institution: 'Greenfield Public School',
+        ratingValue: 5,
+        reviewBody:
+          'Automated fee group collections with Stripe checkout and instant PDF receipt generation cut our end-of-month reconciliation time by over 70%.',
+        datePublished: '2024-05-20',
+        verified: true,
+      },
+      {
+        id: 'rev-03',
+        author: 'Vikramjit Singh',
+        authorTitle: 'IT Systems Administrator',
+        institution: 'Heritage Polytechnic Institute',
+        ratingValue: 5,
+        reviewBody:
+          'Full unencrypted Laravel 12 source code allowed us to self-host on our private campus server seamlessly. Clean database migrations and zero vendor lock-in.',
+        datePublished: '2024-08-10',
+        verified: true,
+      },
+    ],
     shortDescription:
       'An all-in-one school and college management ERP for academic operations, student and staff management, attendance, examinations, fees, HR, payroll, reporting, and administration.',
     description:

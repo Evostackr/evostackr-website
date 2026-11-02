@@ -171,24 +171,68 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
         if (prod.cardPreviewUrl) {
           ogImage = `${baseUrl}${prod.cardPreviewUrl}`;
         }
-        schemaJson = {
+        const offerData: Record<string, unknown> = {
+          '@type': 'Offer',
+          price: prod.price?.amount ? String(prod.price.amount) : '3999',
+          priceCurrency: prod.price?.currency || 'INR',
+          availability: 'https://schema.org/InStock',
+          url: `${baseUrl}/store/${prod.slug}`,
+          validFrom: '2024-01-01',
+          priceValidUntil: '2027-12-31',
+          hasMerchantReturnPolicy: {
+            '@type': 'MerchantReturnPolicy',
+            applicableCountry: 'IN',
+            returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+            merchantReturnDays: 0,
+            returnMethod: 'https://schema.org/ReturnNotPermitted',
+            returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
+            merchantReturnLink: `${baseUrl}/#faq`,
+          },
+          shippingDetails: {
+            '@type': 'OfferShippingDetails',
+            shippingRate: {
+              '@type': 'MonetaryAmount',
+              value: '0',
+              currency: prod.price?.currency || 'INR',
+            },
+            shippingDestination: {
+              '@type': 'DefinedRegion',
+              addressCountry: 'IN',
+            },
+            deliveryTime: {
+              '@type': 'ShippingDeliveryTime',
+              handlingTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+              transitTime: {
+                '@type': 'QuantitativeValue',
+                minValue: 0,
+                maxValue: 0,
+                unitCode: 'DAY',
+              },
+            },
+          },
+        };
+
+        const productSchema: Record<string, unknown> = {
           '@context': 'https://schema.org',
           '@type': ['Product', 'SoftwareApplication'],
           '@id': `${baseUrl}/store/${prod.slug}#product`,
           name: prod.name,
+          sku: prod.sku || 'EVOEDU-PRO-001',
+          brand: {
+            '@type': 'Brand',
+            name: prod.brand || 'Evostackr',
+          },
           description: prod.description || prod.shortDescription,
           applicationCategory: 'EducationalApplication',
           operatingSystem: prod.platforms?.join(', ') || 'Web / Self-Hosted',
           url: `${baseUrl}/store/${prod.slug}`,
           image: prod.cardPreviewUrl ? `${baseUrl}${prod.cardPreviewUrl}` : defaultImage,
-          offers: {
-            '@type': 'Offer',
-            price: prod.price?.amount ? String(prod.price.amount) : '3999',
-            priceCurrency: prod.price?.currency || 'INR',
-            availability: 'https://schema.org/InStock',
-            url: `${baseUrl}/store/${prod.slug}`,
-            priceValidUntil: '2027-12-31',
-          },
+          offers: offerData,
           author: {
             '@type': 'Organization',
             name: 'Evostackr',
@@ -203,6 +247,36 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
             ],
           },
         };
+
+        if (prod.rating) {
+          productSchema.aggregateRating = {
+            '@type': 'AggregateRating',
+            ratingValue: String(prod.rating.ratingValue),
+            reviewCount: String(prod.rating.reviewCount),
+            bestRating: String(prod.rating.bestRating || 5),
+            worstRating: String(prod.rating.worstRating || 1),
+          };
+        }
+
+        if (prod.reviews && prod.reviews.length > 0) {
+          productSchema.review = prod.reviews.map((r) => ({
+            '@type': 'Review',
+            author: {
+              '@type': 'Person',
+              name: r.author,
+            },
+            datePublished: r.datePublished,
+            reviewBody: r.reviewBody,
+            reviewRating: {
+              '@type': 'Rating',
+              ratingValue: String(r.ratingValue),
+              bestRating: '5',
+              worstRating: '1',
+            },
+          }));
+        }
+
+        schemaJson = productSchema;
       }
     } else if (isStore) {
       title = 'Software Store — Premium Digital Products & Source Code | Evostackr';
@@ -232,9 +306,23 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
             item: {
               '@type': ['Product', 'SoftwareApplication'],
               name: p.name,
+              sku: p.sku || 'EVOEDU-PRO-001',
+              brand: {
+                '@type': 'Brand',
+                name: p.brand || 'Evostackr',
+              },
               description: p.shortDescription,
               url: `${baseUrl}/store/${p.slug}`,
               image: p.cardPreviewUrl ? `${baseUrl}${p.cardPreviewUrl}` : defaultImage,
+              offers: {
+                '@type': 'Offer',
+                price: p.price?.amount ? String(p.price.amount) : '3999',
+                priceCurrency: p.price?.currency || 'INR',
+                availability: 'https://schema.org/InStock',
+                url: `${baseUrl}/store/${p.slug}`,
+                validFrom: '2024-01-01',
+                priceValidUntil: '2027-12-31',
+              },
             },
           })),
         },
