@@ -20,3 +20,29 @@
 [id] {
   scroll-margin-top: 4.5rem;
 }
+
+/* ─── App Mount Fade-In & Layout Stability ─── */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-loaded {
+  animation: appFadeIn 0.22s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes appFadeIn {
+  from {
+    opacity: 0.85;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .app-loaded {
+    animation: none !important;
+  }
+}

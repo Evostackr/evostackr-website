@@ -64,7 +64,7 @@ function App() {
     : null;
 
   return (
-    <>
+    <div className="app-container app-loaded">
       <SEOHead currentPath={currentPath} />
       <a href="#main-content" className="skip-link">
         Skip to main content
@@ -107,7 +107,7 @@ function App() {
       </main>
       <Footer onNavigate={navigate} />
       <WhatsAppContactWidget />
-    </>
+    </div>
   );
 }
 
