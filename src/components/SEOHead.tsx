@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import { products } from '../data/products';
 import { services } from '../data/services';
 import { storeProducts } from '../data/storeProducts';
+import { blogArticles, blogCategories, getArticleBySlug } from '../data/blogArticles';
 
 interface SEOHeadProps {
   currentPath: string;
@@ -19,6 +20,9 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
       currentPath === '/admin/seo' ||
       currentPath === '/system/seo' ||
       currentPath === '/optimization';
+    const isBlogIndex = currentPath === '/blog';
+    const isBlogCategory = currentPath.startsWith('/blog/category/');
+    const isBlogArticle = currentPath.startsWith('/blog/') && !isBlogCategory && currentPath !== '/blog';
 
     const baseUrl = 'https://evostackr.in';
     const defaultImage = `${baseUrl}/evostackr-logo.png`;
@@ -333,6 +337,148 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
         'Evostackr Unified Optimization Suite: Technical SEO, AEO, GEO, SXO, and AI Search Intelligence Architecture.';
       canonical = `${baseUrl}/admin/seo`;
       ogType = 'website';
+    } else if (isBlogIndex) {
+      title = 'Engineering Blog & Technical Blueprints | Evostackr';
+      description =
+        'In-depth software engineering guides, cloud architecture blueprints, Play Console testing frameworks, and multi-agent system designs from Evostackr.';
+      canonical = `${baseUrl}/blog`;
+      ogType = 'website';
+      ogImage = blogArticles[0]?.featuredImage?.url
+        ? `${baseUrl}${blogArticles[0].featuredImage.url}`
+        : defaultImage;
+      schemaJson = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${baseUrl}/blog#collection`,
+        name: 'Evostackr Engineering Blog & Technical Blueprints',
+        url: `${baseUrl}/blog`,
+        description,
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${baseUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${baseUrl}/blog` },
+          ],
+        },
+        mainEntity: {
+          '@type': 'ItemList',
+          itemListElement: blogArticles.map((article, idx) => ({
+            '@type': 'ListItem',
+            position: idx + 1,
+            item: {
+              '@type': 'BlogPosting',
+              headline: article.title,
+              description: article.excerpt,
+              url: `${baseUrl}/blog/${article.slug}`,
+              image: `${baseUrl}${article.featuredImage.url}`,
+              datePublished: article.publishedDate,
+              dateModified: article.modifiedDate,
+              author: {
+                '@type': 'Organization',
+                name: article.author.name,
+              },
+            },
+          })),
+        },
+      };
+    } else if (isBlogCategory) {
+      const catSlug = currentPath.replace('/blog/category/', '').trim().toLowerCase();
+      const categoryMeta = blogCategories.find((c) => c.slug.toLowerCase() === catSlug);
+      const catName = categoryMeta ? categoryMeta.name : 'Engineering Category';
+      title = `${catName} — Engineering Blog | Evostackr`;
+      description =
+        categoryMeta?.description ||
+        `Technical articles and architecture guides in ${catName} from Evostackr.`;
+      canonical = `${baseUrl}/blog/category/${catSlug}`;
+      ogType = 'website';
+      schemaJson = {
+        '@context': 'https://schema.org',
+        '@type': 'CollectionPage',
+        '@id': `${baseUrl}/blog/category/${catSlug}#collection`,
+        name: `${catName} — Evostackr Engineering Blog`,
+        url: `${baseUrl}/blog/category/${catSlug}`,
+        description,
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${baseUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Blog', item: `${baseUrl}/blog` },
+            {
+              '@type': 'ListItem',
+              position: 3,
+              name: catName,
+              item: `${baseUrl}/blog/category/${catSlug}`,
+            },
+          ],
+        },
+      };
+    } else if (isBlogArticle) {
+      const artSlug = currentPath.replace('/blog/', '').trim().toLowerCase();
+      const article = getArticleBySlug(artSlug);
+      if (article) {
+        title = `${article.title} | Evostackr`;
+        description = article.excerpt;
+        canonical = `${baseUrl}/blog/${article.slug}`;
+        ogType = 'article';
+        ogImage = `${baseUrl}${article.featuredImage.url}`;
+        schemaJson = {
+          '@context': 'https://schema.org',
+          '@type': 'BlogPosting',
+          '@id': `${baseUrl}/blog/${article.slug}#article`,
+          headline: article.title,
+          alternativeHeadline: article.headline,
+          description: article.excerpt,
+          url: `${baseUrl}/blog/${article.slug}`,
+          image: [
+            `${baseUrl}${article.featuredImage.url}`,
+            ...article.contextualImages.map((img) => `${baseUrl}${img.url}`),
+          ],
+          datePublished: article.publishedDate,
+          dateModified: article.modifiedDate,
+          author: {
+            '@type': 'Organization',
+            name: article.author.name,
+            url: baseUrl,
+            logo: `${baseUrl}/evostackr-logo.png`,
+          },
+          publisher: {
+            '@type': 'Organization',
+            name: 'Evostackr',
+            url: baseUrl,
+            logo: {
+              '@type': 'ImageObject',
+              url: `${baseUrl}/evostackr-logo.png`,
+            },
+          },
+          mainEntityOfPage: {
+            '@type': 'WebPage',
+            '@id': `${baseUrl}/blog/${article.slug}`,
+          },
+          keywords: article.tags.join(', '),
+          articleSection: article.categoryName,
+          wordCount: article.wordCount,
+          inLanguage: 'en-US',
+          breadcrumb: {
+            '@type': 'BreadcrumbList',
+            itemListElement: [
+              { '@type': 'ListItem', position: 1, name: 'Home', item: `${baseUrl}/` },
+              { '@type': 'ListItem', position: 2, name: 'Blog', item: `${baseUrl}/blog` },
+              {
+                '@type': 'ListItem',
+                position: 3,
+                name: article.categoryName,
+                item: `${baseUrl}/blog/category/${article.categorySlug}`,
+              },
+              {
+                '@type': 'ListItem',
+                position: 4,
+                name: article.title,
+                item: `${baseUrl}/blog/${article.slug}`,
+              },
+            ],
+          },
+        };
+      }
     }
 
     // 1. Update Title

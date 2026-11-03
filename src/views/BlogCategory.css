@@ -1,0 +1,185 @@
+/* ─── Blog Category Styles ─── */
+.blog-category-page {
+  background-color: var(--color-bg);
+  min-height: calc(100vh - 3.75rem);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Breadcrumbs Navigation */
+.category-breadcrumbs {
+  padding-top: calc(5.5rem + var(--space-md));
+  padding-bottom: var(--space-md);
+}
+
+/* Category Hero */
+.category-hero {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-2xl);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.category-hero__title {
+  font-size: clamp(2.25rem, 4.5vw, 3.5rem);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-tight);
+  letter-spacing: -0.025em;
+  color: var(--color-text);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-md);
+}
+
+.category-hero__description {
+  font-size: var(--fs-body);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  max-width: 680px;
+  margin-bottom: var(--space-lg);
+}
+
+.category-hero__count-badge {
+  display: inline-block;
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--color-brand-primary);
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: 0.3rem 0.75rem;
+  border-radius: 0;
+}
+
+/* Other Topics Navigation Bar */
+.category-nav-bar {
+  padding-top: var(--space-lg);
+  padding-bottom: var(--space-lg);
+  border-bottom: 1px solid var(--color-border);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.category-nav-bar__label {
+  color: var(--color-brand-primary);
+  font-weight: var(--fw-bold);
+  white-space: nowrap;
+}
+
+.category-nav-bar__pills {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--space-xs);
+}
+
+.category-nav-pill {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 0;
+  padding: 0.4rem 0.8rem;
+  font-size: var(--fs-meta);
+  font-weight: var(--fw-medium);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  white-space: nowrap;
+}
+
+.category-nav-pill:hover {
+  border-color: var(--color-brand-primary);
+  color: var(--color-text);
+}
+
+/* Category Grid Section */
+.category-grid-section {
+  padding-top: var(--space-2xl);
+  padding-bottom: var(--space-5xl);
+  flex: 1;
+}
+
+/* Empty State */
+.category-empty-state {
+  padding: var(--space-4xl) var(--space-xl);
+  text-align: center;
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: var(--space-2xl) auto;
+  border-radius: 0;
+}
+
+.category-empty-state__title {
+  font-size: var(--fs-h2);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin-top: var(--space-sm);
+  margin-bottom: var(--space-xs);
+}
+
+.category-empty-state__description {
+  font-size: var(--fs-small);
+  color: var(--color-text-secondary);
+  margin-bottom: var(--space-lg);
+}
+
+/* Category Footer CTA */
+.category-footer-cta {
+  padding-bottom: var(--space-5xl);
+}
+
+.category-footer-cta__inner {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  padding: var(--space-2xl);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-xl);
+  border-radius: 0;
+}
+
+.category-footer-cta__title {
+  font-size: var(--fs-h3);
+  font-weight: var(--fw-bold);
+  color: var(--color-text);
+  margin: 0 0 var(--space-xs);
+}
+
+.category-footer-cta__description {
+  font-size: var(--fs-small);
+  line-height: var(--lh-relaxed);
+  color: var(--color-text-secondary);
+  margin: 0;
+  max-width: 580px;
+}
+
+/* Responsive Media Queries */
+@media (max-width: 768px) {
+  .category-nav-bar__pills {
+    overflow-x: auto;
+    flex-wrap: nowrap;
+    padding-bottom: var(--space-xs);
+    -webkit-overflow-scrolling: touch;
+    width: 100%;
+  }
+
+  .category-footer-cta__inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .category-footer-cta__inner .btn {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .category-breadcrumbs {
+    padding-top: calc(4.5rem + var(--space-sm));
+  }
+}

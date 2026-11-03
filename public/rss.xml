@@ -1,68 +1,78 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Evostackr — Products &amp; Software Engineering</title>
-    <link>https://evostackr.in/</link>
-    <description>Official product releases, engineering updates, and software developments from Evostackr.</description>
+    <title>Evostackr — Engineering Blog &amp; Product Blueprints</title>
+    <link>https://evostackr.in/blog</link>
+    <description>Authoritative engineering guides, multi-agent AI architecture blueprints, Google Play Closed Testing playbooks, and SaaS system designs from Evostackr.</description>
     <language>en-us</language>
-    <lastBuildDate>Sat, 24 Oct 2026 12:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Tue, 03 Nov 2026 12:00:00 GMT</lastBuildDate>
     <atom:link href="https://evostackr.in/rss.xml" rel="self" type="application/rss+xml" />
     <managingEditor>support@evostackr.in (Evostackr)</managingEditor>
     <webMaster>support@evostackr.in (Evostackr)</webMaster>
     <docs>https://www.rssboard.org/rss-specification</docs>
-
     <item>
-      <title>SMS Campaign Manager — Dual-SIM Bulk SMS Dispatch Engine for Android</title>
-      <link>https://dir.evostackr.in/#/project/sms-campaign-manager</link>
-      <guid isPermaLink="true">https://dir.evostackr.in/#/project/sms-campaign-manager</guid>
-      <pubDate>Sat, 24 Oct 2026 09:00:00 GMT</pubDate>
-      <description><![CDATA[Turn any Android phone into an automated, private bulk SMS dispatch engine with Dual-SIM support, intelligent rate-limiting, and zero third-party gateway markups. Built using native Kotlin, Jetpack Compose, and persistent Foreground Services.]]></description>
-      <category>Mobile System</category>
+      <title>Enterprise Agentic AI Architecture: Production Blueprint for Autonomous Multi-Agent Systems</title>
+      <link>https://evostackr.in/blog/agentic-ai-architecture-enterprise-guide</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/agentic-ai-architecture-enterprise-guide</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Explore the complete production blueprint for enterprise agentic AI systems. Learn how multi-agent topologies, Model Context Protocol (MCP) tool execution, and deterministic evaluation loops transform stochastic LLMs into resilient autonomous workflows.]]></description>
+      <category>AI &amp; Machine Learning</category>
     </item>
-
     <item>
-      <title>Fabricate — Product Incubation Studio for Startups</title>
-      <link>https://dir.evostackr.in/#/project/fabricate</link>
-      <guid isPermaLink="true">https://dir.evostackr.in/#/project/fabricate</guid>
-      <pubDate>Sat, 24 Oct 2026 08:30:00 GMT</pubDate>
-      <description><![CDATA[A venture studio that selects promising startup ideas and engineers them into functional web and mobile applications at zero initial development cost.]]></description>
-      <category>Venture Studio</category>
+      <title>Modern Multi-Tenant SaaS Architecture: Isolation Models, Database Strategies, and Scalability</title>
+      <link>https://evostackr.in/blog/multi-tenant-saas-architecture-patterns</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/multi-tenant-saas-architecture-patterns</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Compare Silo, Pool, and Bridge multi-tenancy models. Learn how to architect database partitioning strategies, implement PostgreSQL Row-Level Security, and prevent noisy-neighbor performance degradation in high-growth enterprise SaaS platforms.]]></description>
+      <category>Cloud Architecture</category>
     </item>
-
     <item>
-      <title>WhatsApp Past Member Extractor — Browser Group Analytics &amp; Export Tool</title>
-      <link>https://dir.evostackr.in/#/project/whatsapp-past-member-extractor</link>
-      <guid isPermaLink="true">https://dir.evostackr.in/#/project/whatsapp-past-member-extractor</guid>
-      <pubDate>Sat, 24 Oct 2026 08:00:00 GMT</pubDate>
-      <description><![CDATA[Client-side browser utility that safely extracts and exports past participants who left or were removed from WhatsApp Web groups into CSV, Excel, and VCF formats.]]></description>
-      <category>Browser Utility</category>
+      <title>Microservices Design Patterns: Architectural Blueprint for Resilient Distributed Systems</title>
+      <link>https://evostackr.in/blog/microservices-design-patterns-cloud-architecture</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/microservices-design-patterns-cloud-architecture</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Discover the essential design patterns for building fault-tolerant microservices. From domain decomposition and the Saga pattern to API gateways, circuit breakers, and distributed tracing, learn how to prevent cascading failures across cloud services.]]></description>
+      <category>Software Engineering</category>
     </item>
-
     <item>
-      <title>24IDChat — Ephemeral Anonymous Messaging Platform</title>
-      <link>https://dir.evostackr.in/#/project/24idchat</link>
-      <guid isPermaLink="true">https://dir.evostackr.in/#/project/24idchat</guid>
-      <pubDate>Sat, 24 Oct 2026 07:30:00 GMT</pubDate>
-      <description><![CDATA[High-speed real-time anonymous chat rooms powered by unique 24-hour disposable identities, sub-15ms WebSocket delivery, and self-purging message streams with zero data logging.]]></description>
-      <category>Communication Platform</category>
+      <title>Google Play Closed Testing in 2026: The Complete Guide to the 14-Day Tester Requirement</title>
+      <link>https://evostackr.in/blog/google-play-closed-testing-complete-guide</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/google-play-closed-testing-complete-guide</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Navigate Google Play’s strict 2026 closed testing policy for personal developer accounts. Learn exact tester recruitment criteria, 14-day opt-in verification rules, production application review guidelines, and how to avoid outright account rejections.]]></description>
+      <category>Mobile Engineering</category>
     </item>
-
     <item>
-      <title>TempEmailFree — Instant Disposable Email Generator with OTP Detection</title>
-      <link>https://dir.evostackr.in/#/project/tempemailfree</link>
-      <guid isPermaLink="true">https://dir.evostackr.in/#/project/tempemailfree</guid>
-      <pubDate>Sat, 24 Oct 2026 07:00:00 GMT</pubDate>
-      <description><![CDATA[Instant, secure, and disposable temporary email service featuring real-time inbox auto-refresh and algorithmic OTP verification code detection.]]></description>
-      <category>Privacy Utility</category>
+      <title>Cloud-Native DevOps CI/CD: Building Zero-Downtime Deployment Pipelines with Kubernetes</title>
+      <link>https://evostackr.in/blog/cloud-native-devops-cicd-pipeline-blueprint</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/cloud-native-devops-cicd-pipeline-blueprint</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Design resilient zero-downtime deployment pipelines for cloud-native software. Master automated unit/integration testing gates, immutable container tagging, ArgoCD GitOps reconciliation, and Kubernetes canary traffic shifting.]]></description>
+      <category>DevOps &amp; Cloud</category>
     </item>
-
     <item>
-      <title>Custom Software Engineering &amp; SaaS Platform Architecture</title>
-      <link>https://evostackr.in/#services</link>
-      <guid isPermaLink="true">https://evostackr.in/#services</guid>
-      <pubDate>Sat, 24 Oct 2026 06:00:00 GMT</pubDate>
-      <description><![CDATA[Evostackr provides custom website engineering, complex web application development, multi-tenant SaaS platforms, business workflow automation, and custom API integrations for clients worldwide.]]></description>
-      <category>Engineering Services</category>
+      <title>Enterprise API Integration Patterns: Architecting Resilient Webhooks and Event Synchronization</title>
+      <link>https://evostackr.in/blog/enterprise-api-integration-patterns-webhooks</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/enterprise-api-integration-patterns-webhooks</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Master enterprise API integration patterns for mission-critical software. Learn how to architect asynchronous webhook ingestion pipelines, enforce cryptographic HMAC signature verification, guarantee idempotency with Redis keys, and manage dead-letter replays.]]></description>
+      <category>Software Engineering</category>
+    </item>
+    <item>
+      <title>Component-Driven Development: Architecting Scalable Design Systems from Atoms to Applications</title>
+      <link>https://evostackr.in/blog/component-driven-development-design-systems</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/component-driven-development-design-systems</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Transform your frontend engineering workflow with Component-Driven Development (CDD). Learn how to structure design token taxonomies, isolate presentation from business logic, enforce strict UI geometry invariants, and accelerate delivery using automated UI builders like Fabricate.]]></description>
+      <category>Frontend Architecture</category>
+    </item>
+    <item>
+      <title>High-Throughput Messaging Infrastructure: Designing Reliable Bulk Delivery Systems</title>
+      <link>https://evostackr.in/blog/high-throughput-messaging-infrastructure-architecture</link>
+      <guid isPermaLink="true">https://evostackr.in/blog/high-throughput-messaging-infrastructure-architecture</guid>
+      <pubDate>Tue, 03 Nov 2026 10:00:00 GMT</pubDate>
+      <description><![CDATA[Explore the internal architecture of high-throughput messaging platforms. Learn how to interface with SMPP carrier links, partition distributed queues with Kafka and Redis, handle regulatory DND compliance, and process millions of delivery receipts asynchronously.]]></description>
+      <category>Cloud Architecture</category>
     </item>
   </channel>
 </rss>

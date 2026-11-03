@@ -98,6 +98,16 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             Services
           </a>
           <a
+            href="/blog"
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('/blog');
+            }}
+            className={`nav__link link-underline ${currentPath === '/blog' || currentPath.startsWith('/blog/') ? 'nav__link--active' : ''}`}
+          >
+            Blog
+          </a>
+          <a
             href={isHome ? '#about' : '/#about'}
             onClick={(e) => {
               if (!isHome) {
@@ -197,6 +207,16 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
             }}
           >
             Services
+          </a>
+          <a
+            href="/blog"
+            className={`nav__mobile-link ${currentPath === '/blog' || currentPath.startsWith('/blog/') ? 'nav__mobile-link--active' : ''}`}
+            onClick={(e) => {
+              e.preventDefault();
+              handleLinkClick('/blog');
+            }}
+          >
+            Blog
           </a>
           <a
             href={isHome ? '#about' : '/#about'}

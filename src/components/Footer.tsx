@@ -59,7 +59,7 @@ export function Footer({ onNavigate }: FooterProps) {
             </div>
           </div>
 
-          <nav className="footer__nav" aria-label="Footer navigation">
+          <nav className="footer__nav" style={{ gridTemplateColumns: 'repeat(auto-fit, minmax(160px, 1fr))' }} aria-label="Footer navigation">
             <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Products</h3>
               <ul className="footer__nav-list">
@@ -145,10 +145,114 @@ export function Footer({ onNavigate }: FooterProps) {
             </div>
 
             <div className="footer__nav-group">
+              <h3 className="footer__nav-title text-meta">Blog &amp; Guides</h3>
+              <ul className="footer__nav-list">
+                <li>
+                  <a
+                    href="/blog"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    All Articles
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog/category/ai-engineering"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog/category/ai-engineering');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    AI &amp; Machine Learning
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog/category/cloud-architecture"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog/category/cloud-architecture');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Cloud Architecture
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog/category/software-engineering"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog/category/software-engineering');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Software Engineering
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog/category/mobile-development"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog/category/mobile-development');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Mobile Engineering
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="/blog/category/devops-infrastructure"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog/category/devops-infrastructure');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    DevOps &amp; Cloud
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="footer__nav-group">
               <h3 className="footer__nav-title text-meta">Company</h3>
               <ul className="footer__nav-list">
                 <li><a href="#about" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#about'); } }} className="footer__nav-link link-underline">About</a></li>
                 <li><a href="#faq" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#faq'); } }} className="footer__nav-link link-underline">FAQ</a></li>
+                <li>
+                  <a
+                    href="/blog"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/blog');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Engineering Blog
+                  </a>
+                </li>
                 <li><a href="https://dir.evostackr.in/" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">Project Directory</a></li>
                 <li><a href="/rss.xml" className="footer__nav-link link-underline" target="_blank" rel="noopener noreferrer">RSS Feed</a></li>
                 <li>

@@ -3,7 +3,7 @@
         xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
     <loc>https://evostackr.in/</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
     <image:image>
@@ -14,103 +14,167 @@
   </url>
   <url>
     <loc>https://evostackr.in/products</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/sms-campaign-manager.png</image:loc>
-      <image:title>SMS Campaign Manager — Dual-SIM Bulk SMS Dispatch Engine</image:title>
-      <image:caption>Native Android bulk SMS application for automated customer outreach</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/fabricate.png</image:loc>
-      <image:title>Fabricate — Venture Product Studio</image:title>
-      <image:caption>Startup engineering model prototyping and launching validated applications</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/whatsapp-past-member-extractor.png</image:loc>
-      <image:title>WhatsApp Past Member Extractor</image:title>
-      <image:caption>Browser automation extension for exporting historical WhatsApp Web group members</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/24idchat.png</image:loc>
-      <image:title>24IDChat — Ephemeral Anonymous Real-Time Chat</image:title>
-      <image:caption>Real-time anonymous messaging platform powered by 24-hour disposable cryptographic IDs</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/tempemailfree.png</image:loc>
-      <image:title>TempEmailFree — Instant Disposable Email Generator</image:title>
-      <image:caption>Automated temporary email inbox with real-time OTP verification code detection</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/pink-pdf.png</image:loc>
-      <image:title>Pink PDF — WebAssembly Client-Side PDF Suite</image:title>
-      <image:caption>100% private in-browser PDF utilities powered by WebAssembly</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/products/codevault.png</image:loc>
-      <image:title>CodeVault — Developer Resources and Source Code</image:title>
-      <image:caption>Open developer templates, full-stack architectures, and UI code components</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://evostackr.in/services</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://evostackr.in/services/google-play-closed-testing</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
     <loc>https://evostackr.in/store</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/dashboard-showcase.png</image:loc>
-      <image:title>Evostackr Software Store — Premium Digital Products</image:title>
-      <image:caption>Production software packages with direct source code access</image:caption>
-    </image:image>
   </url>
   <url>
     <loc>https://evostackr.in/store/evoedu-pro</loc>
-    <lastmod>2026-10-29</lastmod>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority>
     <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/logo.png</image:loc>
-      <image:title>EvoEdu Pro — School and College Management ERP</image:title>
-      <image:caption>Official logo of EvoEdu Pro Educational ERP</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/dashboard-showcase.png</image:loc>
-      <image:title>EvoEdu Pro — Multi-Device Showcase</image:title>
-      <image:caption>Responsive admin dashboard interface for institutional governance</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/dark-dashboard.png</image:loc>
-      <image:title>EvoEdu Pro — Dark Theme Admin Dashboard</image:title>
-      <image:caption>Ultra-modern FilamentPHP v3 administrative interface</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/analytics-dashboard.png</image:loc>
-      <image:title>EvoEdu Pro — Academic Analytics and Telemetry</image:title>
-      <image:caption>Institutional performance and student metric analysis</image:caption>
-    </image:image>
-    <image:image>
-      <image:loc>https://evostackr.in/images/store/evoedu-pro/monthly-attendance.png</image:loc>
-      <image:title>EvoEdu Pro — Attendance Management</image:title>
-      <image:caption>Comprehensive attendance tracking and automated reporting</image:caption>
+      <image:loc>https://evostackr.in/images/blog/agentic-ai-architecture-enterprise-guide/banner.png</image:loc>
+      <image:title>Evostackr Engineering Blog & Architecture Blueprints</image:title>
+      <image:caption>Authoritative engineering blueprints, Play Console testing, and distributed architecture guides</image:caption>
     </image:image>
   </url>
   <url>
-    <loc>https://evostackr.in/admin/seo</loc>
-    <lastmod>2026-10-29</lastmod>
+    <loc>https://evostackr.in/blog/category/ai-engineering</loc>
+    <lastmod>2026-11-03</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/category/cloud-architecture</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/category/software-engineering</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/category/mobile-development</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/category/devops-infrastructure</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/category/frontend-architecture</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/agentic-ai-architecture-enterprise-guide</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/agentic-ai-architecture-enterprise-guide/banner.png</image:loc>
+      <image:title>Enterprise Agentic AI Architecture: Production Blueprint for Autonomous Multi-Agent Systems</image:title>
+      <image:caption>Figure 1.0: End-to-end architecture of an enterprise multi-agent system showing the control plane, execution sandboxes, and MCP tool gateways.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/multi-tenant-saas-architecture-patterns</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/multi-tenant-saas-architecture-patterns/banner.png</image:loc>
+      <image:title>Modern Multi-Tenant SaaS Architecture: Isolation Models, Database Strategies, and Scalability</image:title>
+      <image:caption>Figure 2.0: Structural topology of cloud multi-tenancy illustrating tenant routing gateways, isolation boundaries, and database partitioning.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/microservices-design-patterns-cloud-architecture</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/microservices-design-patterns-cloud-architecture/banner.png</image:loc>
+      <image:title>Microservices Design Patterns: Architectural Blueprint for Resilient Distributed Systems</image:title>
+      <image:caption>Figure 3.0: High-resilience microservices ecosystem illustrating edge routing, asynchronous event streaming, and distributed data consistency.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/google-play-closed-testing-complete-guide</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/google-play-closed-testing-complete-guide/banner.png</image:loc>
+      <image:title>Google Play Closed Testing in 2026: The Complete Guide to the 14-Day Tester Requirement</image:title>
+      <image:caption>Figure 4.0: Official Google Play Console closed testing workflow showing tester opt-in, continuous engagement tracking, and production review submission.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/cloud-native-devops-cicd-pipeline-blueprint</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/cloud-native-devops-cicd-pipeline-blueprint/banner.png</image:loc>
+      <image:title>Cloud-Native DevOps CI/CD: Building Zero-Downtime Deployment Pipelines with Kubernetes</image:title>
+      <image:caption>Figure 5.0: Complete cloud-native delivery lifecycle illustrating automated build gates, vulnerability scanning, and GitOps continuous delivery.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/enterprise-api-integration-patterns-webhooks</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/enterprise-api-integration-patterns-webhooks/banner.png</image:loc>
+      <image:title>Enterprise API Integration Patterns: Architecting Resilient Webhooks and Event Synchronization</image:title>
+      <image:caption>Figure 6.0: Resilient webhook processing architecture decoupling synchronous HTTP ingestion from asynchronous worker execution.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/component-driven-development-design-systems</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/component-driven-development-design-systems/banner.png</image:loc>
+      <image:title>Component-Driven Development: Architecting Scalable Design Systems from Atoms to Applications</image:title>
+      <image:caption>Figure 7.0: Atomic design hierarchy illustrating how design tokens compose into reusable atomic elements and complex page views.</image:caption>
+    </image:image>
+  </url>
+  <url>
+    <loc>https://evostackr.in/blog/high-throughput-messaging-infrastructure-architecture</loc>
+    <lastmod>2026-11-03</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://evostackr.in/images/blog/high-throughput-messaging-infrastructure-architecture/banner.png</image:loc>
+      <image:title>High-Throughput Messaging Infrastructure: Designing Reliable Bulk Delivery Systems</image:title>
+      <image:caption>Figure 8.0: Carrier-grade messaging infrastructure topology showing asynchronous queue buffering, protocol transcoding, and high-frequency DLR reconciliation.</image:caption>
+    </image:image>
   </url>
 </urlset>

@@ -17,6 +17,10 @@ import { ServicesPage } from './pages/ServicesPage';
 import { Store } from './pages/Store';
 import { StoreProductDetail } from './pages/StoreProductDetail';
 import { storeProducts } from './data/storeProducts';
+import { BlogIndex } from './views/BlogIndex';
+import { BlogArticle } from './views/BlogArticle';
+import { BlogCategory } from './views/BlogCategory';
+import { getArticleBySlug } from './data/blogArticles';
 
 function getInitialPath(): string {
   if (typeof window === 'undefined') return '/';
@@ -37,7 +41,7 @@ function App() {
         el?.scrollIntoView({ behavior: 'smooth' });
       }, 50);
     } else {
-      window.scrollTo({ top: 0, behavior: 'instant' });
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
   }, []);
 
@@ -45,6 +49,7 @@ function App() {
     const handlePopState = () => {
       const path = window.location.pathname.replace(/\/$/, '') || '/';
       setCurrentPath(path);
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     };
     window.addEventListener('popstate', handlePopState);
     return () => window.removeEventListener('popstate', handlePopState);
@@ -63,6 +68,19 @@ function App() {
     ? storeProducts.find((p) => `/store/${p.slug}` === currentPath)
     : null;
 
+  const isBlogIndex = currentPath === '/blog';
+  const isBlogCategory = currentPath.startsWith('/blog/category/');
+  const categorySlug = isBlogCategory
+    ? currentPath.slice('/blog/category/'.length).replace(/\/$/, '')
+    : null;
+
+  const isBlogArticleRoute =
+    currentPath.startsWith('/blog/') && !currentPath.startsWith('/blog/category/');
+  const articleSlug = isBlogArticleRoute
+    ? currentPath.slice('/blog/'.length).replace(/\/$/, '')
+    : null;
+  const matchedArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
+
   return (
     <div className="app-container app-loaded">
       <SEOHead currentPath={currentPath} />
@@ -77,6 +95,50 @@ function App() {
             onNavigate={navigate}
             onRequestQuote={() => window.dispatchEvent(new CustomEvent('open-contact-widget'))}
           />
+        ) : isBlogCategory && categorySlug ? (
+          <BlogCategory
+            categorySlug={categorySlug}
+            onNavigateHome={() => navigate('/')}
+            onNavigate={navigate}
+          />
+        ) : isBlogArticleRoute ? (
+          matchedArticle ? (
+            <BlogArticle
+              article={matchedArticle}
+              onNavigateHome={() => navigate('/')}
+              onNavigate={navigate}
+            />
+          ) : (
+            <div
+              className="container"
+              style={{
+                paddingTop: 'calc(6rem + var(--space-xl))',
+                paddingBottom: 'var(--space-5xl)',
+                textAlign: 'center',
+              }}
+            >
+              <h1 style={{ fontSize: 'var(--fs-h2)', marginBottom: 'var(--space-md)' }}>
+                Article Not Found
+              </h1>
+              <p
+                style={{
+                  color: 'var(--color-text-secondary)',
+                  marginBottom: 'var(--space-lg)',
+                }}
+              >
+                The architectural guide you requested does not exist or has been relocated.
+              </p>
+              <button
+                type="button"
+                className="btn btn--primary"
+                onClick={() => navigate('/blog')}
+              >
+                ← Return to Blog
+              </button>
+            </div>
+          )
+        ) : isBlogIndex ? (
+          <BlogIndex onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : isServicesPage ? (
           <ServicesPage
             onNavigateHome={() => navigate('/')}

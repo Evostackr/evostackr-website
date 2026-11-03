@@ -1,0 +1,177 @@
+{
+  "timestamp": "2026-11-03T15:38:41.004Z",
+  "totalTests": 8,
+  "passedTests": 6,
+  "failedTests": 2,
+  "findings": [
+    {
+      "category": "colors",
+      "severity": "MEDIUM",
+      "description": "CSS rules contain 16 literal hex / rgba declarations instead of var(--color-*) tokens",
+      "items": [
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 130,
+          "rawLine": "background: linear-gradient(135deg, #111827 0%, #172554 100%);",
+          "property": "background",
+          "value": "linear-gradient(135deg, #111827 0%, #172554 100%)",
+          "reason": "Literal hex color \"#111827\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 138,
+          "rawLine": "color: rgba(245, 246, 245, 0.7);",
+          "property": "color",
+          "value": "rgba(245, 246, 245, 0.7)",
+          "reason": "Property \"color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 139,
+          "rawLine": "border: 1px solid rgba(245, 246, 245, 0.25);",
+          "property": "border",
+          "value": "1px solid rgba(245, 246, 245, 0.25)",
+          "reason": "Literal rgb/rgba \"rgba(245, 246, 245, 0.25)\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 331,
+          "rawLine": "background-color: #fff;",
+          "property": "background-color",
+          "value": "#fff",
+          "reason": "Property \"background-color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 398,
+          "rawLine": "background: linear-gradient(135deg, #111827 0%, #172554 100%);",
+          "property": "background",
+          "value": "linear-gradient(135deg, #111827 0%, #172554 100%)",
+          "reason": "Literal hex color \"#111827\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 406,
+          "rawLine": "color: rgba(245, 246, 245, 0.6);",
+          "property": "color",
+          "value": "rgba(245, 246, 245, 0.6)",
+          "reason": "Property \"color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogIndex.css",
+          "line": 407,
+          "rawLine": "border: 1px solid rgba(245, 246, 245, 0.2);",
+          "property": "border",
+          "value": "1px solid rgba(245, 246, 245, 0.2)",
+          "reason": "Literal rgb/rgba \"rgba(245, 246, 245, 0.2)\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 138,
+          "rawLine": "background: linear-gradient(135deg, #111827 0%, #172554 100%);",
+          "property": "background",
+          "value": "linear-gradient(135deg, #111827 0%, #172554 100%)",
+          "reason": "Literal hex color \"#111827\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 146,
+          "rawLine": "color: rgba(245, 246, 245, 0.7);",
+          "property": "color",
+          "value": "rgba(245, 246, 245, 0.7)",
+          "reason": "Property \"color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 147,
+          "rawLine": "border: 1px solid rgba(245, 246, 245, 0.25);",
+          "property": "border",
+          "value": "1px solid rgba(245, 246, 245, 0.25)",
+          "reason": "Literal rgb/rgba \"rgba(245, 246, 245, 0.25)\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 337,
+          "rawLine": "background: linear-gradient(135deg, #111827 0%, #172554 100%);",
+          "property": "background",
+          "value": "linear-gradient(135deg, #111827 0%, #172554 100%)",
+          "reason": "Literal hex color \"#111827\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 347,
+          "rawLine": "color: rgba(245, 246, 245, 0.7);",
+          "property": "color",
+          "value": "rgba(245, 246, 245, 0.7)",
+          "reason": "Property \"color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 348,
+          "rawLine": "border: 1px solid rgba(245, 246, 245, 0.2);",
+          "property": "border",
+          "value": "1px solid rgba(245, 246, 245, 0.2)",
+          "reason": "Literal rgb/rgba \"rgba(245, 246, 245, 0.2)\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 366,
+          "rawLine": "background-color: #fff;",
+          "property": "background-color",
+          "value": "#fff",
+          "reason": "Property \"background-color\" does not use var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 466,
+          "rawLine": "border-top: 1px solid rgba(217, 220, 218, 0.5);",
+          "property": "border-top",
+          "value": "1px solid rgba(217, 220, 218, 0.5)",
+          "reason": "Literal rgb/rgba \"rgba(217, 220, 218, 0.5)\" used instead of var(--color-*)"
+        },
+        {
+          "file": "src/views/BlogArticle.css",
+          "line": 530,
+          "rawLine": "background-color: #fff;",
+          "property": "background-color",
+          "value": "#fff",
+          "reason": "Property \"background-color\" does not use var(--color-*)"
+        }
+      ]
+    },
+    {
+      "category": "img-loading",
+      "severity": "LOW",
+      "description": "3 author avatar <img> tag(s) omit explicit loading attribute",
+      "items": [
+        {
+          "file": "src/views/BlogIndex.tsx",
+          "line": 142,
+          "className": "author-byline__avatar",
+          "hasWidth": true,
+          "hasHeight": true,
+          "hasLoading": false,
+          "rawTag": "<img src={featuredArticle.author.avatar} alt={featuredArticle.author.name} width={32} height={32} className=\"author-byline__avatar\" />"
+        },
+        {
+          "file": "src/views/BlogArticle.tsx",
+          "line": 229,
+          "className": "article-author-avatar",
+          "hasWidth": true,
+          "hasHeight": true,
+          "hasLoading": false,
+          "rawTag": "<img src={article.author.avatar} alt={article.author.name} width={44} height={44} className=\"article-author-avatar\" itemProp=\"image\" />"
+        },
+        {
+          "file": "src/views/BlogArticle.tsx",
+          "line": 550,
+          "className": "author-bio-card__avatar",
+          "hasWidth": true,
+          "hasHeight": true,
+          "hasLoading": false,
+          "rawTag": "<img src={article.author.avatar} alt={article.author.name} width={64} height={64} className=\"author-bio-card__avatar\" />"
+        }
+      ]
+    }
+  ]
+}
