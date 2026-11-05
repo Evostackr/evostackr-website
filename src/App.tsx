@@ -16,6 +16,7 @@ import { ProductsPage } from './pages/ProductsPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { Store } from './pages/Store';
 import { StoreProductDetail } from './pages/StoreProductDetail';
+import { ReturnPolicy } from './pages/ReturnPolicy';
 import { storeProducts } from './data/storeProducts';
 import { BlogIndex } from './views/BlogIndex';
 import { BlogArticle } from './views/BlogArticle';
@@ -61,6 +62,8 @@ function App() {
     currentPath === '/optimization';
 
   const isClosedTestingPage = currentPath === '/services/google-play-closed-testing';
+  const isReturnPolicyPage =
+    currentPath === '/return-policy' || currentPath === '/refund-policy';
   const isServicesPage = currentPath === '/services';
   const isProductsPage = currentPath === '/products';
   const isStorePage = currentPath === '/store';
@@ -154,6 +157,8 @@ function App() {
           />
         ) : isStorePage ? (
           <Store onNavigateHome={() => navigate('/')} onNavigate={navigate} />
+        ) : isReturnPolicyPage ? (
+          <ReturnPolicy onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : isSeoSuite ? (
           <OptimizationSuite onNavigateHome={() => navigate('/')} />
         ) : (

@@ -98,6 +98,11 @@ function getAllCanonicalUrls() {
     identifier: 'evoedu-pro',
   });
   urls.push({
+    url: `${BASE_URL}/return-policy`,
+    type: 'core',
+    identifier: 'return-policy',
+  });
+  urls.push({
     url: `${BASE_URL}/blog`,
     type: 'blog',
     identifier: 'blog-index',

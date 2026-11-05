@@ -269,6 +269,20 @@ export function Footer({ onNavigate }: FooterProps) {
                     SEO &amp; AI Intelligence
                   </a>
                 </li>
+                <li>
+                  <a
+                    href="/return-policy"
+                    onClick={(e) => {
+                      if (onNavigate) {
+                        e.preventDefault();
+                        handleNav('/return-policy');
+                      }
+                    }}
+                    className="footer__nav-link link-underline"
+                  >
+                    Return Policy
+                  </a>
+                </li>
                 <li><a href="#contact" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#contact'); } }} className="footer__nav-link link-underline">Contact</a></li>
               </ul>
             </div>
@@ -280,6 +294,19 @@ export function Footer({ onNavigate }: FooterProps) {
             © {CURRENT_YEAR} Evostackr. All rights reserved.
           </p>
           <div className="footer__legal">
+            <a
+              href="/return-policy"
+              onClick={(e) => {
+                if (onNavigate) {
+                  e.preventDefault();
+                  handleNav('/return-policy');
+                }
+              }}
+              className="footer__legal-link link-underline"
+            >
+              Return Policy
+            </a>
+            <span style={{ color: 'var(--color-dark-text-secondary)', margin: '0 var(--space-xs)' }} aria-hidden="true">•</span>
             <a href="#contact" onClick={(e) => { if (onNavigate) { e.preventDefault(); handleNav('/', '#contact'); } }} className="footer__legal-link link-underline">Privacy &amp; Terms</a>
           </div>
         </div>

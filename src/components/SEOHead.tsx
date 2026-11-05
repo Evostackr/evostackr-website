@@ -14,6 +14,8 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
     const isProducts = currentPath === '/products';
     const isServices = currentPath === '/services';
     const isClosedTesting = currentPath === '/services/google-play-closed-testing';
+    const isReturnPolicy =
+      currentPath === '/return-policy' || currentPath === '/refund-policy';
     const isStore = currentPath === '/store';
     const isStoreProduct = currentPath.startsWith('/store/');
     const isSeoSuite =
@@ -184,7 +186,7 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
             '@type': 'MerchantReturnPolicy',
             applicableCountry: 'IN',
             returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-            merchantReturnLink: `${baseUrl}/#faq`,
+            merchantReturnLink: `${baseUrl}/return-policy`,
           },
         };
 
@@ -283,6 +285,40 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
               image: p.cardPreviewUrl ? `${baseUrl}${p.cardPreviewUrl}` : defaultImage,
             },
           })),
+        },
+      };
+    } else if (isReturnPolicy) {
+      title = 'Merchant Return & Refund Policy | Evostackr';
+      description =
+        'Official merchant return and refund policies for digital software downloads, unencrypted source code packages, and custom software services from Evostackr.';
+      canonical = `${baseUrl}/return-policy`;
+      ogType = 'website';
+      schemaJson = {
+        '@context': 'https://schema.org',
+        '@type': 'WebPage',
+        '@id': `${baseUrl}/return-policy#webpage`,
+        url: `${baseUrl}/return-policy`,
+        name: 'Evostackr Merchant Return & Refund Policy',
+        description,
+        publisher: {
+          '@type': 'Organization',
+          name: 'Evostackr',
+          url: `${baseUrl}/`,
+        },
+        breadcrumb: {
+          '@type': 'BreadcrumbList',
+          itemListElement: [
+            { '@type': 'ListItem', position: 1, name: 'Home', item: `${baseUrl}/` },
+            { '@type': 'ListItem', position: 2, name: 'Return Policy', item: `${baseUrl}/return-policy` },
+          ],
+        },
+        mainEntity: {
+          '@type': 'MerchantReturnPolicy',
+          '@id': `${baseUrl}/return-policy#policy`,
+          name: 'Evostackr Digital Goods Return Policy',
+          applicableCountry: 'IN',
+          returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
+          merchantReturnLink: `${baseUrl}/return-policy`,
         },
       };
     } else if (isSeoSuite) {

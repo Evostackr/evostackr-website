@@ -109,6 +109,12 @@ function buildSitemapXml() {
       priority: '0.9',
     },
     {
+      loc: `${BASE_URL}/return-policy`,
+      lastmod: '2026-11-05',
+      changefreq: 'monthly',
+      priority: '0.6',
+    },
+    {
       loc: `${BASE_URL}/blog`,
       lastmod: '2026-11-05',
       changefreq: 'daily',
