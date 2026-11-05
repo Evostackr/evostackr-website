@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-03T17:45:07.426Z",
-  "totalElapsedMs": 5410,
+  "timestamp": "2026-11-05T03:04:43.165Z",
+  "totalElapsedMs": 5855,
   "summary": {
     "total": 23,
     "passed": 23,
@@ -12,13 +12,13 @@
       "name": "TC-R1-01: OpenSEO Intelligence Report completeness",
       "tier": 1,
       "passed": true,
-      "duration": 1
+      "duration": 20
     },
     {
       "name": "TC-F8-01: Blog Articles Module existence and helper functions",
       "tier": 1,
       "passed": true,
-      "duration": 39
+      "duration": 36
     },
     {
       "name": "TC-F8-02: Individual article data contract completeness and image specs",
@@ -30,13 +30,13 @@
       "name": "TC-F2-01: Client-Side Blog Routing in src/App.tsx",
       "tier": 1,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F3-01: Blog Views and Stylesheet Tokens",
       "tier": 1,
       "passed": true,
-      "duration": 2
+      "duration": 1
     },
     {
       "name": "TC-F6-01: Navigation and Footer Blog Links",
@@ -66,19 +66,19 @@
       "name": "TC-F5-02: Unknown and empty category slug handling",
       "tier": 2,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F3-02: Search filtering boundary queries (empty, whitespace, symbols, case)",
       "tier": 2,
       "passed": true,
-      "duration": 1
+      "duration": 0
     },
     {
       "name": "TC-F8-03: Character encoding, typographic entities, and XML escaping",
       "tier": 2,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F8-04: Optional fields resilience (faqs, related products, related services)",
@@ -96,37 +96,37 @@
       "name": "TC-F9-02: Internal product and service link resolution",
       "tier": 3,
       "passed": true,
-      "duration": 5
+      "duration": 7
     },
     {
       "name": "TC-F11-03: Breadcrumb hierarchy and sequence matching",
       "tier": 3,
       "passed": true,
-      "duration": 1
+      "duration": 0
     },
     {
       "name": "TC-F10-02: Canonical URL and OpenGraph URL alignment",
       "tier": 3,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F14-01: Production build clean execution (npm run build)",
       "tier": 4,
       "passed": true,
-      "duration": 4255
+      "duration": 4689
     },
     {
       "name": "TC-F14-02: Static Oxlint verification (npx oxlint src)",
       "tier": 4,
       "passed": true,
-      "duration": 1091
+      "duration": 1081
     },
     {
       "name": "TC-F11-02: Formal Schema.org BlogPosting & BreadcrumbList compliance",
       "tier": 4,
       "passed": true,
-      "duration": 2
+      "duration": 3
     },
     {
       "name": "TC-F12-02: RSS 2.0 RFC 822 pubDate compliance",
@@ -138,13 +138,13 @@
       "name": "TC-F12-03: Sitemap XML well-formedness and Google Image extension syntax",
       "tier": 4,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F7-02: Zero Cumulative Layout Shift (CLS) image styling and dimensions",
       "tier": 4,
       "passed": true,
-      "duration": 1
+      "duration": 2
     }
   ]
 }

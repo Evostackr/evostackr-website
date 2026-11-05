@@ -1,0 +1,101 @@
+name: Evostackr Publishing & IndexNow Pipeline
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'src/data/**'
+      - 'src/views/Blog*.tsx'
+      - 'src/pages/**'
+      - 'public/sitemap.xml'
+      - 'public/rss.xml'
+      - 'public/llms.txt'
+      - 'scripts/**'
+      - '.github/workflows/indexnow-pipeline.yml'
+  workflow_dispatch:
+    inputs:
+      force_all:
+        description: 'Force submit all canonical production URLs to IndexNow'
+        type: boolean
+        required: false
+        default: false
+      custom_urls:
+        description: 'Comma or newline-separated custom URLs to submit (leave empty for auto-detect)'
+        type: string
+        required: false
+        default: ''
+
+concurrency:
+  group: indexnow-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish-and-index:
+    name: Validate, Deploy & IndexNow Submit
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+
+    steps:
+      - name: 1. Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 2. Setup Node.js 22 Runtime
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: 'npm'
+
+      - name: 3. Install Dependencies
+        run: npm ci
+
+      - name: 4. Verify Content Feeds (Sitemap, RSS & LLMs.txt)
+        run: |
+          echo "Verifying content feed synchronization..."
+          node scripts/sync-content-feeds.mjs --check
+
+      - name: 5. Execute Production Build & Test Invariants
+        run: |
+          echo "Running oxlint and production build..."
+          npx oxlint src
+          npm run build
+          npm run test:e2e
+
+      - name: 6. Detect Changed Canonical URLs
+        id: detect
+        run: |
+          echo "Detecting newly published or modified canonical URLs..."
+          if [ "${{ github.event.inputs.force_all }}" = "true" ]; then
+            node scripts/detect-changed-urls.mjs --all --output=changed-urls.json
+          elif [ -n "${{ github.event.inputs.custom_urls }}" ]; then
+            node scripts/detect-changed-urls.mjs --urls="${{ github.event.inputs.custom_urls }}" --output=changed-urls.json
+          else
+            node scripts/detect-changed-urls.mjs --output=changed-urls.json
+          fi
+
+      - name: 7. Wait for Cloudflare Pages Deployment & Verify Live Accessibility
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+        run: |
+          echo "Deployment-Aware Verification: Waiting for Cloudflare Pages to finish deployment..."
+          # Allow Cloudflare Pages 30 seconds to begin building and updating
+          sleep 25
+          echo "Verifying IndexNow domain verification key and live deployment state..."
+          node scripts/submit-indexnow.mjs --verify-only
+
+      - name: 8. Submit Eligible URLs to IndexNow API
+        env:
+          INDEXNOW_KEY: ${{ secrets.INDEXNOW_KEY }}
+          INDEXNOW_FORCE_ALL: ${{ github.event.inputs.force_all }}
+        run: |
+          echo "Executing IndexNow submission to participating search engines..."
+          if [ -n "${{ github.event.inputs.custom_urls }}" ]; then
+            node scripts/submit-indexnow.mjs --urls="${{ github.event.inputs.custom_urls }}"
+          else
+            node scripts/submit-indexnow.mjs
+          fi

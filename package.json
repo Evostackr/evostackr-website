@@ -8,7 +8,12 @@
     "build": "tsc -b && vite build",
     "lint": "oxlint",
     "test:e2e": "node scratch/test-suite/run-tests.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "sync:feeds": "node scripts/sync-content-feeds.mjs",
+    "check:feeds": "node scripts/sync-content-feeds.mjs --check",
+    "detect:urls": "node scripts/detect-changed-urls.mjs",
+    "indexnow:submit": "node scripts/submit-indexnow.mjs",
+    "indexnow:verify": "node scripts/submit-indexnow.mjs --verify-only"
   },
   "dependencies": {
     "react": "^19.3.1",
