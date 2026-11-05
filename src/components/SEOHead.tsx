@@ -146,7 +146,6 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
           priceCurrency: 'INR',
           availability: 'https://schema.org/InStock',
           url: `${baseUrl}/services/google-play-closed-testing`,
-          priceValidUntil: '2027-12-31',
         },
         breadcrumb: {
           '@type': 'BreadcrumbList',
@@ -181,43 +180,11 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
           priceCurrency: prod.price?.currency || 'INR',
           availability: 'https://schema.org/InStock',
           url: `${baseUrl}/store/${prod.slug}`,
-          validFrom: '2024-01-01',
-          priceValidUntil: '2027-12-31',
           hasMerchantReturnPolicy: {
             '@type': 'MerchantReturnPolicy',
             applicableCountry: 'IN',
             returnPolicyCategory: 'https://schema.org/MerchantReturnNotPermitted',
-            merchantReturnDays: 0,
-            returnMethod: 'https://schema.org/ReturnNotPermitted',
-            returnFees: 'https://schema.org/ReturnFeesCustomerResponsibility',
             merchantReturnLink: `${baseUrl}/#faq`,
-          },
-          shippingDetails: {
-            '@type': 'OfferShippingDetails',
-            shippingRate: {
-              '@type': 'MonetaryAmount',
-              value: '0',
-              currency: prod.price?.currency || 'INR',
-            },
-            shippingDestination: {
-              '@type': 'DefinedRegion',
-              addressCountry: 'IN',
-            },
-            deliveryTime: {
-              '@type': 'ShippingDeliveryTime',
-              handlingTime: {
-                '@type': 'QuantitativeValue',
-                minValue: 0,
-                maxValue: 0,
-                unitCode: 'DAY',
-              },
-              transitTime: {
-                '@type': 'QuantitativeValue',
-                minValue: 0,
-                maxValue: 0,
-                unitCode: 'DAY',
-              },
-            },
           },
         };
 
@@ -308,25 +275,12 @@ export function SEOHead({ currentPath }: SEOHeadProps) {
             '@type': 'ListItem',
             position: index + 1,
             item: {
-              '@type': ['Product', 'SoftwareApplication'],
+              '@type': 'SoftwareApplication',
               name: p.name,
-              sku: p.sku || 'EVOEDU-PRO-001',
-              brand: {
-                '@type': 'Brand',
-                name: p.brand || 'Evostackr',
-              },
+              applicationCategory: 'EducationalApplication',
               description: p.shortDescription,
               url: `${baseUrl}/store/${p.slug}`,
               image: p.cardPreviewUrl ? `${baseUrl}${p.cardPreviewUrl}` : defaultImage,
-              offers: {
-                '@type': 'Offer',
-                price: p.price?.amount ? String(p.price.amount) : '3999',
-                priceCurrency: p.price?.currency || 'INR',
-                availability: 'https://schema.org/InStock',
-                url: `${baseUrl}/store/${p.slug}`,
-                validFrom: '2024-01-01',
-                priceValidUntil: '2027-12-31',
-              },
             },
           })),
         },
