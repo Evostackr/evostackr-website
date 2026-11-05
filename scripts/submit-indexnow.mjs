@@ -185,10 +185,32 @@ function updateHistory(submittedUrls) {
     }
   }
 
+  // Retrieve current canonical hashes to persist state
+  let hashesByUrl = {};
+  try {
+    const detectProc = spawnSync(
+      process.execPath,
+      ['scripts/detect-changed-urls.mjs', '--json', '--all'],
+      { cwd: PROJECT_ROOT, encoding: 'utf-8' }
+    );
+    if (detectProc.status === 0 && detectProc.stdout) {
+      const match = detectProc.stdout.trim().match(/\[.*\]/s);
+      if (match) {
+        const list = JSON.parse(match[0]);
+        for (const item of list) {
+          if (typeof item === 'object' && item.url) {
+            hashesByUrl[item.url] = item.contentHash || null;
+          }
+        }
+      }
+    }
+  } catch {}
+
   const now = new Date().toISOString();
   for (const url of submittedUrls) {
     history[url] = {
       lastSubmitted: now,
+      contentHash: hashesByUrl[url] || history[url]?.contentHash || null,
       status: 'submitted',
     };
   }
@@ -260,16 +282,22 @@ async function main() {
       .filter(Boolean);
   } else {
     // Run changed URL detector
+    const detectArgs = ['scripts/detect-changed-urls.mjs', '--json', ...process.argv.slice(2)];
     const detectProc = spawnSync(
       process.execPath,
-      ['scripts/detect-changed-urls.mjs', '--json', ...process.argv.slice(2)],
+      detectArgs,
       { cwd: PROJECT_ROOT, encoding: 'utf-8' }
     );
     if (detectProc.status === 0 && detectProc.stdout) {
       try {
-        const parsed = JSON.parse(detectProc.stdout.trim());
-        urlsToSubmit = parsed.map((item) => (typeof item === 'string' ? item : item.url));
-      } catch {
+        const raw = detectProc.stdout.trim();
+        const match = raw.match(/\[.*\]/s);
+        if (match) {
+          const parsed = JSON.parse(match[0]);
+          urlsToSubmit = parsed.map((item) => (typeof item === 'string' ? item : item.url));
+        }
+      } catch (err) {
+        console.error('[ERROR] Failed to parse detect-changed-urls output:', err.message);
         urlsToSubmit = [];
       }
     }
@@ -311,3 +339,4 @@ main().catch((err) => {
   console.error('\n[FATAL ERROR]', err.message);
   process.exit(1);
 });
+

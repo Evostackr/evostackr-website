@@ -35,9 +35,6 @@ if (!process.execArgv.includes('--experimental-strip-types')) {
 
 // 2. Load typed content data
 const { blogArticles, blogCategories } = await import('../src/data/blogArticles.ts');
-const { products } = await import('../src/data/products.ts');
-const { services } = await import('../src/data/services.ts');
-const { storeProducts } = await import('../src/data/storeProducts.ts');
 
 const BASE_URL = 'https://evostackr.in';
 const isCheckOnly = process.argv.includes('--check');
@@ -278,3 +275,4 @@ if (isCheckOnly) {
   console.log(`  - ${rssPath}`);
   console.log(`  - ${llmsPath}`);
 }
+

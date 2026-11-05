@@ -99,3 +99,4 @@ jobs:
           else
             node scripts/submit-indexnow.mjs
           fi
+

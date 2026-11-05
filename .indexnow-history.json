@@ -1,0 +1,107 @@
+{
+  "https://evostackr.in/": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/products": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/services": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/services/google-play-closed-testing": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/store": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/store/evoedu-pro": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/ai-engineering": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/cloud-architecture": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/software-engineering": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/mobile-development": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/devops-infrastructure": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/category/frontend-architecture": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": null
+  },
+  "https://evostackr.in/blog/agentic-ai-architecture-enterprise-guide": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "1495b123807c87ef"
+  },
+  "https://evostackr.in/blog/multi-tenant-saas-architecture-patterns": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "9db435dca410ead3"
+  },
+  "https://evostackr.in/blog/microservices-design-patterns-cloud-architecture": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "28f3cd1bfea215b6"
+  },
+  "https://evostackr.in/blog/google-play-closed-testing-complete-guide": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "6b79373d311b11d8"
+  },
+  "https://evostackr.in/blog/cloud-native-devops-cicd-pipeline-blueprint": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "0d8e989300145b21"
+  },
+  "https://evostackr.in/blog/enterprise-api-integration-patterns-webhooks": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "844e5b73a882b7c5"
+  },
+  "https://evostackr.in/blog/component-driven-development-design-systems": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "ff62aa599f00cbba"
+  },
+  "https://evostackr.in/blog/high-throughput-messaging-infrastructure-architecture": {
+    "lastSubmitted": "2026-11-05T04:40:37.519Z",
+    "status": "submitted",
+    "contentHash": "9548e145dfda32c1"
+  }
+}

@@ -26,18 +26,17 @@ if (!process.execArgv.includes('--experimental-strip-types')) {
     process.execPath,
     ['--experimental-strip-types', __filename, ...process.argv.slice(2)],
     {
-      stdio: 'inherit',
+      stdio: ['inherit', 'pipe', 'inherit'],
       cwd: PROJECT_ROOT,
       env: process.env,
+      encoding: 'utf-8',
     }
   );
+  if (result.stdout) process.stdout.write(result.stdout);
   process.exit(result.status ?? 0);
 }
 
 const { blogArticles, blogCategories } = await import('../src/data/blogArticles.ts');
-const { products } = await import('../src/data/products.ts');
-const { services } = await import('../src/data/services.ts');
-const { storeProducts } = await import('../src/data/storeProducts.ts');
 
 const BASE_URL = 'https://evostackr.in';
 const HISTORY_FILE = path.join(PROJECT_ROOT, '.indexnow-history.json');
@@ -135,8 +134,13 @@ function getAllCanonicalUrls() {
 
 function detectChangedUrls() {
   const args = process.argv.slice(2);
+  const isJson = args.includes('--json');
   const isForceAll = args.includes('--all') || process.env.INDEXNOW_FORCE_ALL === 'true';
   const customUrlsArg = args.find((a) => a.startsWith('--urls='));
+
+  const log = (...msg) => {
+    if (!isJson) console.log(...msg);
+  };
 
   if (customUrlsArg) {
     const rawList = customUrlsArg.slice('--urls='.length).split(/[,\n]/);
@@ -149,8 +153,8 @@ function detectChangedUrls() {
   const allCanonicals = getAllCanonicalUrls();
 
   if (isForceAll) {
-    console.log('[INFO] --all flag active: Including all canonical production URLs.');
-    return allCanonicals.map((item) => item.url);
+    log('[INFO] --all flag active: Including all canonical production URLs.');
+    return allCanonicals;
   }
 
   // 1. Inspect Git diff
@@ -165,10 +169,10 @@ function detectChangedUrls() {
       gitDiffFiles = gitDiff.stdout.trim().split(/\r?\n/).filter(Boolean);
     }
   } catch (err) {
-    console.warn('[WARN] Could not retrieve git diff, falling back to content hash comparison:', err.message);
+    if (!isJson) console.warn('[WARN] Could not retrieve git diff, falling back to content hash comparison:', err.message);
   }
 
-  console.log(`[INFO] Git changed files (${gitDiffFiles.length}):`, gitDiffFiles.join(', ') || 'None detected via git diff');
+  log(`[INFO] Git changed files (${gitDiffFiles.length}):`, gitDiffFiles.join(', ') || 'None detected via git diff');
 
   const history = loadHistory();
   const changedUrls = [];
@@ -179,7 +183,7 @@ function detectChangedUrls() {
 
     const previousEntry = history[item.url];
     const isNew = !previousEntry;
-    const isModified = previousEntry && item.contentHash && previousEntry.contentHash !== item.contentHash;
+    const isModified = Boolean(previousEntry && item.contentHash && previousEntry.contentHash && previousEntry.contentHash !== item.contentHash);
 
     // Check git file affiliation
     let gitTriggered = false;
@@ -229,3 +233,4 @@ if (outputPathArg) {
   });
   console.log('========================================================\n');
 }
+
