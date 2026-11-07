@@ -7,6 +7,37 @@ interface FooterProps {
   onNavigate?: (path: string, hash?: string) => void;
 }
 
+interface FooterBadge {
+  id: string;
+  name: string;
+  href: string;
+  imgSrc: string;
+  rel: string;
+  alt: string;
+  height: number;
+}
+
+const FOOTER_BADGES: FooterBadge[] = [
+  {
+    id: "drchecker",
+    name: "DRChecker",
+    href: "https://drchecker.net/item/evostackr.in",
+    imgSrc: "https://drchecker.net/api/badge?domain=evostackr.in",
+    rel: "noopener noreferrer",
+    alt: "Monitor your Domain Rating with DRChecker",
+    height: 54,
+  },
+  {
+    id: "freescan",
+    name: "FreeScan",
+    href: "https://www.freescan.app/api/badges/free-score/report?url=https%3A%2F%2Fevostackr.in",
+    imgSrc: "https://www.freescan.app/api/badges/free-score?url=https%3A%2F%2Fevostackr.in&theme=light",
+    rel: "noopener noreferrer",
+    alt: "evostackr.in FreeScan score",
+    height: 60,
+  },
+];
+
 export function Footer({ onNavigate }: FooterProps) {
   const handleNav = (path: string, hash?: string) => {
     if (onNavigate) {
@@ -43,19 +74,22 @@ export function Footer({ onNavigate }: FooterProps) {
             <p className="footer__tagline">
               Independent software products and custom development for real-world problems.
             </p>
-            <div className="footer__badge">
-              <a
-                href="https://www.freescan.app/api/badges/free-score/report?url=https%3A%2F%2Fevostackr.in"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <img
-                  src="https://www.freescan.app/api/badges/free-score?url=https%3A%2F%2Fevostackr.in&theme=light"
-                  alt="evostackr.in FreeScan score"
-                  height="60"
-                  style={{ display: 'block', height: 'auto', maxWidth: '100%', width: 'auto' }}
-                />
-              </a>
+            <div className="footer__badges">
+              {FOOTER_BADGES.map((badge) => (
+                <a
+                  key={badge.id}
+                  href={badge.href}
+                  target="_blank"
+                  rel={badge.rel}
+                >
+                  <img
+                    src={badge.imgSrc}
+                    alt={badge.alt}
+                    height={badge.height}
+                    style={{ display: 'block', height: 'auto', maxWidth: '100%', width: 'auto' }}
+                  />
+                </a>
+              ))}
             </div>
           </div>
 

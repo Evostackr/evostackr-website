@@ -42,11 +42,17 @@
   line-height: var(--lh-relaxed);
 }
 
-.footer__badge {
+.footer__badge,
+.footer__badges {
   margin-top: var(--space-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-sm);
+  align-items: flex-start;
 }
 
-.footer__badge a {
+.footer__badge a,
+.footer__badges a {
   display: inline-block;
   line-height: 0;
 }
