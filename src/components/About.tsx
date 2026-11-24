@@ -115,89 +115,272 @@ export function About() {
             {/* Card 1: Commercial Proof & Deliverables */}
             <article className="about__proof-card" data-trust-signal="commercial-proof">
               <div className="about__proof-card-header">
-                <span className="about__proof-badge text-meta">01 • Commercial Proof</span>
+                <div className="about__proof-badge-wrap">
+                  <div className="about__proof-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m7.5 4.27 9 5.15" />
+                      <path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z" />
+                      <path d="m3.3 7 8.7 5 8.7-5" />
+                      <path d="M12 22V12" />
+                    </svg>
+                  </div>
+                  <span className="about__proof-badge text-meta">01 • Commercial Proof</span>
+                </div>
                 <h4 className="about__proof-card-title">Production Software &amp; Deliverables</h4>
               </div>
-              <ul className="about__proof-list">
-                <li className="about__proof-item">
-                  <strong>8+ Independent Products Shipped:</strong> Production utilities including SMS Campaign Manager, Pink PDF, CodeVault, and Fabricate with public architectural specifications.
-                </li>
-                <li className="about__proof-item">
-                  <strong>11+ Apps Closed Tested:</strong> Android applications for which Evostackr provided Google Play Closed Testing support.
-                </li>
-                <li className="about__proof-item">
-                  <strong>Instant Source Delivery:</strong> Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.
-                </li>
-              </ul>
-              <cite className="about__proof-cite text-meta">
-                Source: <a href="https://dir.evostackr.in/" target="_blank" rel="noopener noreferrer" className="link-underline">Evostackr Project Directory ↗</a>
-              </cite>
+
+              <div className="about__proof-tiles">
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>8+ Independent Products Shipped</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Production utilities including SMS Campaign Manager, Pink PDF, CodeVault, and Fabricate with public architectural specifications.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>11+ Apps Closed Tested</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Android applications for which Evostackr provided Google Play Closed Testing track compliance.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Instant Source Delivery</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Evostackr Store packages include direct unencrypted source code downloads on checkout with zero recurring platform markups.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about__proof-footer">
+                <a href="https://dir.evostackr.in/" target="_blank" rel="noopener noreferrer" className="about__proof-link">
+                  <span>Source: Evostackr Project Directory</span>
+                  <span className="arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
             </article>
 
             {/* Card 2: Security & Privacy Methodology */}
             <article className="about__proof-card" data-trust-signal="methodology">
               <div className="about__proof-card-header">
-                <span className="about__proof-badge text-meta">02 • Methodology</span>
+                <div className="about__proof-badge-wrap">
+                  <div className="about__proof-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10" />
+                      <path d="m9 12 2 2 4-4" />
+                    </svg>
+                  </div>
+                  <span className="about__proof-badge text-meta">02 • Methodology</span>
+                </div>
                 <h4 className="about__proof-card-title">Privacy &amp; Engineering Standards</h4>
               </div>
-              <ul className="about__proof-list">
-                <li className="about__proof-item">
-                  <strong>Zero-Telemetry Standard:</strong> In-browser WebAssembly cryptography (Pink PDF) and local background engines (SMS Campaign Manager) execute with 100% client-side privacy.
-                </li>
-                <li className="about__proof-item">
-                  <strong>Google Play Compliance Protocol:</strong> 20 verified opt-in human testers actively tracked over 14 continuous days satisfying Google Play Console publishing criteria.
-                </li>
-                <li className="about__proof-item">
-                  <strong>Edge-First Security Architecture:</strong> Deployed on Cloudflare Edge with strict Content Security Policy, HSTS preload, and sub-200ms TTFB globally.
-                </li>
-              </ul>
-              <cite className="about__proof-cite text-meta">
-                Methodology: <a href="/services/google-play-closed-testing" className="link-underline">14-Day Testing Protocol Documentation →</a>
-              </cite>
+
+              <div className="about__proof-tiles">
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Zero-Telemetry Standard</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    In-browser WebAssembly cryptography (Pink PDF) and local background engines (SMS Campaign Manager) execute with 100% client-side privacy.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Google Play Compliance Protocol</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    20 verified opt-in human testers actively tracked over 14 continuous days satisfying Google Play Console publishing criteria.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Edge-First Security Architecture</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Deployed on Cloudflare Edge with strict Content Security Policy, HSTS preload, and sub-200ms TTFB globally.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about__proof-footer">
+                <a href="/services/google-play-closed-testing" className="about__proof-link">
+                  <span>Methodology: 14-Day Testing Protocol</span>
+                  <span className="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
             </article>
 
             {/* Card 3: Authorship & Data Provenance */}
             <article className="about__proof-card" data-trust-signal="provenance">
               <div className="about__proof-card-header">
-                <span className="about__proof-badge text-meta">03 • Provenance</span>
+                <div className="about__proof-badge-wrap">
+                  <div className="about__proof-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <path d="m18 16 4-4-4-4" />
+                      <path d="m6 8-4 4 4 4" />
+                      <path d="m14.5 4-5 16" />
+                    </svg>
+                  </div>
+                  <span className="about__proof-badge text-meta">03 • Provenance</span>
+                </div>
                 <h4 className="about__proof-card-title">Authorship &amp; Public Code</h4>
               </div>
-              <ul className="about__proof-list">
-                <li className="about__proof-item">
-                  <strong>Engineering Authorship:</strong> Engineered, maintained, and operated directly by the core Evostackr engineering team (Jharkhand, India).
-                </li>
-                <li className="about__proof-item">
-                  <strong>Public Code Repositories:</strong> Open developer resources, UI component templates, and platform schemas hosted on our verified GitHub organization.
-                </li>
-                <li className="about__proof-item">
-                  <strong>Audited Review Dates:</strong> System architecture, security headers, and compliance verified regularly. Current audit cycle: <strong><time dateTime="2026-10">October 2026</time></strong>.
-                </li>
-              </ul>
-              <cite className="about__proof-cite text-meta">
-                Provenance: <a href="https://github.com/Evostackr" target="_blank" rel="noopener noreferrer" className="link-underline">github.com/Evostackr ↗</a>
-              </cite>
+
+              <div className="about__proof-tiles">
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Engineering Authorship</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Engineered, maintained, and operated directly by the core Evostackr engineering team (Jharkhand, India).
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Public Code Repositories</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Open developer resources, UI component templates, and platform schemas hosted on our verified GitHub organization.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Audited Review Dates</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    System architecture, security headers, and compliance verified regularly. Current audit cycle: <strong><time dateTime="2026-10">October 2026</time></strong>.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about__proof-footer">
+                <a href="https://github.com/Evostackr" target="_blank" rel="noopener noreferrer" className="about__proof-link">
+                  <span>Provenance: github.com/Evostackr</span>
+                  <span className="arrow" aria-hidden="true">↗</span>
+                </a>
+              </div>
             </article>
 
             {/* Card 4: Support SLA & Commercial Terms */}
             <article className="about__proof-card" data-trust-signal="commercial-guarantee">
               <div className="about__proof-card-header">
-                <span className="about__proof-badge text-meta">04 • Guarantees</span>
+                <div className="about__proof-badge-wrap">
+                  <div className="about__proof-icon" aria-hidden="true">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                      <circle cx="12" cy="12" r="10" />
+                      <polyline points="12 6 12 12 16 14" />
+                    </svg>
+                  </div>
+                  <span className="about__proof-badge text-meta">04 • Guarantees</span>
+                </div>
                 <h4 className="about__proof-card-title">Direct Engineering SLA &amp; Pricing</h4>
               </div>
-              <ul className="about__proof-list">
-                <li className="about__proof-item">
-                  <strong>Direct Engineer Access:</strong> Communication directly with software engineers via official WhatsApp and email—no automated bots or sales gatekeepers.
-                </li>
-                <li className="about__proof-item">
-                  <strong>24-Hour Response SLA:</strong> Guaranteed technical response within 24 business hours for all project and closed-testing inquiries.
-                </li>
-                <li className="about__proof-item">
-                  <strong>Transparent Fixed Pricing:</strong> Clear, upfront starting rates (from ₹1,245 INR / $49 USD) with confirmed terms prior to engagement.
-                </li>
-              </ul>
-              <cite className="about__proof-cite text-meta">
-                Guarantees: <a href="mailto:support@evostackr.in" className="link-underline">support@evostackr.in</a>
-              </cite>
+
+              <div className="about__proof-tiles">
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Direct Engineer Access</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Communication directly with software engineers via official WhatsApp and email—no automated bots or sales gatekeepers.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>24-Hour Response SLA</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Guaranteed technical response within 24 business hours for all project and closed-testing inquiries.
+                  </p>
+                </div>
+
+                <div className="about__proof-tile">
+                  <div className="about__proof-tile-lead">
+                    <span className="about__proof-check" aria-hidden="true">
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12" />
+                      </svg>
+                    </span>
+                    <strong>Transparent Fixed Pricing</strong>
+                  </div>
+                  <p className="about__proof-tile-text">
+                    Clear, upfront starting rates (from ₹1,245 INR / $49 USD) with confirmed terms prior to engagement.
+                  </p>
+                </div>
+              </div>
+
+              <div className="about__proof-footer">
+                <a href="mailto:support@evostackr.in" className="about__proof-link">
+                  <span>Guarantees: support@evostackr.in</span>
+                  <span className="arrow" aria-hidden="true">→</span>
+                </a>
+              </div>
             </article>
           </div>
         </div>

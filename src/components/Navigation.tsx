@@ -41,241 +41,225 @@ export function Navigation({ currentPath, onNavigate }: NavigationProps) {
     onNavigate(targetPath, hash);
   };
 
-  const isHome = currentPath === '/';
-
   return (
-    <header className="nav" role="banner">
-      <div className="nav__inner container">
-        <a
-          href="/"
-          onClick={(e) => {
-            e.preventDefault();
-            handleLinkClick('/');
-          }}
-          className="nav__wordmark"
-          aria-label="Evostackr Home"
-        >
-          <img
-            src="/evostackr-logo.png"
-            alt="Evostackr logo"
-            className="nav__logo"
-            width="28"
-            height="28"
-            fetchPriority="high"
-          />
-          <span className="nav__name">Evostackr</span>
-        </a>
-
-        <nav className="nav__links" role="navigation" aria-label="Main navigation">
-          <a
-            href="/products"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/products');
-            }}
-            className={`nav__link link-underline ${currentPath === '/products' ? 'nav__link--active' : ''}`}
-          >
-            Products
-          </a>
-          <a
-            href="/store"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/store');
-            }}
-            className={`nav__link link-underline ${currentPath === '/store' || currentPath.startsWith('/store/') ? 'nav__link--active' : ''}`}
-          >
-            Store
-          </a>
-          <a
-            href="/services"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/services');
-            }}
-            className={`nav__link link-underline ${currentPath === '/services' || currentPath.startsWith('/services/') ? 'nav__link--active' : ''}`}
-          >
-            Services
-          </a>
-          <a
-            href="/blog"
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/blog');
-            }}
-            className={`nav__link link-underline ${currentPath === '/blog' || currentPath.startsWith('/blog/') ? 'nav__link--active' : ''}`}
-          >
-            Blog
-          </a>
-          <a
-            href={isHome ? '#about' : '/#about'}
-            onClick={(e) => {
-              if (!isHome) {
+    <>
+      {/* Top Announcement Bar */}
+      <div className="nav-topbar">
+        <div className="nav-topbar__inner container">
+          <span className="nav-topbar__text">
+            ✦ 10% off on any custom software &amp; website order.{' '}
+            <a
+              href="#instant-quote"
+              onClick={(e) => {
                 e.preventDefault();
-                handleLinkClick('/', '#about');
-              }
-            }}
-            className="nav__link link-underline"
-          >
-            About
-          </a>
-          <a
-            href={isHome ? '#faq' : '/#faq'}
-            onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#faq');
-              }
-            }}
-            className="nav__link link-underline"
-          >
-            FAQ
-          </a>
-          <a
-            href={isHome ? '#contact' : '/#contact'}
-            onClick={(e) => {
-              if (!isHome) {
-                e.preventDefault();
-                handleLinkClick('/', '#contact');
-              }
-            }}
-            className="nav__link link-underline"
-          >
-            Contact
-          </a>
-        </nav>
-
-        <a
-          href={isHome ? '#contact' : '/#contact'}
-          onClick={(e) => {
-            if (!isHome) {
-              e.preventDefault();
-              handleLinkClick('/', '#contact');
-            }
-          }}
-          className="nav__cta btn btn--primary"
-        >
-          Get in touch <span className="arrow" aria-hidden="true">→</span>
-        </a>
-
-        <button
-          className={`nav__hamburger ${menuOpen ? 'nav__hamburger--open' : ''}`}
-          onClick={toggleMenu}
-          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
-          aria-expanded={menuOpen}
-          aria-controls="mobile-menu"
-        >
-          <span className="nav__hamburger-line" />
-          <span className="nav__hamburger-line" />
-        </button>
+                handleLinkClick('/', '#instant-quote');
+              }}
+              className="nav-topbar__link"
+            >
+              Get Instant Quote &rarr;
+            </a>
+          </span>
+        </div>
       </div>
 
-      <div
-        id="mobile-menu"
-        className={`nav__mobile ${menuOpen ? 'nav__mobile--open' : ''}`}
-        role="dialog"
-        aria-modal={menuOpen}
-        aria-label="Mobile navigation"
-      >
-        <nav className="nav__mobile-links" aria-label="Mobile navigation">
+      {/* Main Navbar */}
+      <header className="nav" role="banner">
+        <div className="nav__inner container">
+          {/* Brand Wordmark with neo-badge styling */}
           <a
-            href="/products"
-            className={`nav__mobile-link ${currentPath === '/products' ? 'nav__mobile-link--active' : ''}`}
+            href="/"
             onClick={(e) => {
               e.preventDefault();
-              handleLinkClick('/products');
+              handleLinkClick('/');
             }}
+            className="nav__wordmark"
+            aria-label="Evostackr Home"
           >
-            Products
+            <div className="nav__logo-badge">
+              <svg width="22" height="22" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <polygon points="33.44,13.27 10.0,50.2 32.91,86.73 80.05,86.73 72.85,74.94 39.85,74.94 25.06,50.2 41.03,25.19 82.67,25.19 90.0,13.27" fill="#121316" />
+                <polygon points="45.35,37.5 75.07,37.5 68.0,49.15 38.28,49.15" fill="#FF6B35" />
+                <polygon points="39.46,55.17 64.6,55.17 58.97,64.47 45.09,64.47" fill="#FF6B35" />
+              </svg>
+            </div>
+            <span className="nav__name">Evostackr</span>
           </a>
-          <a
-            href="/store"
-            className={`nav__mobile-link ${currentPath === '/store' || currentPath.startsWith('/store/') ? 'nav__mobile-link--active' : ''}`}
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/store');
-            }}
-          >
-            Store
-          </a>
-          <a
-            href="/services"
-            className={`nav__mobile-link ${currentPath === '/services' || currentPath.startsWith('/services/') ? 'nav__mobile-link--active' : ''}`}
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/services');
-            }}
-          >
-            Services
-          </a>
-          <a
-            href="/blog"
-            className={`nav__mobile-link ${currentPath === '/blog' || currentPath.startsWith('/blog/') ? 'nav__mobile-link--active' : ''}`}
-            onClick={(e) => {
-              e.preventDefault();
-              handleLinkClick('/blog');
-            }}
-          >
-            Blog
-          </a>
-          <a
-            href={isHome ? '#about' : '/#about'}
-            className="nav__mobile-link"
-            onClick={(e) => {
-              if (!isHome) {
+
+          {/* Desktop Navigation Links */}
+          <nav className="nav__links" role="navigation" aria-label="Main navigation">
+            <a
+              href="/#services"
+              onClick={(e) => {
                 e.preventDefault();
-                handleLinkClick('/', '#about');
-              } else {
-                closeMenu();
-              }
-            }}
-          >
-            About
-          </a>
-          <a
-            href={isHome ? '#faq' : '/#faq'}
-            className="nav__mobile-link"
-            onClick={(e) => {
-              if (!isHome) {
+                handleLinkClick('/', '#services');
+              }}
+              className={`nav__link ${currentPath === '/services' ? 'nav__link--active' : ''}`}
+            >
+              Services
+            </a>
+            <a
+              href="/#process"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('/', '#process');
+              }}
+              className="nav__link"
+            >
+              Process
+            </a>
+            <a
+              href="/#instant-quote"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('/', '#instant-quote');
+              }}
+              className="nav__link"
+            >
+              Instant Quote
+            </a>
+            <a
+              href="https://blog.evostackr.in/product-launches"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="nav__link"
+            >
+              Products
+            </a>
+            <a
+              href="/store"
+              onClick={(e) => {
+                e.preventDefault();
+                handleLinkClick('/store');
+              }}
+              className={`nav__link ${currentPath === '/store' || currentPath.startsWith('/store/') ? 'nav__link--active' : ''}`}
+            >
+              Store
+            </a>
+            <a
+              href="/#faq"
+              onClick={(e) => {
                 e.preventDefault();
                 handleLinkClick('/', '#faq');
-              } else {
-                closeMenu();
-              }
-            }}
-          >
-            FAQ
-          </a>
-          <a
-            href={isHome ? '#contact' : '/#contact'}
-            className="nav__mobile-link"
-            onClick={(e) => {
-              if (!isHome) {
+              }}
+              className="nav__link"
+            >
+              FAQ
+            </a>
+          </nav>
+
+          {/* Action Button: Pill Outline "Let's talk" */}
+          <div className="nav__actions">
+            <a
+              href="#contact"
+              onClick={(e) => {
                 e.preventDefault();
                 handleLinkClick('/', '#contact');
-              } else {
-                closeMenu();
-              }
-            }}
-          >
-            Contact
-          </a>
-        </nav>
-        <a
-          href={isHome ? '#contact' : '/#contact'}
-          className="btn btn--primary nav__mobile-cta"
-          onClick={(e) => {
-            if (!isHome) {
-              e.preventDefault();
-              handleLinkClick('/', '#contact');
-            } else {
-              closeMenu();
-            }
-          }}
-        >
-          Get in touch <span className="arrow" aria-hidden="true">→</span>
-        </a>
-      </div>
-    </header>
+              }}
+              className="btn btn--neo-talk"
+            >
+              Let's talk
+            </a>
+
+            {/* Mobile Hamburger Button */}
+            <button
+              type="button"
+              className="nav__menu-btn"
+              onClick={toggleMenu}
+              aria-label={menuOpen ? 'Close navigation menu' : 'Open navigation menu'}
+              aria-expanded={menuOpen}
+            >
+              <span className={`nav__hamburger ${menuOpen ? 'nav__hamburger--open' : ''}`} />
+            </button>
+          </div>
+        </div>
+
+        {/* Mobile Navigation Drawer */}
+        <div className={`nav__drawer ${menuOpen ? 'nav__drawer--open' : ''}`}>
+          <div className="nav__drawer-content">
+            <nav className="nav__drawer-links">
+              <a
+                href="/"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/');
+                }}
+                className="nav__drawer-link"
+              >
+                Home
+              </a>
+              <a
+                href="/#services"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/', '#services');
+                }}
+                className="nav__drawer-link"
+              >
+                Services
+              </a>
+              <a
+                href="/#process"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/', '#process');
+                }}
+                className="nav__drawer-link"
+              >
+                Process
+              </a>
+              <a
+                href="/#instant-quote"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/', '#instant-quote');
+                }}
+                className="nav__drawer-link"
+              >
+                Instant Quote
+              </a>
+              <a
+                href="https://blog.evostackr.in/product-launches"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={closeMenu}
+                className="nav__drawer-link"
+              >
+                Products
+              </a>
+              <a
+                href="/store"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/store');
+                }}
+                className="nav__drawer-link"
+              >
+                Store
+              </a>
+              <a
+                href="/#faq"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/', '#faq');
+                }}
+                className="nav__drawer-link"
+              >
+                FAQ
+              </a>
+              <a
+                href="/#contact"
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleLinkClick('/', '#contact');
+                }}
+                className="btn btn--dark nav__drawer-cta"
+              >
+                Let's talk &rarr;
+              </a>
+            </nav>
+          </div>
+        </div>
+      </header>
+    </>
   );
 }

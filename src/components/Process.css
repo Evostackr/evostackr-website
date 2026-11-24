@@ -1,0 +1,94 @@
+/* ─── Process Section ("This is how we do things") ─── */
+.process {
+  background-color: var(--color-bg);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
+}
+
+.process__header {
+  margin-bottom: 3rem;
+  max-width: 680px;
+}
+
+.process__title-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 0.75rem;
+}
+
+.process__title {
+  font-size: var(--fs-h2);
+  font-weight: 800;
+  color: var(--color-dark);
+  letter-spacing: -0.025em;
+}
+
+.process__sparkle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.process__subtitle {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* ─── Cards Grid ─── */
+.process__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.75rem;
+}
+
+.process__card {
+  background-color: #FFFFFF;
+  border: 1.5px solid var(--color-dark);
+  border-radius: var(--radius-card);
+  padding: 2.25rem 2rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.process__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 4px 4px 0px var(--color-dark);
+}
+
+.process__card-header {
+  margin-bottom: 1.5rem;
+}
+
+.process__card-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--color-dark);
+  line-height: 1;
+  letter-spacing: -0.03em;
+  font-family: var(--font-primary);
+}
+
+.process__card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--color-dark);
+  margin-bottom: 0.85rem;
+  line-height: 1.3;
+}
+
+.process__card-desc {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+  flex-grow: 1;
+}
+
+@media (max-width: 900px) {
+  .process__grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+}

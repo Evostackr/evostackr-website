@@ -1,5 +1,7 @@
 .about {
-  background-color: var(--color-surface);
+  background-color: var(--color-bg);
+  padding-top: var(--space-4xl);
+  padding-bottom: var(--space-4xl);
 }
 
 .about__layout {
@@ -7,7 +9,7 @@
   grid-template-columns: 1fr 5fr 2fr;
   gap: var(--space-3xl);
   align-items: start;
-  margin-bottom: var(--space-5xl);
+  margin-bottom: var(--space-4xl);
 }
 
 .about__label-col {
@@ -15,14 +17,15 @@
 }
 
 .about__content {
-  max-width: 600px;
+  max-width: 640px;
 }
 
 .about__title {
   font-size: var(--fs-h1);
   font-weight: var(--fw-bold);
   letter-spacing: -0.02em;
-  margin-bottom: var(--space-2xl);
+  margin-bottom: var(--space-xl);
+  color: var(--color-brand-primary);
 }
 
 .about__text {
@@ -45,37 +48,51 @@
 .about__graphic {
   width: 140px;
   height: auto;
-  opacity: 0.7;
+  opacity: 0.6;
 }
 
 /* ─── Principles ─── */
 .about__principles {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
   padding-top: var(--space-3xl);
-  border-top: 1px solid var(--color-border);
+  border-top: 1px solid rgba(45, 125, 115, 0.15);
 }
 
 .about__principle {
+  background-color: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  border: 1px solid rgba(15, 27, 54, 0.06);
+  box-shadow: 0 4px 16px rgba(15, 27, 54, 0.03);
   display: flex;
   flex-direction: column;
-  gap: var(--space-sm);
+  gap: var(--space-xs);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.about__principle:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(15, 27, 54, 0.06);
 }
 
 .about__principle-num {
-  color: var(--color-text-secondary);
+  font-size: 0.85rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-secondary);
   margin-bottom: var(--space-xs);
 }
 
 .about__principle-title {
-  font-size: var(--fs-body);
-  font-weight: var(--fw-semibold);
+  font-size: 1.15rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
   letter-spacing: -0.01em;
 }
 
 .about__principle-text {
-  font-size: var(--fs-small);
+  font-size: 0.95rem;
   color: var(--color-text-secondary);
   line-height: var(--lh-relaxed);
 }
@@ -83,22 +100,22 @@
 /* ─── Proof & Methodology Section ─── */
 .about__proof-section {
   margin-top: var(--space-4xl);
-  padding-top: var(--space-4xl);
-  border-top: 1px solid var(--color-border);
+  padding-top: var(--space-3xl);
+  border-top: 1px solid rgba(45, 125, 115, 0.15);
 }
 
 .about__proof-header {
   max-width: 680px;
-  margin-bottom: var(--space-3xl);
+  margin-bottom: var(--space-2xl);
 }
 
 .about__proof-title {
   font-size: var(--fs-h2);
   font-weight: var(--fw-bold);
   letter-spacing: -0.02em;
-  margin-top: var(--space-sm);
-  margin-bottom: var(--space-md);
-  color: var(--color-text);
+  margin-top: var(--space-xs);
+  margin-bottom: var(--space-sm);
+  color: var(--color-brand-primary);
 }
 
 .about__proof-subtitle {
@@ -110,21 +127,25 @@
 .about__proof-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: var(--space-2xl);
+  gap: var(--space-xl);
 }
 
 .about__proof-card {
-  background-color: var(--color-bg);
-  border: 1px solid var(--color-border);
-  padding: var(--space-2xl);
+  background-color: var(--color-surface);
+  border: 1px solid rgba(34, 39, 46, 0.08);
+  border-radius: var(--radius-xl);
+  padding: clamp(1.5rem, 2.5vw, 2.25rem);
   display: flex;
   flex-direction: column;
   gap: var(--space-lg);
-  transition: border-color var(--transition-base);
+  box-shadow: 0 4px 20px rgba(34, 39, 46, 0.03);
+  transition: transform var(--transition-base), box-shadow var(--transition-base), border-color var(--transition-base);
 }
 
 .about__proof-card:hover {
-  border-color: var(--color-text-secondary);
+  transform: translateY(-4px);
+  border-color: rgba(45, 125, 115, 0.25);
+  box-shadow: 0 12px 32px rgba(34, 39, 46, 0.06);
 }
 
 .about__proof-card-header {
@@ -133,93 +154,138 @@
   gap: var(--space-xs);
 }
 
+.about__proof-badge-wrap {
+  display: flex;
+  align-items: center;
+  gap: var(--space-sm);
+  margin-bottom: 0.25rem;
+}
+
+.about__proof-icon {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  background-color: rgba(45, 125, 115, 0.08);
+  color: var(--color-brand-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
 .about__proof-badge {
-  color: var(--color-brand-accent);
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
 }
 
 .about__proof-card-title {
-  font-size: var(--fs-h3);
-  font-weight: var(--fw-semibold);
-  letter-spacing: -0.01em;
-  color: var(--color-text);
+  font-size: clamp(1.2rem, 1.4vw + 0.5rem, 1.35rem);
+  font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
+  letter-spacing: -0.015em;
+  line-height: 1.25;
 }
 
-.about__proof-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+/* ─── Micro-Tiles ─── */
+.about__proof-tiles {
   display: flex;
   flex-direction: column;
-  gap: var(--space-md);
+  gap: 0.75rem;
+  flex: 1;
 }
 
-.about__proof-item {
-  font-size: var(--fs-small);
-  color: var(--color-text-secondary);
-  line-height: var(--lh-relaxed);
-  position: relative;
-  padding-left: var(--space-md);
+.about__proof-tile {
+  background-color: var(--color-bg);
+  border: 1px solid rgba(34, 39, 46, 0.05);
+  border-radius: 14px;
+  padding: 0.9rem 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  transition: transform var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
-.about__proof-item::before {
-  content: '—';
-  position: absolute;
-  left: 0;
-  color: var(--color-brand-primary);
+.about__proof-tile:hover {
+  transform: translateY(-2px);
+  border-color: rgba(45, 125, 115, 0.2);
+  background-color: #FFFFFF;
+}
+
+.about__proof-tile-lead {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
   font-weight: var(--fw-bold);
+  color: var(--color-brand-primary);
 }
 
-.about__proof-item strong {
-  color: var(--color-text);
-  font-weight: var(--fw-semibold);
+.about__proof-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: rgba(45, 125, 115, 0.12);
+  color: var(--color-brand-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
-.about__proof-cite {
-  margin-top: auto;
-  padding-top: var(--space-md);
-  border-top: 1px solid var(--color-border);
+.about__proof-tile-text {
+  font-size: 0.88rem;
   color: var(--color-text-secondary);
-  font-style: normal;
+  line-height: 1.55;
+  padding-left: 1.85rem;
 }
 
-.about__proof-cite a {
-  color: var(--color-text);
+/* ─── Footer Action ─── */
+.about__proof-footer {
+  padding-top: var(--space-md);
+  border-top: 1px solid rgba(34, 39, 46, 0.06);
+  margin-top: auto;
 }
 
-/* ─── Responsive ─── */
-@media (max-width: 1024px) {
+.about__proof-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.85rem;
+  font-weight: var(--fw-semibold);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--color-brand-secondary);
+  transition: color var(--transition-fast);
+}
+
+.about__proof-link:hover {
+  color: var(--color-brand-primary);
+}
+
+.about__proof-link .arrow {
+  display: inline-block;
+  transition: transform var(--transition-fast);
+}
+
+.about__proof-link:hover .arrow {
+  transform: translateX(3px) translateY(-1px);
+}
+
+@media (max-width: 900px) {
   .about__layout {
     grid-template-columns: 1fr;
-    gap: var(--space-2xl);
+    gap: var(--space-xl);
   }
 
-  .about__visual {
-    display: none;
+  .about__principles {
+    grid-template-columns: 1fr;
   }
 
   .about__proof-grid {
     grid-template-columns: 1fr;
-    gap: var(--space-xl);
-  }
-}
-
-@media (max-width: 768px) {
-  .about__principles {
-    grid-template-columns: 1fr;
-    gap: var(--space-xl);
   }
 
-  .about__layout {
-    margin-bottom: var(--space-3xl);
-  }
-
-  .about__proof-card {
-    padding: var(--space-xl);
-  }
-
-  .about__proof-title {
-    font-size: var(--fs-h3);
+  .about__visual {
+    display: none;
   }
 }

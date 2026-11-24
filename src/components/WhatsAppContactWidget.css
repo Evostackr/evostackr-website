@@ -13,42 +13,68 @@
 
 /* Floating Trigger Button */
 .wa-widget__trigger {
-  width: 52px;
-  height: 52px;
+  width: 56px;
+  height: 56px;
   border-radius: 50%;
-  background-color: var(--color-dark);
-  color: var(--color-dark-text);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: #FF3B30; /* Red fill in the outer ring */
+  color: #25D366;
+  border: 2px solid #E02E24;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.18);
-  transition: transform var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast);
+  box-shadow: 0 0 0 2px rgba(255, 59, 48, 0.2), 0 8px 24px rgba(0, 0, 0, 0.22);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
   outline: none;
   position: relative;
 }
 
 .wa-widget__trigger:hover {
-  background-color: var(--color-brand-secondary, #172554);
-  transform: translateY(-2px);
-  border-color: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px) scale(1.04);
+  border-color: #D32018;
+  box-shadow: 0 0 0 3px rgba(255, 59, 48, 0.35), 0 12px 28px rgba(0, 0, 0, 0.28);
 }
 
 .wa-widget__trigger:focus-visible {
-  outline: 2px solid var(--color-brand-accent, var(--color-dark));
+  outline: 2px solid #FF3B30;
   outline-offset: 3px;
 }
 
+/* Inner container that keeps WhatsApp icon area dark & green (NOT red) */
+.wa-widget__icon-inner {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: var(--color-dark, #121316);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform var(--transition-fast);
+}
+
+.wa-widget__trigger:hover .wa-widget__icon-inner {
+  transform: scale(1.02);
+}
+
 .wa-widget__trigger-icon {
-  width: 26px;
-  height: 26px;
-  fill: currentColor;
+  width: 25px;
+  height: 25px;
+  fill: #25D366;
+  color: #25D366;
   transition: transform var(--transition-fast), opacity var(--transition-fast);
 }
 
-.wa-widget__trigger--open .wa-widget__trigger-icon {
-  transform: rotate(90deg);
+.wa-widget__trigger-icon path {
+  fill: #25D366;
+}
+
+.wa-widget__trigger--open .wa-widget__trigger-icon,
+.wa-widget__trigger-icon--close {
+  width: 24px;
+  height: 24px;
+  stroke: #FFFFFF;
+  fill: none;
 }
 
 /* Tooltip */

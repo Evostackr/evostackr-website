@@ -1,0 +1,58 @@
+/* ─── Full-Width Orange Marquee Ticker ─── */
+.marquee-banner {
+  background-color: var(--color-brand-orange);
+  border-top: 1.5px solid var(--color-dark);
+  border-bottom: 1.5px solid var(--color-dark);
+  padding: 0.85rem 0;
+  overflow: hidden;
+  user-select: none;
+  position: relative;
+}
+
+.marquee-banner__track {
+  display: flex;
+  width: max-content;
+  animation: marqueeScroll 24s linear infinite;
+}
+
+.marquee-banner__track:hover {
+  animation-play-state: paused;
+}
+
+.marquee-banner__content {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.marquee-banner__text {
+  font-size: 1.05rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: lowercase;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.marquee-banner__sparkle {
+  color: #FFFFFF;
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+@keyframes marqueeScroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .marquee-banner__track {
+    animation: none;
+    transform: none;
+  }
+}

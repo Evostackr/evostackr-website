@@ -3,25 +3,25 @@ import './App.css';
 import { SEOHead } from './components/SEOHead';
 import { Navigation } from './components/Navigation';
 import { Hero } from './components/Hero';
-import { Products } from './components/Products';
+import { MarqueeBanner } from './components/MarqueeBanner';
+import { Process } from './components/Process';
 import { Services } from './components/Services';
-import { About } from './components/About';
+import { BudgetCallout } from './components/BudgetCallout';
+import { BrandProof } from './components/BrandProof';
+import { UniqueApproach } from './components/UniqueApproach';
+import { InstantQuote } from './components/InstantQuote';
+import { Testimonials } from './components/Testimonials';
 import { FAQ } from './components/FAQ';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { WhatsAppContactWidget } from './components/WhatsAppContactWidget';
 import { GooglePlayClosedTesting } from './pages/GooglePlayClosedTesting';
 import { OptimizationSuite } from './pages/OptimizationSuite';
-import { ProductsPage } from './pages/ProductsPage';
 import { ServicesPage } from './pages/ServicesPage';
 import { Store } from './pages/Store';
 import { StoreProductDetail } from './pages/StoreProductDetail';
 import { ReturnPolicy } from './pages/ReturnPolicy';
 import { storeProducts } from './data/storeProducts';
-import { BlogIndex } from './views/BlogIndex';
-import { BlogArticle } from './views/BlogArticle';
-import { BlogCategory } from './views/BlogCategory';
-import { getArticleBySlug } from './data/blogArticles';
 
 function getInitialPath(): string {
   if (typeof window === 'undefined') return '/';
@@ -56,6 +56,14 @@ function App() {
     return () => window.removeEventListener('popstate', handlePopState);
   }, []);
 
+  useEffect(() => {
+    if (currentPath === '/products') {
+      window.location.href = 'https://blog.evostackr.in/product-launches';
+    } else if (currentPath === '/blog' || currentPath.startsWith('/blog/')) {
+      navigate('/');
+    }
+  }, [currentPath, navigate]);
+
   const isSeoSuite =
     currentPath === '/admin/seo' ||
     currentPath === '/system/seo' ||
@@ -65,24 +73,10 @@ function App() {
   const isReturnPolicyPage =
     currentPath === '/return-policy' || currentPath === '/refund-policy';
   const isServicesPage = currentPath === '/services';
-  const isProductsPage = currentPath === '/products';
   const isStorePage = currentPath === '/store';
   const matchedProduct = currentPath.startsWith('/store/')
     ? storeProducts.find((p) => `/store/${p.slug}` === currentPath)
     : null;
-
-  const isBlogIndex = currentPath === '/blog';
-  const isBlogCategory = currentPath.startsWith('/blog/category/');
-  const categorySlug = isBlogCategory
-    ? currentPath.slice('/blog/category/'.length).replace(/\/$/, '')
-    : null;
-
-  const isBlogArticleRoute =
-    currentPath.startsWith('/blog/') && !currentPath.startsWith('/blog/category/');
-  const articleSlug = isBlogArticleRoute
-    ? currentPath.slice('/blog/'.length).replace(/\/$/, '')
-    : null;
-  const matchedArticle = articleSlug ? getArticleBySlug(articleSlug) : null;
 
   return (
     <div className="app-container app-loaded">
@@ -98,57 +92,11 @@ function App() {
             onNavigate={navigate}
             onRequestQuote={() => window.dispatchEvent(new CustomEvent('open-contact-widget'))}
           />
-        ) : isBlogCategory && categorySlug ? (
-          <BlogCategory
-            categorySlug={categorySlug}
-            onNavigateHome={() => navigate('/')}
-            onNavigate={navigate}
-          />
-        ) : isBlogArticleRoute ? (
-          matchedArticle ? (
-            <BlogArticle
-              article={matchedArticle}
-              onNavigateHome={() => navigate('/')}
-              onNavigate={navigate}
-            />
-          ) : (
-            <div
-              className="container"
-              style={{
-                paddingTop: 'calc(6rem + var(--space-xl))',
-                paddingBottom: 'var(--space-5xl)',
-                textAlign: 'center',
-              }}
-            >
-              <h1 style={{ fontSize: 'var(--fs-h2)', marginBottom: 'var(--space-md)' }}>
-                Article Not Found
-              </h1>
-              <p
-                style={{
-                  color: 'var(--color-text-secondary)',
-                  marginBottom: 'var(--space-lg)',
-                }}
-              >
-                The architectural guide you requested does not exist or has been relocated.
-              </p>
-              <button
-                type="button"
-                className="btn btn--primary"
-                onClick={() => navigate('/blog')}
-              >
-                ← Return to Blog
-              </button>
-            </div>
-          )
-        ) : isBlogIndex ? (
-          <BlogIndex onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : isServicesPage ? (
           <ServicesPage
             onNavigateHome={() => navigate('/')}
             onNavigate={navigate}
           />
-        ) : isProductsPage ? (
-          <ProductsPage onNavigateHome={() => navigate('/')} onNavigate={navigate} />
         ) : matchedProduct ? (
           <StoreProductDetail
             product={matchedProduct}
@@ -164,9 +112,14 @@ function App() {
         ) : (
           <>
             <Hero />
-            <Products onNavigate={navigate} />
+            <MarqueeBanner />
+            <Process />
             <Services onNavigate={navigate} />
-            <About />
+            <BudgetCallout />
+            <BrandProof />
+            <UniqueApproach />
+            <InstantQuote />
+            <Testimonials />
             <FAQ />
             <Contact />
           </>

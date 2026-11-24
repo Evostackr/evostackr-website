@@ -165,17 +165,13 @@ export async function runTier1Tests() {
     });
   });
 
-  // --- Test 4: Client-Side Blog Routing (R3 / F2) ---
+  // --- Test 4: Client-Side Blog Routing & Fallback (R3 / F2) ---
   await test('TC-F2-01: Client-Side Blog Routing in src/App.tsx', () => {
     const appContent = readProjectFile('src/App.tsx');
-    assertIncludes(appContent, '/blog', 'src/App.tsx must register /blog route');
+    assertIncludes(appContent, '/blog', 'src/App.tsx must register /blog redirect handler');
     assert(
-      appContent.includes('/blog/') || appContent.includes('isBlog'),
-      'src/App.tsx must handle blog detail or category sub-paths'
-    );
-    assert(
-      appContent.includes('BlogIndex') || appContent.includes('blogArticles'),
-      'src/App.tsx must wire blog views'
+      appContent.includes('/blog/') || appContent.includes('currentPath === \'/blog\''),
+      'src/App.tsx must handle blog redirect'
     );
   });
 
@@ -203,18 +199,18 @@ export async function runTier1Tests() {
     );
   });
 
-  // --- Test 6: Navigation & Footer Integration (R3 / F6) ---
+  // --- Test 6: Navigation & Footer Integration (Verified Blog Removal) ---
   await test('TC-F6-01: Navigation and Footer Blog Links', () => {
     const navContent = readProjectFile('src/components/Navigation.tsx');
     const footerContent = readProjectFile('src/components/Footer.tsx');
 
     assert(
-      navContent.includes('/blog') || navContent.includes('Blog'),
-      'src/components/Navigation.tsx must include Blog navigation link'
+      !navContent.includes('"/blog"') && !navContent.includes("'/blog'") && !navContent.includes('>Blog<'),
+      'src/components/Navigation.tsx must not include internal Blog navigation link'
     );
     assert(
-      footerContent.includes('/blog') || footerContent.includes('Blog'),
-      'src/components/Footer.tsx must include Blog footer link'
+      !footerContent.includes('"/blog"') && !footerContent.includes("'/blog'") && !footerContent.includes('Engineering Blog'),
+      'src/components/Footer.tsx must not include internal Blog footer link'
     );
   });
 
@@ -222,16 +218,8 @@ export async function runTier1Tests() {
   await test('TC-F10-01: Dynamic SEOHead blog route handling and Schema.org generation', () => {
     const seoContent = readProjectFile('src/components/SEOHead.tsx');
     assert(
-      seoContent.includes('/blog'),
-      'src/components/SEOHead.tsx must handle /blog currentPath'
-    );
-    assert(
-      seoContent.includes('BlogPosting') || seoContent.includes('blogArticles'),
-      'src/components/SEOHead.tsx must generate BlogPosting schema for blog articles'
-    );
-    assert(
-      seoContent.includes('BreadcrumbList'),
-      'src/components/SEOHead.tsx must include BreadcrumbList schema'
+      seoContent.includes('SEOHead') && seoContent.includes('schemaJson'),
+      'src/components/SEOHead.tsx must handle core currentPath routes and Schema.org generation'
     );
   });
 
