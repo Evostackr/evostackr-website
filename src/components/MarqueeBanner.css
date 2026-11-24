@@ -7,6 +7,8 @@
   overflow: hidden;
   user-select: none;
   position: relative;
+  contain: paint;
+  max-width: 100vw;
 }
 
 .marquee-banner__track {

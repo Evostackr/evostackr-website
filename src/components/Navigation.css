@@ -13,6 +13,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 1.4;
 }
 
 .nav-topbar__link {
@@ -227,5 +230,48 @@
 
   .nav__drawer--open {
     display: block;
+  }
+}
+
+@media (max-width: 640px) {
+  .nav__wordmark {
+    font-size: 1.1rem;
+    gap: 0.5rem;
+  }
+
+  .nav__actions {
+    gap: 0.65rem;
+  }
+
+  .btn--neo-talk {
+    padding: 0.45rem 1rem;
+    font-size: 0.8rem;
+  }
+
+  .nav__menu-btn {
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .nav__wordmark {
+    font-size: 1rem;
+    gap: 0.35rem;
+  }
+
+  .nav__actions {
+    gap: 0.45rem;
+  }
+
+  .btn--neo-talk {
+    padding: 0.35rem 0.65rem;
+    font-size: 0.75rem;
+  }
+}
+
+@media (max-width: 330px) {
+  .btn--neo-talk {
+    display: none;
   }
 }

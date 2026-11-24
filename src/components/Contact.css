@@ -159,6 +159,8 @@
   font-size: 1.05rem;
   font-weight: 700;
   color: var(--color-dark);
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .contact__card-text {
@@ -209,5 +211,20 @@
 
   .contact__form-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .contact__card {
+    padding: 1.5rem 1.25rem;
+  }
+
+  .contact__card-value {
+    font-size: 0.95rem;
+  }
+
+  .btn--neo-submit {
+    width: 100%;
+    text-align: center;
   }
 }
