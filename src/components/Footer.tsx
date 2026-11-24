@@ -35,7 +35,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Services Column */}
           <div className="footer__col">
-            <h4 className="footer__col-title">Services</h4>
+            <h3 className="footer__col-title">Services</h3>
             <ul className="footer__links">
               <li>
                 <a
@@ -79,7 +79,7 @@ export function Footer({ onNavigate }: FooterProps) {
 
           {/* Quick Links Column */}
           <div className="footer__col">
-            <h4 className="footer__col-title">Quick Links</h4>
+            <h3 className="footer__col-title">Quick Links</h3>
             <ul className="footer__links">
               <li>
                 <a

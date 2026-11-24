@@ -146,6 +146,7 @@
 .hero__isometric-stage {
   width: 100%;
   max-width: 520px;
+  aspect-ratio: 500 / 400;
   animation: heroFloat 6s ease-in-out infinite alternate;
 }
 

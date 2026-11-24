@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "Evostackr",
+  "description": "Independent software products and custom digital engineering studio.",
+  "url": "https://evostackr.in",
+  "capabilities": [
+    {
+      "name": "google-play-closed-testing",
+      "description": "Google Play Console 20 active opt-in testers compliance service for 14 continuous days.",
+      "url": "https://evostackr.in/services/google-play-closed-testing"
+    },
+    {
+      "name": "instant-quote",
+      "description": "Interactive instant quote calculator and project estimation engine for software engineering services.",
+      "url": "https://evostackr.in/#instant-quote"
+    },
+    {
+      "name": "digital-products",
+      "description": "Production software tools including SMS Campaign Manager, WhatsApp Past Member Extractor, and TempEmailFree.",
+      "url": "https://evostackr.in/store"
+    }
+  ]
+}

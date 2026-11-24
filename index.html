@@ -71,20 +71,24 @@
     <!-- RSS Feed Auto-Discovery -->
     <link rel="alternate" type="application/rss+xml" title="Evostackr RSS Feed" href="https://evostackr.in/rss.xml" />
 
-    <!-- Typography Preconnect & High-Priority Stylesheet -->
+    <!-- Typography Preconnect & Asynchronous High-Performance Stylesheet -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" />
+    </noscript>
 
     <!-- Critical Anti-FOUC & Skeleton Loading Engine -->
     <style id="evostackr-critical-css">
       :root {
         --color-brand-primary: #121316;
-        --color-brand-secondary: #FF6B35;
-        --color-brand-accent: #FF6B35;
+        --color-brand-secondary: #EF4444;
+        --color-brand-accent: #EF4444;
         --color-bg: #FAF8F5;
         --color-surface: #FFFFFF;
-        --color-surface-alt: #FFF3EB;
+        --color-surface-alt: #FEE2E2;
         --color-border: #121316;
         --color-text-secondary: #5B616E;
         --page-margin: clamp(1.25rem, 5vw, 6rem);
