@@ -8,15 +8,15 @@
     fill="#121316"
   />
 
-  <!-- Upper Slanted Bar (Vibrant Brand Orange #FF6B35) -->
+  <!-- Upper Slanted Bar (Alert Red #EF4444) -->
   <polygon
     points="45.35,37.5 75.07,37.5 68.0,49.15 38.28,49.15"
-    fill="#FF6B35"
+    fill="#EF4444"
   />
 
-  <!-- Lower Trapezoid Bar (Vibrant Brand Orange #FF6B35) -->
+  <!-- Lower Trapezoid Bar (Alert Red #EF4444) -->
   <polygon
     points="39.46,55.17 64.6,55.17 58.97,64.47 45.09,64.47"
-    fill="#FF6B35"
+    fill="#EF4444"
   />
 </svg>

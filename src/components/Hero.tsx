@@ -94,7 +94,7 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                 <rect x="24" y="112" width="140" height="8" rx="2" fill="#F0F0F0" />
 
                 {/* Sub grid cards */}
-                <rect x="24" y="140" width="115" height="56" rx="6" fill="#FFF3EB" stroke="#121316" strokeWidth="1.5" />
+                <rect x="24" y="140" width="115" height="56" rx="6" fill="#FEE2E2" stroke="#121316" strokeWidth="1.5" />
                 <rect x="155" y="140" width="115" height="56" rx="6" fill="#FAF8F5" stroke="#121316" strokeWidth="1.5" />
               </g>
 
@@ -121,7 +121,7 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                   {/* Left Bracket < */}
                   <path
                     d="M32 20 L8 45 L32 70"
-                    stroke="#FF6B35"
+                    stroke="#EF4444"
                     strokeWidth="7"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -136,7 +136,7 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                   {/* Right Bracket > */}
                   <path
                     d="M88 20 L112 45 L88 70"
-                    stroke="#FF6B35"
+                    stroke="#EF4444"
                     strokeWidth="7"
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -144,13 +144,13 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                 </g>
 
                 {/* Terminal mini-status pill */}
-                <rect x="20" y="146" width="60" height="18" rx="9" fill="#FF6B35" />
+                <rect x="20" y="146" width="60" height="18" rx="9" fill="#EF4444" />
                 <text x="32" y="159" fill="#FFFFFF" fontSize="9" fontWeight="bold" fontFamily="monospace">
                   LIVE
                 </text>
               </g>
 
-              {/* Window 3 (Foreground Vibrant Orange Layered Card) */}
+              {/* Window 3 (Foreground Vibrant Red Layered Card) */}
               <g transform="translate(60, 150) skewY(-8)">
                 <rect
                   x="0"
@@ -158,7 +158,7 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                   width="250"
                   height="160"
                   rx="12"
-                  fill="#FF8A50"
+                  fill="#EF4444"
                   stroke="#121316"
                   strokeWidth="3"
                 />
@@ -172,8 +172,8 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                 <line x1="36" y1="60" x2="160" y2="60" stroke="#121316" strokeWidth="3" strokeLinecap="round" />
 
                 {/* Secondary Rows */}
-                <rect x="20" y="86" width="130" height="12" rx="4" fill="#FFE2D1" stroke="#121316" strokeWidth="1.5" />
-                <rect x="20" y="106" width="180" height="12" rx="4" fill="#FFE2D1" stroke="#121316" strokeWidth="1.5" />
+                <rect x="20" y="86" width="130" height="12" rx="4" fill="#FEE2E2" stroke="#121316" strokeWidth="1.5" />
+                <rect x="20" y="106" width="180" height="12" rx="4" fill="#FEE2E2" stroke="#121316" strokeWidth="1.5" />
 
                 {/* Floating pill button inside */}
                 <rect x="20" y="128" width="75" height="18" rx="9" fill="#121316" />
@@ -187,14 +187,14 @@ export function Hero({ onExploreProducts: _onExploreProducts }: HeroProps = {}) 
                 <circle cx="20" cy="20" r="22" fill="#FFFFFF" stroke="#121316" strokeWidth="2" />
                 <path
                   d="M20 8 L22 17 L31 20 L22 23 L20 32 L18 23 L9 20 L18 17 Z"
-                  fill="#FF6B35"
+                  fill="#EF4444"
                 />
               </g>
 
               <g transform="translate(30, 90)">
                 <path
                   d="M20 4 L23 16 L35 20 L23 24 L20 36 L17 24 L5 20 L17 16 Z"
-                  fill="#FF6B35"
+                  fill="#EF4444"
                 />
               </g>
             </svg>

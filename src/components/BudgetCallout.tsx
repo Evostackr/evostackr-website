@@ -31,9 +31,9 @@ export function BudgetCallout() {
             >
               <defs>
                 <radialGradient id="orangeGlow" cx="50%" cy="50%" r="50%">
-                  <stop offset="0%" stopColor="#FF6B35" stopOpacity="0.85" />
-                  <stop offset="60%" stopColor="#FFA275" stopOpacity="0.35" />
-                  <stop offset="100%" stopColor="#FFF3EB" stopOpacity="0" />
+                  <stop offset="0%" stopColor="#EF4444" stopOpacity="0.85" />
+                  <stop offset="60%" stopColor="#F87171" stopOpacity="0.35" />
+                  <stop offset="100%" stopColor="#FEE2E2" stopOpacity="0" />
                 </radialGradient>
               </defs>
 
@@ -57,7 +57,7 @@ export function BudgetCallout() {
                 points="160,80 225,120 225,200 160,240 95,200 95,120"
                 stroke="#121316"
                 strokeWidth="1.5"
-                fill="rgba(255, 243, 235, 0.4)"
+                fill="rgba(254, 226, 226, 0.4)"
               />
 
               {/* Connecting Perspective Struts */}
@@ -73,10 +73,10 @@ export function BudgetCallout() {
               {/* Center Wireframe Node Cross */}
               <line x1="95" y1="120" x2="225" y2="200" stroke="#121316" strokeWidth="1" strokeDasharray="3 3" />
               <line x1="225" y1="120" x2="95" y2="200" stroke="#121316" strokeWidth="1" strokeDasharray="3 3" />
-              <line x1="160" y1="80" x2="160" y2="240" stroke="#FF6B35" strokeWidth="1.5" />
+              <line x1="160" y1="80" x2="160" y2="240" stroke="#EF4444" strokeWidth="1.5" />
 
               {/* Central Glowing Sparkle Node */}
-              <circle cx="160" cy="160" r="4.5" fill="#FF6B35" />
+              <circle cx="160" cy="160" r="4.5" fill="#EF4444" />
             </svg>
           </div>
         </div>

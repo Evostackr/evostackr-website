@@ -41,7 +41,7 @@ export function Process() {
               <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
                 <path
                   d="M12 2 L13.8 8.2 L20 10 L13.8 11.8 L12 18 L10.2 11.8 L4 10 L10.2 8.2 Z"
-                  fill="#FF6B35"
+                  fill="#EF4444"
                 />
               </svg>
             </div>

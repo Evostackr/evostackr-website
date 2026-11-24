@@ -1,6 +1,6 @@
 {
-  "timestamp": "2026-11-24T03:14:05.905Z",
-  "totalElapsedMs": 7448,
+  "timestamp": "2026-11-24T05:24:48.153Z",
+  "totalElapsedMs": 6357,
   "summary": {
     "total": 23,
     "passed": 23,
@@ -12,25 +12,25 @@
       "name": "TC-R1-01: OpenSEO Intelligence Report completeness",
       "tier": 1,
       "passed": true,
-      "duration": 0
+      "duration": 10
     },
     {
       "name": "TC-F8-01: Blog Articles Module existence and helper functions",
       "tier": 1,
       "passed": true,
-      "duration": 48
+      "duration": 37
     },
     {
       "name": "TC-F8-02: Individual article data contract completeness and image specs",
       "tier": 1,
       "passed": true,
-      "duration": 2
+      "duration": 1
     },
     {
       "name": "TC-F2-01: Client-Side Blog Routing in src/App.tsx",
       "tier": 1,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F3-01: Blog Views and Stylesheet Tokens",
@@ -42,7 +42,7 @@
       "name": "TC-F6-01: Navigation and Footer Blog Links",
       "tier": 1,
       "passed": true,
-      "duration": 2
+      "duration": 0
     },
     {
       "name": "TC-F10-01: Dynamic SEOHead blog route handling and Schema.org generation",
@@ -54,7 +54,7 @@
       "name": "TC-F12-01: sitemap.xml, rss.xml, robots.txt, and llms.txt discovery",
       "tier": 1,
       "passed": true,
-      "duration": 2
+      "duration": 49
     },
     {
       "name": "TC-F2-02: Invalid and unknown slug handling in data layer and views",
@@ -66,19 +66,19 @@
       "name": "TC-F5-02: Unknown and empty category slug handling",
       "tier": 2,
       "passed": true,
-      "duration": 1
+      "duration": 0
     },
     {
       "name": "TC-F3-02: Search filtering boundary queries (empty, whitespace, symbols, case)",
       "tier": 2,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F8-03: Character encoding, typographic entities, and XML escaping",
       "tier": 2,
       "passed": true,
-      "duration": 2
+      "duration": 1
     },
     {
       "name": "TC-F8-04: Optional fields resilience (faqs, related products, related services)",
@@ -90,55 +90,55 @@
       "name": "TC-F9-01: Category-to-article traversal and bidirectional consistency",
       "tier": 3,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F9-02: Internal product and service link resolution",
       "tier": 3,
       "passed": true,
-      "duration": 8
+      "duration": 5
     },
     {
       "name": "TC-F11-03: Breadcrumb hierarchy and sequence matching",
       "tier": 3,
       "passed": true,
-      "duration": 1
+      "duration": 0
     },
     {
       "name": "TC-F10-02: Canonical URL and OpenGraph URL alignment",
       "tier": 3,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F14-01: Production build clean execution (npm run build)",
       "tier": 4,
       "passed": true,
-      "duration": 6014
+      "duration": 4819
     },
     {
       "name": "TC-F14-02: Static Oxlint verification (npx oxlint src)",
       "tier": 4,
       "passed": true,
-      "duration": 1355
+      "duration": 1421
     },
     {
       "name": "TC-F11-02: Formal Schema.org BlogPosting & BreadcrumbList compliance",
       "tier": 4,
       "passed": true,
-      "duration": 2
+      "duration": 1
     },
     {
       "name": "TC-F12-02: RSS 2.0 RFC 822 pubDate compliance",
       "tier": 4,
       "passed": true,
-      "duration": 1
+      "duration": 0
     },
     {
       "name": "TC-F12-03: Sitemap XML well-formedness and Google Image extension syntax",
       "tier": 4,
       "passed": true,
-      "duration": 0
+      "duration": 1
     },
     {
       "name": "TC-F7-02: Zero Cumulative Layout Shift (CLS) image styling and dimensions",

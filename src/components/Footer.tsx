@@ -23,8 +23,8 @@ export function Footer({ onNavigate }: FooterProps) {
             <div className="footer__logo-wrap">
               <svg width="24" height="24" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <polygon points="33.44,13.27 10.0,50.2 32.91,86.73 80.05,86.73 72.85,74.94 39.85,74.94 25.06,50.2 41.03,25.19 82.67,25.19 90.0,13.27" fill="#121316" />
-                <polygon points="45.35,37.5 75.07,37.5 68.0,49.15 38.28,49.15" fill="#FF6B35" />
-                <polygon points="39.46,55.17 64.6,55.17 58.97,64.47 45.09,64.47" fill="#FF6B35" />
+                <polygon points="45.35,37.5 75.07,37.5 68.0,49.15 38.28,49.15" fill="#EF4444" />
+                <polygon points="39.46,55.17 64.6,55.17 58.97,64.47 45.09,64.47" fill="#EF4444" />
               </svg>
               <span className="footer__brand-name">Evostackr</span>
             </div>

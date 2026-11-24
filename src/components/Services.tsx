@@ -113,10 +113,10 @@ export function Services({ onNavigate }: ServicesProps) {
                 {item.iconType === 'code' && (
                   <div className="services__visual-badge">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                      <rect x="2" y="3" width="20" height="14" rx="2" stroke="#121316" strokeWidth="1.75" fill="#FFF3EB" />
+                      <rect x="2" y="3" width="20" height="14" rx="2" stroke="#121316" strokeWidth="1.75" fill="#FEE2E2" />
                       <line x1="8" y1="21" x2="16" y2="21" stroke="#121316" strokeWidth="1.75" strokeLinecap="round" />
                       <line x1="12" y1="17" x2="12" y2="21" stroke="#121316" strokeWidth="1.75" />
-                      <path d="M7 9 L10 12 L7 15" stroke="#FF6B35" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
+                      <path d="M7 9 L10 12 L7 15" stroke="#EF4444" strokeWidth="1.75" strokeLinecap="round" strokeLinejoin="round" />
                       <line x1="12" y1="15" x2="16" y2="15" stroke="#121316" strokeWidth="1.75" strokeLinecap="round" />
                     </svg>
                   </div>
@@ -124,26 +124,26 @@ export function Services({ onNavigate }: ServicesProps) {
                 {item.iconType === 'saas' && (
                   <div className="services__visual-badge">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                      <rect x="5" y="2" width="14" height="20" rx="2" stroke="#121316" strokeWidth="1.75" fill="#FFF3EB" />
+                      <rect x="5" y="2" width="14" height="20" rx="2" stroke="#121316" strokeWidth="1.75" fill="#FEE2E2" />
                       <circle cx="12" cy="18" r="1" fill="#121316" />
                       <line x1="9" y1="6" x2="15" y2="6" stroke="#121316" strokeWidth="1.75" strokeLinecap="round" />
-                      <path d="M12 9 L14 11 L10 13 L12 15" stroke="#FF6B35" strokeWidth="1.75" strokeLinecap="round" />
+                      <path d="M12 9 L14 11 L10 13 L12 15" stroke="#EF4444" strokeWidth="1.75" strokeLinecap="round" />
                     </svg>
                   </div>
                 )}
                 {item.iconType === 'testing' && (
                   <div className="services__visual-badge">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                      <path d="M5 3 L19 12 L5 21 Z" stroke="#121316" strokeWidth="1.75" fill="#FFF3EB" />
-                      <circle cx="12" cy="12" r="3" fill="#FF6B35" />
+                      <path d="M5 3 L19 12 L5 21 Z" stroke="#121316" strokeWidth="1.75" fill="#FEE2E2" />
+                      <circle cx="12" cy="12" r="3" fill="#EF4444" />
                     </svg>
                   </div>
                 )}
                 {item.iconType === 'design' && (
                   <div className="services__visual-badge">
                     <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                      <circle cx="12" cy="12" r="9" stroke="#121316" strokeWidth="1.75" fill="#FFF3EB" />
-                      <path d="M12 3 A9 9 0 0 1 21 12 L12 12 Z" fill="#FF6B35" stroke="#121316" strokeWidth="1.75" />
+                      <circle cx="12" cy="12" r="9" stroke="#121316" strokeWidth="1.75" fill="#FEE2E2" />
+                      <path d="M12 3 A9 9 0 0 1 21 12 L12 12 Z" fill="#EF4444" stroke="#121316" strokeWidth="1.75" />
                     </svg>
                   </div>
                 )}

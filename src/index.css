@@ -1,12 +1,12 @@
 :root {
   /* ─── Neo-Brutalist Color Palette (Matching Reference Design) ─── */
   --color-brand-primary: #121316;       /* Deep Charcoal Ink for headings & borders */
-  --color-brand-orange: #FF6B35;        /* Vibrant energetic orange accent */
-  --color-brand-orange-hover: #E85A26;
-  --color-brand-orange-light: #FFF0E6;  /* Soft peach tint for badges */
+  --color-brand-orange: #EF4444;        /* Vibrant Alert Red accent */
+  --color-brand-orange-hover: #DC2626;  /* Deep Alert Red hover */
+  --color-brand-orange-light: #FEE2E2;  /* Soft alert red tint for badges */
   --color-brand-secondary: #121316;     /* Secondary dark ink */
-  --color-brand-coral: #FF6B35;
-  --color-brand-coral-hover: #E85A26;
+  --color-brand-coral: #EF4444;
+  --color-brand-coral-hover: #DC2626;
 
   --color-bg: #FAF8F5;                  /* Warm off-white / light cream canvas */
   --color-text: #121316;                /* Deep Charcoal Ink */
@@ -14,8 +14,8 @@
   --color-text-muted: #868E96;          /* Muted metadata */
   
   --color-surface: #FFFFFF;             /* Pure White card surface */
-  --color-surface-peach: #FFF3EB;       /* Warm Peach / Cream accent container */
-  --color-surface-alt: #FFF3EB;         /* Harmonized surface */
+  --color-surface-peach: #FEE2E2;       /* Soft alert red accent container */
+  --color-surface-alt: #FEE2E2;         /* Harmonized surface */
   --color-surface-mint: #F0FBF7;        /* Soft Mint Pastel */
   --color-border: #121316;              /* Crisp 1.5px border */
   --color-border-subtle: rgba(18, 19, 22, 0.15);

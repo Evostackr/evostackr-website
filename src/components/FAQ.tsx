@@ -77,10 +77,10 @@ export function FAQ() {
             </h2>
             <div className="faq__star-badge" aria-hidden="true">
               <svg width="64" height="64" viewBox="0 0 24 24" fill="none">
-                <circle cx="12" cy="12" r="10" fill="#FFF3EB" />
+                <circle cx="12" cy="12" r="10" fill="#FEE2E2" />
                 <path
                   d="M12 4 L13.8 9.5 L19.5 11.2 L13.8 13 L12 18.5 L10.2 13 L4.5 11.2 L10.2 9.5 Z"
-                  fill="#FF6B35"
+                  fill="#EF4444"
                 />
               </svg>
             </div>

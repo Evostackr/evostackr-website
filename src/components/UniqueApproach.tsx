@@ -55,26 +55,26 @@ export function UniqueApproach() {
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M5 22h14M5 2h14M17 22v-4.172a2 2 0 0 0-.586-1.414L12 12l-4.414 4.414A2 2 0 0 0 7 17.828V22M7 2v4.172a2 2 0 0 0 .586 1.414L12 12l4.414-4.414A2 2 0 0 0 17 6.172V2"
-                      stroke="#FF6B35"
+                      stroke="#EF4444"
                       strokeWidth="1.75"
                       strokeLinecap="round"
                       strokeLinejoin="round"
                     />
-                    <circle cx="12" cy="17" r="1" fill="#FF6B35" />
+                    <circle cx="12" cy="17" r="1" fill="#EF4444" />
                   </svg>
                 )}
                 {p.icon === 'target' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
-                    <circle cx="12" cy="12" r="9" stroke="#FF6B35" strokeWidth="1.75" />
+                    <circle cx="12" cy="12" r="9" stroke="#EF4444" strokeWidth="1.75" />
                     <circle cx="12" cy="12" r="5" stroke="#121316" strokeWidth="1.5" />
-                    <circle cx="12" cy="12" r="2" fill="#FF6B35" />
+                    <circle cx="12" cy="12" r="2" fill="#EF4444" />
                   </svg>
                 )}
                 {p.icon === 'sparkle' && (
                   <svg width="40" height="40" viewBox="0 0 24 24" fill="none">
                     <path
                       d="M12 2 L14 9 L21 12 L14 15 L12 22 L10 15 L3 12 L10 9 Z"
-                      fill="#FF6B35"
+                      fill="#EF4444"
                       stroke="#121316"
                       strokeWidth="1.25"
                     />
